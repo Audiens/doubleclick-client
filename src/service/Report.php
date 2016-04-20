@@ -113,9 +113,9 @@ class Report implements CacheableInterface
         }
 
         if (!isset($repositoryResponse->getResponseArray(
-        )['body']['envelope']['body']['getresponse']['rval']['entries'])
+            )['body']['envelope']['body']['getresponse']['rval']['entries'])
         ) {
-            throw ReportException::missingIndex('body->envelope->body->getresponse->rval->entries');
+            return [];
         }
 
         $entries = $repositoryResponse->getResponseArray(
@@ -161,7 +161,7 @@ class Report implements CacheableInterface
 
 
         if (!isset($repositoryResponse->getResponseArray(
-        )['body']['envelope']['body']['getresponse']['rval']['entries'])
+            )['body']['envelope']['body']['getresponse']['rval']['entries'])
         ) {
             throw ReportException::missingIndex('body->envelope->body->getresponse->rval->entries');
         }

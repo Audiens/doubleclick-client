@@ -52,7 +52,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
         }
 
         return new ReportConfig(
-            '457-396-0769',
+            getenv('CUSTOMER_ID'),
             'Audiens',
             'Audiens',
             $from,

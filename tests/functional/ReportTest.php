@@ -23,25 +23,6 @@ class ReportTest extends FunctionalTestCase
 
         $this->assertNotEmpty($reportArrayResult[0]);
 
-
     }
-
-//
-//    /**
-//     * @test
-//     */
-//    public function get_dmp_report_will_return_an_array()
-//    {
-//
-//        $report = $this->buildReport();
-//
-//        $reportArrayResult = $report->getDmpReport($this->getRevenueReportConfig());
-//
-////        $this->assertNotEmpty($reportArrayResult[0]);
-//
-//
-//        print_r($reportArrayResult);
-//        die();
-//    }
 
 }

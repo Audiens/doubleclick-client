@@ -22,19 +22,21 @@ class SegmentRevenue
     /** @var string */
     protected $segmentStatus;
 
-    /** @var string */
+    /** @var int */
     protected $segmentImpression;
 
+    /** @var  float */
     protected $segmentRevenue;
 
     /**
      * SegmentRevenue constructor.
      *
-     * @param int    $segmentId
-     * @param string $clientName
-     * @param string $segmentName
-     * @param string $segmentStatus
-     * @param string $segmentImpression
+     * @param $segmentId
+     * @param $clientName
+     * @param $segmentName
+     * @param $segmentStatus
+     * @param $segmentImpression
+     * @param $segmentRevenue
      */
     public function __construct(
         $segmentId,
@@ -132,6 +134,9 @@ class SegmentRevenue
         if (!isset($array['clientcustomername'])) {
             throw new \Exception('hydration: clientcustomername');
         }
+        if (!isset($array['userlistname'])) {
+            throw new \Exception('hydration: userlistname');
+        }
 
         if (!isset($array['status'])) {
             throw new \Exception('hydration: status');
@@ -148,7 +153,7 @@ class SegmentRevenue
         return new self(
             $array['userlistid'],
             $array['clientcustomername'],
-            $array['stats']['clientimpressions'],
+            $array['userlistname'],
             $array['status'],
             $array['stats']['clientimpressions'],
             (round($array['stats']['costusd']['microamount'] / 1000000, 2))
