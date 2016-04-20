@@ -1,0 +1,118 @@
+<?php
+
+namespace Test;
+
+use Audiens\DoubleclickClient\Auth;
+use Audiens\DoubleclickClient\authentication\GoogleOauth2DdpRefreshableTokenStrategy;
+use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
+use Audiens\DoubleclickClient\entity\RefreshableToken;
+use Audiens\DoubleclickClient\entity\ServiceAccount;
+use Audiens\DoubleclickClient\service\Report;
+use Audiens\DoubleclickClient\service\TwigCompiler;
+use Audiens\DoubleclickClient\service\UserUpload;
+use Doctrine\Common\Cache\FilesystemCache;
+use Dotenv\Dotenv;
+use GuzzleHttp\Client;
+use Prophecy\Argument;
+
+/**
+ * Class FunctionalTestCase
+ */
+class FunctionalTestCase extends TestCase
+{
+
+    const REQUIRED_ENV = [];
+
+    protected function setUp()
+    {
+
+        if (!$this->checkEnv()) {
+            $this->markTestSkipped('cannotInitialize enviroment tests will be skipped');
+        }
+
+        parent::setUp();
+    }
+
+    /**
+     * @return bool
+     */
+    private function checkEnv()
+    {
+        try {
+            $dotenv = new Dotenv(__DIR__.'/../');
+            $dotenv->load();
+        } catch (\Exception $e) {
+        }
+
+        $env = true;
+
+        foreach (self::REQUIRED_ENV as $requiredEnv) {
+            if (!getenv($requiredEnv)) {
+                $env = false;
+            }
+        }
+
+        return $env;
+    }
+
+
+    /**
+     * @param bool|true $cacheToken
+     *
+     * @return Oauth2ServiceAccountStrategy
+     */
+    protected function buildOauth2ServiceAccountStrategy($cacheToken = true)
+    {
+        $cache = $cacheToken ? new FilesystemCache('cache') : null;
+
+        $client = new Client();
+
+        $privateKey = str_replace('\n', "\n", getenv('SA_PRIVATE_KEY'));
+        $privateKey = str_replace('\'', '', $privateKey);
+
+        $serviceAccount = new ServiceAccount(
+            $privateKey,
+            getenv('SA_CLIENT_EMAIL'),
+            getenv('SA_SUBJECT')
+
+        );
+
+        $authStrategy = new Oauth2ServiceAccountStrategy($client, $cache, $serviceAccount);
+
+        return $authStrategy;
+    }
+
+    /**
+     * @param bool|true $cacheToken
+     *
+     * @return Auth
+     */
+    protected function buildAuth($cacheToken = true)
+    {
+        $refreshableToken = new RefreshableToken();
+        $refreshableToken->setClientId(getenv('RFT_CLIENT_ID'));
+        $refreshableToken->setClientSecret(getenv('RFT_CLIENT_SECRET'));
+        $refreshableToken->setRefreshToken(getenv('RFT_REFRESH_TOKEN'));
+
+        $authStrategy = $this->buildOauth2ServiceAccountStrategy($cacheToken);
+
+        $auth = new Auth(new Client(), $authStrategy);
+
+        return $auth;
+    }
+
+    /**
+     * @param bool|true $cacheToken
+     *
+     * @return Report
+     */
+    protected function buildReport($cacheToken = true)
+    {
+        $cache = $cacheToken ? new FilesystemCache('cache') : null;
+
+        $report = new Report($this->buildAuth(), new TwigCompiler(), $cache);
+
+        return $report;
+    }
+
+}

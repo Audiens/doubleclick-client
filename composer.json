@@ -1,0 +1,40 @@
+{
+  "name": "audiens/doubleclick-ddp-client",
+  "license": "MIT",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Audiens\\DoubleclickClient\\": "src",
+      "Test\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+    "guzzlehttp/guzzle": "^6.2.0",
+    "doctrine/cache": "^1.6.0",
+    "vlucas/phpdotenv": "^2.2.0",
+    "lcobucci/jwt": "^3.1.1",
+    "zendframework/zend-hydrator": "*",
+    "twig/twig": "~1.0"
+  },
+  "require-dev": {
+    "satooshi/php-coveralls": "^1",
+    "phpunit/phpunit": "^5.3",
+    "squizlabs/php_codesniffer": "^2",
+    "phing/phing": "^2"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "bash contrib/setup.sh"
+    ],
+    "post-update-cmd": [
+      "bash contrib/setup.sh"
+    ]
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "extra": {},
+  "prefer-stable": true
+
+}

@@ -1,0 +1,159 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201603">
+			<requestId>000530e6d73223c10a81684528008966</requestId>
+			<serviceName>UserListClientService</serviceName>
+			<methodName>get</methodName>
+			<operations>1</operations>
+			<responseTime>500</responseTime>
+		</ResponseHeader>
+	</soap:Header>
+	<soap:Body>
+		<getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201603">
+			<rval>
+				<totalNumEntries>10</totalNumEntries>
+				<Page.Type>UserListClientPage</Page.Type>
+				<entries>
+					<userListId>78610759</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 35-44</userListName>
+					<stats>
+						<clientImpressions>14291</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>12948236</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78610639</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 45-54</userListName>
+					<stats>
+						<clientImpressions>12348</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>11187460</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78610519</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 55+</userListName>
+					<stats>
+						<clientImpressions>8413</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>7626518</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78593479</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; USER TYPE &gt; Business</userListName>
+					<stats>
+						<clientImpressions>16103</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>14553013</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78609919</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; SPENDING POWER &gt; High</userListName>
+					<stats>
+						<clientImpressions>219206</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>198053852</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78609679</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; SPENDING POWER &gt; Medium</userListName>
+					<stats>
+						<clientImpressions>1350</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>1219381</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>380190125</userListId>
+					<clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; VODAFONE &gt; USER TYPE &gt; Business</userListName>
+					<stats>
+						<clientImpressions>1388</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>1263890</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78610879</userListId>
+					<clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 25-34</userListName>
+					<stats>
+						<clientImpressions>35123</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>31727889</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78610759</userListId>
+					<clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 35-44</userListName>
+					<stats>
+						<clientImpressions>85430</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>77176070</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+				<entries>
+					<userListId>78610639</userListId>
+					<clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+					<status>ACTIVE</status>
+					<userListName>Audiens: ITALY &gt; H3G &gt; AGE &gt; 45-54</userListName>
+					<stats>
+						<clientImpressions>95700</clientImpressions>
+						<costUsd>
+							<ComparableValue.Type>Money</ComparableValue.Type>
+							<microAmount>86447777</microAmount>
+						</costUsd>
+					</stats>
+					<clientProduct>INVITE_ADVERTISER</clientProduct>
+				</entries>
+			</rval>
+		</getResponse>
+	</soap:Body>
+</soap:Envelope>

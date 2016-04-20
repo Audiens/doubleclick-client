@@ -1,0 +1,8 @@
+/bin/
+/composer.phar
+/vendor/
+.idea/
+/build/
+/.env
+composer.lock
+cache/*

@@ -1,0 +1,33 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Header>
+        <RequestHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201603">
+            <clientCustomerId>{{ clientCustomerId }}</clientCustomerId>
+            <developerToken>{{ developerToken }}</developerToken>
+            <userAgent>{{ userAgent }}</userAgent>
+        </RequestHeader>
+    </Header>
+    <Body>
+    <get xmlns="https://ddp.googleapis.com/api/ddp/provider/v201603">
+        <serviceSelector>
+            <fields>Id</fields>
+            <fields>Size</fields>
+            <fields>IsEligibleForSearch</fields>
+            <fields>Status</fields>
+            <predicates>
+                <field>Status</field>
+                <operator>EQUALS</operator>
+                <values>OPEN</values>
+            </predicates>
+            <predicates>
+                <field>Size</field>
+                <operator>GREATER_THAN</operator>
+                <values>0</values>
+            </predicates>
+            <ordering>
+                <field>Size</field>
+                <sortOrder>DESCENDING</sortOrder>
+            </ordering>
+        </serviceSelector>
+    </get>
+    </Body>
+</Envelope>
