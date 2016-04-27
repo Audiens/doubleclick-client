@@ -3,12 +3,10 @@
 namespace Audiens\DoubleclickClient\entity;
 
 /**
- * Class RevenueReportConfig
+ * Class ReportConfig
  */
 class ReportConfig
 {
-
-    use HydratableTrait;
 
     /** @var  string */
     protected $clientCustomerId;

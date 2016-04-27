@@ -19,6 +19,54 @@ class TestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @return Response
+     */
+    public function getGenericErrorResponse()
+    {
+        $fakeResponse = $this->prophesize(Response::class);
+        $stream = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/internal_error.xml'));
+        $stream->rewind()->willReturn(null)->shouldBeCalled();
+        $fakeResponse->getBody()->willReturn($stream->reveal());
+
+        return $fakeResponse->reveal();
+    }
+
+
+    /**
+     * @return Response
+     */
+    public function getRevenueReport()
+    {
+        $fakeResponse = $this->prophesize(Response::class);
+        $stream = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/revenue_report.xml'));
+        $stream->rewind()->willReturn(null)->shouldBeCalled();
+        $fakeResponse->getBody()->willReturn($stream->reveal());
+
+        return $fakeResponse->reveal();
+    }
+
+
+
+    /**
+     * @return Response
+     */
+    public function getBearerTokenResponse()
+    {
+
+
+        $fakeResponse = $this->prophesize(Response::class);
+        $stream = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/bearer_token.json'));
+        $stream->rewind()->willReturn(null)->shouldBeCalled();
+        $fakeResponse->getBody()->willReturn($stream->reveal());
+
+        return $fakeResponse->reveal();
+    }
+
+
+    /**
      * @param $responseBody
      *
      * @return \Prophecy\Prophecy\ObjectProphecy

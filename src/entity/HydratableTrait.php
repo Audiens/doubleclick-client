@@ -13,7 +13,7 @@ trait HydratableTrait
     /**
      * @param array $objectArray
      *
-     * @return self
+     * @return static
      */
     public static function fromArray(array $objectArray)
     {

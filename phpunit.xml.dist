@@ -24,7 +24,6 @@
 		<whitelist>
 			<directory>src</directory>
 			<exclude>
-				<directory>src/entity/</directory>
 				<directory>src/exceptions/</directory>
 			</exclude>
 		</whitelist>

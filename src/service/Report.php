@@ -5,12 +5,11 @@ namespace Audiens\DoubleclickClient\service;
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
-use Audiens\DoubleclickClient\entity\ReportStatus;
-use Audiens\DoubleclickClient\entity\ReportTicket;
 use Audiens\DoubleclickClient\entity\ReportConfig;
+use Audiens\DoubleclickClient\entity\SegmentCommunication;
 use Audiens\DoubleclickClient\entity\SegmentRevenue;
 use Audiens\DoubleclickClient\exceptions\ReportException;
-use Audiens\DoubleclickClient\repository\RepositoryResponse;
+use Audiens\DoubleclickClient\entity\ApiResponse;
 use Doctrine\Common\Cache\Cache;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -26,6 +25,7 @@ class Report implements CacheableInterface
 
     const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201603/UserListClientService?wsdl';
     const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201603/CustomerMatchUploaderService?wsdl';
+    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201603/UserListService?wsdl';
 
     /** @var Client|Auth */
     protected $client;
@@ -85,19 +85,19 @@ class Report implements CacheableInterface
 
 
     /**+
-     * @param ReportConfig $revenueReportConfig
+     * @param ReportConfig $reportConfig
      *
      * @return SegmentRevenue[]
      * @throws ReportException
      */
-    public function getRevenueReport(ReportConfig $revenueReportConfig)
+    public function getRevenueReport(ReportConfig $reportConfig)
     {
 
         $compiledUrl = $this->baseUrl;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
             self::REVENUE_REPORT_TEMPLATE_NAME,
-            $revenueReportConfig->toArray()
+            $reportConfig->toArray()
         );
 
         try {
@@ -106,7 +106,7 @@ class Report implements CacheableInterface
             $response = $e->getResponse();
         }
 
-        $repositoryResponse = RepositoryResponse::fromResponse($response);
+        $repositoryResponse = ApiResponse::fromResponse($response);
 
         if (!$repositoryResponse->isSuccessful()) {
             throw ReportException::failed($repositoryResponse);
@@ -132,19 +132,19 @@ class Report implements CacheableInterface
     }
 
     /**+
-     * @param ReportConfig $revenueReportConfig
+     * @param ReportConfig $reportConfig
      *
-     * @return \Audiens\DoubleclickClient\entity\HydratableTrait
+     * @return array
      * @throws ReportException
      */
-    public function getDmpReport(ReportConfig $revenueReportConfig)
+    public function getDmpReport(ReportConfig $reportConfig)
     {
 
-        $compiledUrl = $this->baseUrlDdp;
+        $compiledUrl = self::USER_LIST_SERVICE;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
             self::DMP_REPORT_TEMPLATE_NAME,
-            $revenueReportConfig->toArray()
+            $reportConfig->toArray()
         );
 
         try {
@@ -153,12 +153,11 @@ class Report implements CacheableInterface
             $response = $e->getResponse();
         }
 
-        $repositoryResponse = RepositoryResponse::fromResponse($response);
+        $repositoryResponse = ApiResponse::fromResponse($response);
 
         if (!$repositoryResponse->isSuccessful()) {
             throw ReportException::failed($repositoryResponse);
         }
-
 
         if (!isset($repositoryResponse->getResponseArray(
             )['body']['envelope']['body']['getresponse']['rval']['entries'])
@@ -166,7 +165,16 @@ class Report implements CacheableInterface
             throw ReportException::missingIndex('body->envelope->body->getresponse->rval->entries');
         }
 
-        return $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
+        $entries = $repositoryResponse->getResponseArray(
+        )['body']['envelope']['body']['getresponse']['rval']['entries'];
+
+        $segmentCommunication = [];
+
+        foreach ($entries as $entry) {
+            $segmentCommunication[] = SegmentCommunication::fromArray($entry);
+        }
+
+        return $segmentCommunication;
 
     }
 }

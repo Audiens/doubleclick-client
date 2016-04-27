@@ -5,11 +5,8 @@ namespace Audiens\DoubleclickClient\authentication;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
 use Audiens\DoubleclickClient\entity\BearerToken;
-use Audiens\DoubleclickClient\entity\ServiceAccount;
 use Doctrine\Common\Cache\Cache;
 use GuzzleHttp\ClientInterface;
-use Lcobucci\JWT\Builder;
-use Lcobucci\JWT\Signer\Rsa\Sha256;
 
 /**
  * Class GoogleOauth2DdpStrategy
@@ -31,21 +28,21 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
     /** @var Cache */
     protected $cache;
 
-    /** @var ServiceAccount */
-    protected $serviceAccount;
+    /** @var JwtFactoryInterface */
+    protected $jwtFactory;
 
     /**
      * GoogleOauth2DdpStrategy constructor.
      *
-     * @param ClientInterface $clientInterface
-     * @param Cache           $cache
-     * @param ServiceAccount  $serviceAccount
+     * @param ClientInterface     $clientInterface
+     * @param Cache               $cache
+     * @param JwtFactoryInterface $jwtFactory
      */
-    public function __construct(ClientInterface $clientInterface, Cache $cache, ServiceAccount $serviceAccount)
+    public function __construct(ClientInterface $clientInterface, Cache $cache, JwtFactoryInterface $jwtFactory)
     {
         $this->cache = $cache;
         $this->client = $clientInterface;
-        $this->serviceAccount = $serviceAccount;
+        $this->jwtFactory = $jwtFactory;
 
         $this->cacheEnabled = $cache instanceof Cache;
     }
@@ -58,8 +55,7 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
     public function authenticate($cache = true)
     {
 
-        $cacheKey = self::CACHE_NAMESPACE.sha1($this->serviceAccount->getClientEmail().self::BASE_URL);
-
+        $cacheKey = self::CACHE_NAMESPACE.sha1($this->jwtFactory->getHash().self::BASE_URL);
 
         if ($cache) {
             if ($this->cache->contains($cacheKey)) {
@@ -67,7 +63,7 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
             }
         }
 
-        $token = $this->getJwt();
+        $token = $this->jwtFactory->build();
 
         $body = 'grant_type='.urlencode('urn:ietf:params:oauth:grant-type:jwt-bearer').'&assertion='.$token;
 
@@ -81,6 +77,8 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
         );
 
         $bearerToken = BearerToken::fromArray(json_decode($response->getBody()->getContents(), true));
+
+        $response->getBody()->rewind();
 
         if ($this->isCacheEnabled()) {
             $this->cache->save($cacheKey, $bearerToken, self::CACHE_EXPIRATION);
@@ -98,31 +96,4 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
         return self::NAME;
     }
 
-    /**
-     *
-     * iss    The email address of the service account.
-     * scope  A space-delimited list of the permissions that the application requests.
-     * aud    A descriptor of the intended target of the assertion. When making an access token request this value is
-     * sub    the user to impersonate as there should be a domain wide auth
-     * always https://www.googleapis.com/oauth2/v4/token. exp    The expiration time of the assertion, specified as
-     * seconds since 00:00:00 UTC, January 1, 1970. This value has a maximum of 1 hour after the issued time. iat
-     * The time the assertion was issued, specified as seconds since 00:00:00 UTC, January 1, 1970.
-     *
-     * @return \Lcobucci\JWT\Token
-     */
-    protected function getJwt()
-    {
-        return (new Builder())
-            ->setIssuer($this->serviceAccount->getClientEmail())// iss claim
-            ->setAudience('https://www.googleapis.com/oauth2/v4/token')// aud claim
-            ->setSubject($this->serviceAccount->getSubject())// sub claim
-            ->setIssuedAt(time())// iat claim
-            ->setExpiration(time() + 3600)// exp claim
-            ->set('scope', self::SCOPE)// custom claim
-            ->sign(
-                new Sha256(),
-                $this->serviceAccount->getPrivateKey()
-            )
-            ->getToken(); // Retrieves the generated token
-    }
 }

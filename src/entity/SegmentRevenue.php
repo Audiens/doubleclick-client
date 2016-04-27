@@ -5,22 +5,13 @@ namespace Audiens\DoubleclickClient\entity;
 /**
  * Class SegmentRevenue
  */
-class SegmentRevenue
+class SegmentRevenue extends Segment
 {
 
     use HydratableTrait;
 
-    /** @var int */
-    protected $segmentId;
-
     /** @var string */
     protected $clientName;
-
-    /** @var string */
-    protected $segmentName;
-
-    /** @var string */
-    protected $segmentStatus;
 
     /** @var int */
     protected $segmentImpression;
@@ -46,12 +37,12 @@ class SegmentRevenue
         $segmentImpression,
         $segmentRevenue
     ) {
-        $this->segmentId = $segmentId;
         $this->clientName = $clientName;
-        $this->segmentName = $segmentName;
-        $this->segmentStatus = $segmentStatus;
         $this->segmentImpression = $segmentImpression;
         $this->segmentRevenue = $segmentRevenue;
+
+        parent::__construct($segmentId, $segmentName, $segmentStatus);
+
     }
 
     /**
@@ -62,37 +53,12 @@ class SegmentRevenue
         return $this->segmentRevenue;
     }
 
-
-    /**
-     * @return int
-     */
-    public function getSegmentId()
-    {
-        return $this->segmentId;
-    }
-
     /**
      * @return string
      */
     public function getClientName()
     {
         return $this->clientName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSegmentName()
-    {
-        return $this->segmentName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSegmentStatus()
-    {
-        return $this->segmentStatus;
     }
 
     /**
@@ -111,21 +77,6 @@ class SegmentRevenue
      */
     public static function fromArray(array $array)
     {
-
-//          [userlistid] => 78610639
-//          [clientcustomername] => Bid Manager Partner 353167
-//          [status] => ACTIVE
-//          [userlistname] => Audiens: ITALY > H3G > AGE > 45-54
-//          [clientproduct] => INVITE_ADVERTISER
-//          [stats] => Array
-//                          (
-//                              [clientimpressions] => 85896
-//                              [costusd] => Array
-//                                                  (
-//                                                     [comparablevalue.type] => Money
-//                                                     [microamount] => 77544224
-//                                                   )
-//                            )
 
         if (!isset($array['userlistid'])) {
             throw new \Exception('hydration: userlistid');

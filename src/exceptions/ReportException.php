@@ -2,7 +2,7 @@
 
 namespace Audiens\DoubleclickClient\exceptions;
 
-use Audiens\DoubleclickClient\repository\RepositoryResponse;
+use Audiens\DoubleclickClient\entity\ApiResponse;
 
 /**
  * Class ReportException
@@ -11,11 +11,11 @@ class ReportException extends \Exception
 {
 
     /**
-     * @param RepositoryResponse $repositoryResponse
+     * @param ApiResponse $repositoryResponse
      *
      * @return self
      */
-    public static function failed(RepositoryResponse $repositoryResponse)
+    public static function failed(ApiResponse $repositoryResponse)
     {
         return new self('Failed call: '.$repositoryResponse->getError());
     }

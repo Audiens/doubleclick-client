@@ -3,13 +3,11 @@
 namespace Test;
 
 use Audiens\DoubleclickClient\Auth;
-use Audiens\DoubleclickClient\authentication\GoogleOauth2DdpRefreshableTokenStrategy;
+use Audiens\DoubleclickClient\authentication\JwtServiceAccountFactory;
 use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
-use Audiens\DoubleclickClient\entity\RefreshableToken;
 use Audiens\DoubleclickClient\entity\ServiceAccount;
 use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
-use Audiens\DoubleclickClient\service\UserUpload;
 use Doctrine\Common\Cache\FilesystemCache;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
@@ -77,7 +75,9 @@ class FunctionalTestCase extends TestCase
 
         );
 
-        $authStrategy = new Oauth2ServiceAccountStrategy($client, $cache, $serviceAccount);
+        $jwtFactory = new JwtServiceAccountFactory($serviceAccount);
+
+        $authStrategy = new Oauth2ServiceAccountStrategy($client, $cache, $jwtFactory);
 
         return $authStrategy;
     }
@@ -89,11 +89,6 @@ class FunctionalTestCase extends TestCase
      */
     protected function buildAuth($cacheToken = true)
     {
-        $refreshableToken = new RefreshableToken();
-        $refreshableToken->setClientId(getenv('RFT_CLIENT_ID'));
-        $refreshableToken->setClientSecret(getenv('RFT_CLIENT_SECRET'));
-        $refreshableToken->setRefreshToken(getenv('RFT_REFRESH_TOKEN'));
-
         $authStrategy = $this->buildOauth2ServiceAccountStrategy($cacheToken);
 
         $auth = new Auth(new Client(), $authStrategy);
