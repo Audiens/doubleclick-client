@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\functional;
+namespace Test\unit;
 
 use Audiens\DoubleclickClient\entity\ApiResponse;
 use Audiens\DoubleclickClient\entity\Error;

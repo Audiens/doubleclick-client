@@ -1,0 +1,91 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201609">
+            <requestId>000540c718a8b3610a0dd8caf2046cf6</requestId>
+            <serviceName>UserListClientService</serviceName>
+            <methodName>get</methodName>
+            <operations>1</operations>
+            <responseTime>333</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201609">
+            <rval>
+                <totalNumEntries>54</totalNumEntries>
+                <Page.Type>UserListClientPage</Page.Type>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <startDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </startDate>
+                        <endDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </endDate>
+                        <clientImpressions>34</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>30022</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_ADVERTISER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <startDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </startDate>
+                        <endDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </endDate>
+                        <clientImpressions>136</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>120086</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_ADVERTISER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610399</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; H3G &gt; CELL PHONE PLAN &gt; Data Plan</userListName>
+                    <stats>
+                        <startDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </startDate>
+                        <endDate>
+                            <year>2016</year>
+                            <month>11</month>
+                            <day>8</day>
+                        </endDate>
+                        <clientImpressions>117</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>103310</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_ADVERTISER</clientProduct>
+                </entries>
+            </rval>
+        </getResponse>
+    </soap:Body>
+</soap:Envelope>

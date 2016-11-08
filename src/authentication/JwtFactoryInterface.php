@@ -17,5 +17,4 @@ interface JwtFactoryInterface
      * @return string
      */
     public function getHash();
-
 }

@@ -40,7 +40,21 @@ class TestCase extends \PHPUnit_Framework_TestCase
     {
         $fakeResponse = $this->prophesize(Response::class);
         $stream = $this->prophesize(Stream::class);
-        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/revenue_report.xml'));
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/v201609/revenue_report.xml'));
+        $stream->rewind()->willReturn(null)->shouldBeCalled();
+        $fakeResponse->getBody()->willReturn($stream->reveal());
+
+        return $fakeResponse->reveal();
+    }
+
+    /**
+     * @return Response
+     */
+    public function getDmpReport()
+    {
+        $fakeResponse = $this->prophesize(Response::class);
+        $stream = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/v201609/dmp_report.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 

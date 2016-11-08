@@ -95,5 +95,4 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
     {
         return self::NAME;
     }
-
 }

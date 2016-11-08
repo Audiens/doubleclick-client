@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\functional;
+namespace Test\unit;
 
 use Audiens\DoubleclickClient\entity\ReportConfig;
 use Audiens\DoubleclickClient\entity\SegmentRevenue;

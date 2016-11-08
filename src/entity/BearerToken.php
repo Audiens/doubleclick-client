@@ -52,7 +52,7 @@ class BearerToken
     /**
      * @return string
      */
-    function __toString()
+    public function __toString()
     {
         return self::TOKEN_PREFIX.' '.$this->access_token;
     }

@@ -1,0 +1,131 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201609">
+            <requestId>000540c735cc91f10a816d93ed0aac15</requestId>
+            <serviceName>UserListService</serviceName>
+            <methodName>get</methodName>
+            <operations>1</operations>
+            <responseTime>238</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201609">
+            <rval>
+                <totalNumEntries>552</totalNumEntries>
+                <Page.Type>UserListPage</Page.Type>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LogicalUserList">
+                    <id>78659599</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt;USER TYPE &gt; Private</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.user-type.private</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>10000000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>LOGICAL</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>LogicalUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LogicalUserList">
+                    <id>78612439</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; Pre-Paid</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.contract-type.pre-paid</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>7300000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>LOGICAL</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>LogicalUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="BasicUserList">
+                    <id>380365864</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; VODAFONE &gt; USER TYPE &gt; Private</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.vodafone.user-type.private</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>6000000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>REMARKETING</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>BasicUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LogicalUserList">
+                    <id>78777439</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; GENDER &gt; Male</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.gender.m</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>5800000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>LOGICAL</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>LogicalUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="BasicUserList">
+                    <id>78592639</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; VODAFONE &gt; CONTRACT TYPE &gt; Pre-paid</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.vodafone.contract-type.pre-paid</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>5200000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>REMARKETING</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>BasicUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="BasicUserList">
+                    <id>78593359</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; H3G &gt; USER TYPE &gt; Private</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.h3g.user-type.private</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>5100000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>REMARKETING</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>BasicUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="BasicUserList">
+                    <id>78609919</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; H3G &gt; SPENDING POWER &gt; High</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.h3g.income.high</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>90</membershipLifeSpan>
+                    <size>4600000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>REMARKETING</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>BasicUserList</UserList.Type>
+                </entries>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LogicalUserList">
+                    <id>78777559</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; GENDER &gt; Female</name>
+                    <status>OPEN</status>
+                    <integrationCode>it.gender.f</integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>120</membershipLifeSpan>
+                    <size>4400000</size>
+                    <sizeForSearch>0</sizeForSearch>
+                    <listType>LOGICAL</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>LogicalUserList</UserList.Type>
+                </entries>
+            </rval>
+        </getResponse>
+    </soap:Body>
+</soap:Envelope>

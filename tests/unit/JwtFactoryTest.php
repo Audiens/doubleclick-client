@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\functional;
+namespace Test\unit;
 
 use Audiens\DoubleclickClient\authentication\JwtServiceAccountFactory;
 use Audiens\DoubleclickClient\entity\ServiceAccount;

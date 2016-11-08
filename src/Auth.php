@@ -61,5 +61,4 @@ class Auth extends Client implements ClientInterface
         return $this->client->request($method, $uri, $options);
 
     }
-
 }

@@ -57,5 +57,4 @@ class Segment
     {
         return $this->segmentStatus;
     }
-
 }

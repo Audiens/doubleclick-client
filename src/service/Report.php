@@ -23,9 +23,11 @@ class Report implements CacheableInterface
 
     use CachableTrait;
 
-    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201603/UserListClientService?wsdl';
-    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201603/CustomerMatchUploaderService?wsdl';
-    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201603/UserListService?wsdl';
+    const API_VERSION                  = 'v201609';
+
+    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListClientService?wsdl';
+    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201609/CustomerMatchUploaderService?wsdl';
+    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
 
     /** @var Client|Auth */
     protected $client;
@@ -48,21 +50,22 @@ class Report implements CacheableInterface
     const REVENUE_REPORT_TEMPLATE_NAME = 'revenue.xml.twig';
     const DMP_REPORT_TEMPLATE_NAME     = 'dmp.xml.twig';
 
+
     /**
      * Report constructor.
      *
      * @param ClientInterface $client
-     * @param TwigCompiler    $twigCompiler
-     * @param Cache|null      $cache
+     * @param TwigCompiler $twigCompiler
+     * @param Cache|null $cache
      */
     public function __construct(ClientInterface $client, TwigCompiler $twigCompiler, Cache $cache = null)
     {
-        $this->client = $client;
-        $this->cache = $cache;
+        $this->client       = $client;
+        $this->cache        = $cache;
         $this->twigCompiler = $twigCompiler;
         $this->cacheEnabled = $cache instanceof Cache;
 
-        $this->baseUrl = self::BASE_URL_PROVIDER;
+        $this->baseUrl    = self::BASE_URL_PROVIDER;
         $this->baseUrlDdp = self::BASE_URL_DDP;
 
     }
@@ -96,7 +99,7 @@ class Report implements CacheableInterface
         $compiledUrl = $this->baseUrl;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::REVENUE_REPORT_TEMPLATE_NAME,
+            self::API_VERSION . '/' . self::REVENUE_REPORT_TEMPLATE_NAME,
             $reportConfig->toArray()
         );
 
@@ -112,14 +115,12 @@ class Report implements CacheableInterface
             throw ReportException::failed($repositoryResponse);
         }
 
-        if (!isset($repositoryResponse->getResponseArray(
-            )['body']['envelope']['body']['getresponse']['rval']['entries'])
+        if (!isset($repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'])
         ) {
             return [];
         }
 
-        $entries = $repositoryResponse->getResponseArray(
-        )['body']['envelope']['body']['getresponse']['rval']['entries'];
+        $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 
         $segmentsRevenue = [];
 
@@ -143,7 +144,7 @@ class Report implements CacheableInterface
         $compiledUrl = self::USER_LIST_SERVICE;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::DMP_REPORT_TEMPLATE_NAME,
+            self::API_VERSION . '/' . self::DMP_REPORT_TEMPLATE_NAME,
             $reportConfig->toArray()
         );
 
@@ -159,14 +160,12 @@ class Report implements CacheableInterface
             throw ReportException::failed($repositoryResponse);
         }
 
-        if (!isset($repositoryResponse->getResponseArray(
-            )['body']['envelope']['body']['getresponse']['rval']['entries'])
+        if (!isset($repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'])
         ) {
             throw ReportException::missingIndex('body->envelope->body->getresponse->rval->entries');
         }
 
-        $entries = $repositoryResponse->getResponseArray(
-        )['body']['envelope']['body']['getresponse']['rval']['entries'];
+        $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 
         $segmentCommunication = [];
 

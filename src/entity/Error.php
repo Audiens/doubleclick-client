@@ -32,7 +32,7 @@ class Error
         return $this->faultstring;
     }
 
-    function __toString()
+    public function __toString()
     {
         return $this->faultcode.': '.$this->faultstring;
     }
