@@ -22,7 +22,6 @@ class TwigCompiler
 
         $loader = new \Twig_Loader_Filesystem($templatePath);
         $this->twig = new \Twig_Environment($loader);
-
     }
 
     /**

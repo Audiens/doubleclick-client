@@ -67,7 +67,6 @@ class Report implements CacheableInterface
 
         $this->baseUrl    = self::BASE_URL_PROVIDER;
         $this->baseUrlDdp = self::BASE_URL_DDP;
-
     }
 
     /**
@@ -129,7 +128,6 @@ class Report implements CacheableInterface
         }
 
         return $segmentsRevenue;
-
     }
 
     /**+
@@ -174,6 +172,5 @@ class Report implements CacheableInterface
         }
 
         return $segmentCommunication;
-
     }
 }

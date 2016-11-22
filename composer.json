@@ -14,14 +14,16 @@
     "doctrine/cache": "^1.6.0",
     "vlucas/phpdotenv": "^2.2.0",
     "lcobucci/jwt": "^3.1.1",
-    "zendframework/zend-hydrator": "*",
-    "twig/twig": "~1.0"
+    "twig/twig": "~1.0",
+    "zendframework/zend-hydrator": "^2.2.1"
   },
   "require-dev": {
     "satooshi/php-coveralls": "^1",
     "phpunit/phpunit": "^5.3",
     "squizlabs/php_codesniffer": "^2",
-    "phing/phing": "^2"
+    "phing/phing": "^2",
+    "facile-it/paraunit": "dev-master",
+    "symfony/var-dumper": "^3.1.6"
   },
   "scripts": {
     "post-install-cmd": [

@@ -25,7 +25,6 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
     public function __construct(ServiceAccount $serviceAccount)
     {
         $this->serviceAccount = $serviceAccount;
-
     }
 
     /**
@@ -63,6 +62,5 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
     {
 
         return sha1($this->serviceAccount->getClientEmail().$this->serviceAccount->getSubject());
-
     }
 }

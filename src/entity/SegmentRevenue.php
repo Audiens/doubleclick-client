@@ -42,7 +42,6 @@ class SegmentRevenue extends Segment
         $this->segmentRevenue = $segmentRevenue;
 
         parent::__construct($segmentId, $segmentName, $segmentStatus);
-
     }
 
     /**
@@ -109,7 +108,5 @@ class SegmentRevenue extends Segment
             $array['stats']['clientimpressions'],
             (round($array['stats']['costusd']['microamount'] / 1000000, 2))
         );
-
-
     }
 }

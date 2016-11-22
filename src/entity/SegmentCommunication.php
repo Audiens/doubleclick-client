@@ -33,7 +33,6 @@ class SegmentCommunication extends Segment
         $this->size = $size;
 
         parent::__construct($segmentId, $segmentName, $segmentStatus);
-
     }
 
     /**
@@ -75,6 +74,5 @@ class SegmentCommunication extends Segment
             $array['status'],
             $array['size']
         );
-
     }
 }

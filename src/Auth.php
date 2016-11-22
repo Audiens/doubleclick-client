@@ -59,6 +59,5 @@ class Auth extends Client implements ClientInterface
         $options = array_merge($options, $optionForToken);
 
         return $this->client->request($method, $uri, $options);
-
     }
 }

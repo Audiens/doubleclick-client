@@ -86,7 +86,6 @@ class ApiResponse
         $self->error = $error;
 
         return $self;
-
     }
 
     /**
@@ -100,7 +99,6 @@ class ApiResponse
         $response->getBody()->rewind();
 
         return $responseContent;
-
     }
 
     /**
@@ -121,6 +119,5 @@ class ApiResponse
         $xml = simplexml_load_string($xml); // create xml
 
         return json_decode(json_encode($xml), true); // extract array
-
     }
 }
