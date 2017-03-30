@@ -34,13 +34,14 @@ class TestCase extends \PHPUnit_Framework_TestCase
 
 
     /**
-     * @return Response
+     * @param string $version
+     * @return object
      */
-    public function getRevenueReport()
+    public function getRevenueReport($version = 'v201609')
     {
         $fakeResponse = $this->prophesize(Response::class);
         $stream = $this->prophesize(Stream::class);
-        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/v201609/revenue_report.xml'));
+        $stream->getContents()->willReturn(file_get_contents(__DIR__ . '/samples/' . $version . '/revenue_report.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 
@@ -48,13 +49,14 @@ class TestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return Response
+     * @param string $version
+     * @return object
      */
-    public function getDmpReport()
+    public function getDmpReport($version = 'v201609')
     {
         $fakeResponse = $this->prophesize(Response::class);
         $stream = $this->prophesize(Stream::class);
-        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/v201609/dmp_report.xml'));
+        $stream->getContents()->willReturn(file_get_contents(__DIR__ . '/samples/' . $version . '/dmp_report.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 

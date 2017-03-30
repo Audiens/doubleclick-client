@@ -1,0 +1,3002 @@
+"
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201702">
+            <requestId>00054bf16cc08c680a8178d56509ffee</requestId>
+            <serviceName>UserListClientService</serviceName>
+            <methodName>get</methodName>
+            <operations>1</operations>
+            <responseTime>378</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201702">
+            <rval>
+                <totalNumEntries>213</totalNumEntries>
+                <Page.Type>UserListClientPage</Page.Type>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>87305</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>77267908</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>1344502</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1186236694</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610759</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>2430877</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2145231000</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610639</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>2190166</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1928512042</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610519</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>754861</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>677437343</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610399</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; CELL PHONE PLAN &gt; Data Plan</userListName>
+                    <stats>
+                        <clientImpressions>162649</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>145376438</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610279</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; CELL PHONE PLAN &gt; Voice Plan</userListName>
+                    <stats>
+                        <clientImpressions>115593</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>102684798</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610159</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; CONTRACT TYPE &gt; Post-paid</userListName>
+                    <stats>
+                        <clientImpressions>206281</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>184377552</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>74188159</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>2748816</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2412410072</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78119119</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>1871291</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1594721284</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609199</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; PAYMENT METHOD &gt; Bank</userListName>
+                    <stats>
+                        <clientImpressions>130862</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>116888913</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609079</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; PAYMENT METHOD &gt; Cash Prepay</userListName>
+                    <stats>
+                        <clientImpressions>68149</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>60737444</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78608959</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; PAYMENT METHOD &gt; Credit Card</userListName>
+                    <stats>
+                        <clientImpressions>296977</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>256610774</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78607519</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; REGION &gt; Lazio</userListName>
+                    <stats>
+                        <clientImpressions>6232</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>5642200</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78608599</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; REGION &gt; Lombardia</userListName>
+                    <stats>
+                        <clientImpressions>7293</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>6602562</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78604999</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Bergamo</userListName>
+                    <stats>
+                        <clientImpressions>2034</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1811378</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78604519</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Brescia</userListName>
+                    <stats>
+                        <clientImpressions>2527</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2250757</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593479</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>1340921</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1194710367</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78603679</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Catania</userListName>
+                    <stats>
+                        <clientImpressions>7863</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>6679528</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78603319</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Como</userListName>
+                    <stats>
+                        <clientImpressions>841</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>748789</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78603079</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Cremona</userListName>
+                    <stats>
+                        <clientImpressions>863</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>768779</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78602359</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Florence</userListName>
+                    <stats>
+                        <clientImpressions>7984</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>6781861</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78602119</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Frosinone</userListName>
+                    <stats>
+                        <clientImpressions>2351</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2094075</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78601279</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Latina</userListName>
+                    <stats>
+                        <clientImpressions>1805</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1608075</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78601039</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Lecco</userListName>
+                    <stats>
+                        <clientImpressions>536</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>477318</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78600799</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Lodi</userListName>
+                    <stats>
+                        <clientImpressions>512</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>455846</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78600439</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Mantua</userListName>
+                    <stats>
+                        <clientImpressions>729</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>649153</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78599839</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Milan</userListName>
+                    <stats>
+                        <clientImpressions>36840</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>31699153</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78599599</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Monza and Brianza</userListName>
+                    <stats>
+                        <clientImpressions>1154</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1027998</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78598399</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Pavia</userListName>
+                    <stats>
+                        <clientImpressions>1217</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1083792</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78596719</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Rieti</userListName>
+                    <stats>
+                        <clientImpressions>683</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>608323</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78596479</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Rome</userListName>
+                    <stats>
+                        <clientImpressions>56800</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>48994348</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78595759</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Sondrio</userListName>
+                    <stats>
+                        <clientImpressions>456</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>406155</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78594679</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Turin</userListName>
+                    <stats>
+                        <clientImpressions>20098</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>17072411</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78594439</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Varese</userListName>
+                    <stats>
+                        <clientImpressions>1758</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1565802</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593599</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Viterbo</userListName>
+                    <stats>
+                        <clientImpressions>1483</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1321088</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609919</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; High</userListName>
+                    <stats>
+                        <clientImpressions>6384436</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>5576049578</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609799</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; Low</userListName>
+                    <stats>
+                        <clientImpressions>279124</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>236685594</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609679</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; Medium</userListName>
+                    <stats>
+                        <clientImpressions>15858</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>13743510</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78338479</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>180155</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>159943356</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593239</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>1602637</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1411538079</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>1651203</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1444016856</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>1423154</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1240904658</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592879</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>106345</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>95528759</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592759</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; CONTRACT TYPE &gt; Post-paid</userListName>
+                    <stats>
+                        <clientImpressions>889746</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>792140766</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592639</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; CONTRACT TYPE &gt; Pre-paid</userListName>
+                    <stats>
+                        <clientImpressions>373076</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>331053279</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218479</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>2325607</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2027502666</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218599</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>2146802</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1818084062</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78591079</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; REGION &gt; Lazio</userListName>
+                    <stats>
+                        <clientImpressions>29</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>26276</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592159</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; REGION &gt; Lombardia</userListName>
+                    <stats>
+                        <clientImpressions>65</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>58831</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78588559</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Bergamo</userListName>
+                    <stats>
+                        <clientImpressions>1421</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1266334</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78588079</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Brescia</userListName>
+                    <stats>
+                        <clientImpressions>926</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>824791</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78587239</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Catania</userListName>
+                    <stats>
+                        <clientImpressions>9455</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>8024536</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78586879</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Como</userListName>
+                    <stats>
+                        <clientImpressions>670</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>596813</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78586639</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Cremona</userListName>
+                    <stats>
+                        <clientImpressions>531</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>473128</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78585919</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Florence</userListName>
+                    <stats>
+                        <clientImpressions>2967</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2518907</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78585679</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Frosinone</userListName>
+                    <stats>
+                        <clientImpressions>844</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>751963</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78584839</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Latina</userListName>
+                    <stats>
+                        <clientImpressions>800</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>712653</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78584599</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Lecco</userListName>
+                    <stats>
+                        <clientImpressions>379</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>337720</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78583399</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Milan</userListName>
+                    <stats>
+                        <clientImpressions>58703</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>50096208</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78583159</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Monza and Brianza</userListName>
+                    <stats>
+                        <clientImpressions>411</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>366144</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78581959</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Pavia</userListName>
+                    <stats>
+                        <clientImpressions>765</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>681547</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78580279</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Rieti</userListName>
+                    <stats>
+                        <clientImpressions>211</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>187970</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78580039</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Rome</userListName>
+                    <stats>
+                        <clientImpressions>59959</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>51359298</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78579319</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Sondrio</userListName>
+                    <stats>
+                        <clientImpressions>229</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>203913</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78578239</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Turin</userListName>
+                    <stats>
+                        <clientImpressions>28741</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>24401334</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78577999</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Varese</userListName>
+                    <stats>
+                        <clientImpressions>1298</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1156268</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78577159</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Viterbo</userListName>
+                    <stats>
+                        <clientImpressions>375</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>334135</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>380190125</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>2850246</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2531936820</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>74581</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>67096156</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>610508</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>549301383</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610759</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>1914751</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1721377890</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610639</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>1277359</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1148653240</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610519</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>652072</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>585084975</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>74188159</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>749725</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>674224041</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78119119</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>3683398</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>3309783763</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593479</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>4363014</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>3940491340</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609919</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; High</userListName>
+                    <stats>
+                        <clientImpressions>3115391</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2797891728</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609799</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; Low</userListName>
+                    <stats>
+                        <clientImpressions>40967</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>36790545</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609679</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; Medium</userListName>
+                    <stats>
+                        <clientImpressions>45589</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>41387657</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78338479</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>26517</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>23968032</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593239</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>167587</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>151300728</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>325341</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>293097767</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>181001</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>162992176</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592879</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>99821</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>89680687</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218479</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>187806</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>169648575</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218599</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>621496</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>559327746</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>380190125</userListId>
+                    <clientCustomerName>Bid Manager Partner 330345</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>2819522</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2549549402</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Bid Manager Partner 556857</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>21561</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>19620510</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>501</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>441659</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>84902</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>76674283</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610759</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>341063</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>306291309</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610639</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>391198</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>350627950</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610519</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>108700</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>96401301</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78119119</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>29792</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>26197581</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593479</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>35083</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>31129996</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>13569</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>12149072</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>14597</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>13065539</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592879</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>14553</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>13017489</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>380190125</userListId>
+                    <clientCustomerName>Bid Manager Partner 353167</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>84446</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>74553013</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>12291</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>10361099</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78338479</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>6935</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>5936251</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>74188159</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>985481</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>864824658</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610639</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>29588</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>25486014</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>209900</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>182845158</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593239</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>213089</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>188638836</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610759</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>195731</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>174947603</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>194155</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>174091058</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218479</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>1467874</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1292256256</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Bid Manager Partner 915684</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>3188</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2753021</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610999</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>117812</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>107208920</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78338479</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>69033</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>62820030</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>74188159</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>506181</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>460624710</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610639</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>1281591</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1166247810</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593479</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; USER TYPE &gt; Business</userListName>
+                    <stats>
+                        <clientImpressions>262</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>238420</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610879</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>1032076</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>939189160</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592639</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; CONTRACT TYPE &gt; Pre-paid</userListName>
+                    <stats>
+                        <clientImpressions>7994</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>7274540</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78604759</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Bologna</userListName>
+                    <stats>
+                        <clientImpressions>10</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>9100</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78604279</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Cagliari</userListName>
+                    <stats>
+                        <clientImpressions>11</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>10010</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218599</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>593698</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>540265180</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78599839</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; RESIDENCE &gt; Milan</userListName>
+                    <stats>
+                        <clientImpressions>32</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>29120</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593239</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>385047</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>350392770</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610759</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>1248575</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1136203250</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78580039</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; VODAFONE &gt; RESIDENCE &gt; Rome</userListName>
+                    <stats>
+                        <clientImpressions>12</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>10920</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78609919</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; SPENDING POWER &gt; High</userListName>
+                    <stats>
+                        <clientImpressions>87380</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>79515800</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610159</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; CONTRACT TYPE &gt; Post-paid</userListName>
+                    <stats>
+                        <clientImpressions>193</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>175630</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>487485</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>443611350</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592999</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 45-54</userListName>
+                    <stats>
+                        <clientImpressions>144487</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>131483170</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78610519</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>125</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>113750</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78119119</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; GENDER &gt; Male</userListName>
+                    <stats>
+                        <clientImpressions>767933</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>698819030</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78592879</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 55+</userListName>
+                    <stats>
+                        <clientImpressions>19</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>17290</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78607879</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; TELECOM - MOBILE &gt; H3G &gt; REGION &gt; Toscana</userListName>
+                    <stats>
+                        <clientImpressions>2</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1820</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78218479</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; GENDER &gt; Female</userListName>
+                    <stats>
+                        <clientImpressions>585165</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>533670480</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>411524023</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIORAL &gt; AUTOMOTIVE &gt; Automotive</userListName>
+                    <stats>
+                        <clientImpressions>2325380</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1766297629</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417635264</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; COUPONING &gt; Couponing</userListName>
+                    <stats>
+                        <clientImpressions>291</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>216024</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417635579</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; CULTURE &gt; Culture</userListName>
+                    <stats>
+                        <clientImpressions>5761</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>4279823</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417636308</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FINANCE &gt; Finance</userListName>
+                    <stats>
+                        <clientImpressions>28649</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>21737016</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417636779</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; HEALTH &amp; FITNESS &gt; Health &amp; Fitness</userListName>
+                    <stats>
+                        <clientImpressions>9110</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>6852085</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417637064</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; HOME &amp; GARDEN &gt; Home &amp; Garden</userListName>
+                    <stats>
+                        <clientImpressions>33676</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>25990261</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417791053</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; BETTING &gt; Betting</userListName>
+                    <stats>
+                        <clientImpressions>11</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>8164</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417791305</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; ECO-GREEN &gt; Eco-Green</userListName>
+                    <stats>
+                        <clientImpressions>3585</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2664778</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417791935</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FASHION &gt; Fashion</userListName>
+                    <stats>
+                        <clientImpressions>15348</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>11280499</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417794440</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; TECHNOLOGY &gt; Technology</userListName>
+                    <stats>
+                        <clientImpressions>781514</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>572413457</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419064768</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; ART &amp; ENTERTAINMENT &gt; Art &amp; Entertainment</userListName>
+                    <stats>
+                        <clientImpressions>94645</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>69984680</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419066034</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FAMILY &amp; PARENTNG &gt; Family &amp; Parenting</userListName>
+                    <stats>
+                        <clientImpressions>13288</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>10013773</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419066187</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FOOD &gt; Food</userListName>
+                    <stats>
+                        <clientImpressions>139101</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>104891385</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068302</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; NEWS &gt; News</userListName>
+                    <stats>
+                        <clientImpressions>30417</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>23164979</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068338</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; SHIP &gt; Ship</userListName>
+                    <stats>
+                        <clientImpressions>13</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>9647</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068401</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; TRAVEL &gt; Travel</userListName>
+                    <stats>
+                        <clientImpressions>167679</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>124807178</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068458</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sport</userListName>
+                    <stats>
+                        <clientImpressions>692206</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>522102136</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068869</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; WOMAN &gt; Woman</userListName>
+                    <stats>
+                        <clientImpressions>6693</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>5109850</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419064837</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; ART &amp; ENTERTAINMENT &gt; Art &amp; Entertainment - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>544185</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>805741923</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417790873</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; AUTOMOTIVE &gt; Automotive - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>528849</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>794813703</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419065110</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; BETTING &gt; Betting - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>610</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>934871</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417636251</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FAMILY &amp; PARENTNG &gt; Family &amp; Parenting - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>2651</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>3949029</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419066118</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FASHION &gt; Fashion - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>32019</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>47163632</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417791965</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; FOOD &gt; Food - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>2389</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>3501972</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417636740</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; HOME &amp; GARDEN &gt; Home &amp; Garden - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>176688</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>272544275</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>419068419</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sport - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>153161</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>233335481</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417794392</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; TECHNOLOGY &gt; Technology - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>725</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1106845</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>417794269</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; ALGODATA &gt; BEHAVIOURAL &gt; TRAVEL &gt; Travel - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>150153</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>223064173</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434030664</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; ART &amp; ENTERTAINMENT &gt; Art &amp; Entertainment - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>5786327</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>8569620909</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430874692</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; AUTOMOTIVE &gt; Automotive - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>8181730</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>12179700444</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431815889</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; BETTING &gt; Betting - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>3</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>4609</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430874104</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FAMILY &amp; PARENTNG &gt; Family &amp; Parenting - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>109749</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>164123861</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434030799</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FASHION &gt; Fashion - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>1259671</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1877486596</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431816177</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FINANCE &gt; Finance - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>1219149</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1820047808</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431815907</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FOOD &gt; Food - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>100187</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>147373022</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434030745</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; GAMES &gt; Games - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>2</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>2952</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430874329</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; HOME &amp; GARDEN &gt; Home &amp; Garden - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>586887</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>883900056</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430874308</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; NEWS &gt; News - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>227075</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>338013257</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431816222</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sport - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>3091507</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>4602736019</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434031183</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; TECHNOLOGY &gt; Technology - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>5250419</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>7831421334</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430874020</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; TRAVEL &gt; Travel - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>894520</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1325775369</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434031288</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; WOMAN &gt; Woman - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>5175</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>7806958</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431809028</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; ART &amp; ENTERTAINMENT &gt; Art &amp; Entertainment</userListName>
+                    <stats>
+                        <clientImpressions>576489</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>436729023</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430866880</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; AUTOMOTIVE &gt; Automotive</userListName>
+                    <stats>
+                        <clientImpressions>10322110</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>7730801865</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430863295</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; BETTING &gt; Betting</userListName>
+                    <stats>
+                        <clientImpressions>54073</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>40176527</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867465</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; CULTURE &gt; Culture</userListName>
+                    <stats>
+                        <clientImpressions>1443530</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1071918228</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430866943</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FAMILY &amp; PARENTNG &gt; Family &amp; Parenting</userListName>
+                    <stats>
+                        <clientImpressions>194624</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>144652333</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867105</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FASHION &gt; Fashion</userListName>
+                    <stats>
+                        <clientImpressions>5274904</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>3865780683</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431808953</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FINANCE &gt; Finance</userListName>
+                    <stats>
+                        <clientImpressions>140601</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>105482954</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431809214</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; FOOD &gt; Food</userListName>
+                    <stats>
+                        <clientImpressions>1113900</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>832447770</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431809226</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; GAMES &gt; Games</userListName>
+                    <stats>
+                        <clientImpressions>1</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>738</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867057</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; HEALTH &amp; FITNESS &gt; Health &amp; Fitness</userListName>
+                    <stats>
+                        <clientImpressions>216070</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>161145543</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434030958</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; HOME &amp; GARDEN &gt; Home &amp; Garden</userListName>
+                    <stats>
+                        <clientImpressions>146147</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>111135385</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431809796</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; JOB &gt; Job</userListName>
+                    <stats>
+                        <clientImpressions>111956</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>83309111</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867123</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; NEWS &gt; News</userListName>
+                    <stats>
+                        <clientImpressions>782317</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>588567298</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867720</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SHIP &gt; Ship</userListName>
+                    <stats>
+                        <clientImpressions>57</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>42404</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>430867225</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sport</userListName>
+                    <stats>
+                        <clientImpressions>1373912</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1036439912</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>431809343</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; TECHNOLOGY &gt; Technology</userListName>
+                    <stats>
+                        <clientImpressions>2199116</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1623462345</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434023254</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; TRAVEL &gt; Travel</userListName>
+                    <stats>
+                        <clientImpressions>1065573</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>791375141</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>434023722</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; WOMAN &gt; Woman</userListName>
+                    <stats>
+                        <clientImpressions>27995</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>20861187</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>442478876</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; BEAUTY &gt; Beauty - PREMIUM</userListName>
+                    <stats>
+                        <clientImpressions>17106</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>25843108</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>447048156</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; CHARITY &amp; DONATIONS &gt; Charity &amp; Donations</userListName>
+                    <stats>
+                        <clientImpressions>27425</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>11489169</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>435880074</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; FINANCIAL NEWS &gt; Financial News</userListName>
+                    <stats>
+                        <clientImpressions>51217</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>21706445</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>435880083</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; HOME &amp; GARDEN &gt; Home &amp; Garden</userListName>
+                    <stats>
+                        <clientImpressions>1185196</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>505452190</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>442633753</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; SHOPPING &gt; Consumer Electronics</userListName>
+                    <stats>
+                        <clientImpressions>414995</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>174226534</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>445294524</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; SHOPPING &gt; Gourmet &amp; Speciality Foods</userListName>
+                    <stats>
+                        <clientImpressions>36706</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>15403228</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>435880074</userListId>
+                    <clientCustomerName>Bid Manager Partner 1384757</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; FINANCIAL NEWS &gt; Financial News</userListName>
+                    <stats>
+                        <clientImpressions>140781</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>59727622</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78338479</userListId>
+                    <clientCustomerName>Bid Manager Partner 300231</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 18-24</userListName>
+                    <stats>
+                        <clientImpressions>33264</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>27788944</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593119</userListId>
+                    <clientCustomerName>Bid Manager Partner 300231</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 35-44</userListName>
+                    <stats>
+                        <clientImpressions>232007</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>193878042</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>78593239</userListId>
+                    <clientCustomerName>Bid Manager Partner 300231</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; VODAFONE &gt; AGE &gt; 25-34</userListName>
+                    <stats>
+                        <clientImpressions>159549</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>133310206</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>450447020</userListId>
+                    <clientCustomerName>Google Reseller</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; TRAVEL &amp; HOLIDAYS &gt; Weather</userListName>
+                    <stats>
+                        <clientImpressions>60621</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>25460820</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>GOOGLE_RESELLER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>457153077</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; AS Roma Fans</userListName>
+                    <stats>
+                        <clientImpressions>473</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>358626</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>457153104</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Football</userListName>
+                    <stats>
+                        <clientImpressions>277930</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>209516393</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>457153062</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sport</userListName>
+                    <stats>
+                        <clientImpressions>735307</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>549985416</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>454769074</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>ZZZ_CLOSED &gt; Audiens: ITALY &gt; ALGODATA &gt; BEHAVIORAL &gt; AUTOMOTIVE &gt; Automotive</userListName>
+                    <stats>
+                        <clientImpressions>176</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>131378</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>454474151</userListId>
+                    <clientCustomerName>Bid Manager Partner 440</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; ALGODATA &gt; BEHAVIOURAL &gt; SPORT &gt; Sportivi</userListName>
+                    <stats>
+                        <clientImpressions>31710</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>23946902</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>450441058</userListId>
+                    <clientCustomerName></clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; GAMES &gt; Games</userListName>
+                    <stats>
+                        <clientImpressions>3433</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>1480438</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>ADX_BUYER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>435878751</userListId>
+                    <clientCustomerName></clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; INTERNET &amp; TELECOM &gt; Internet &amp; Telecom</userListName>
+                    <stats>
+                        <clientImpressions>85518</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>36875241</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>ADX_BUYER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>435880095</userListId>
+                    <clientCustomerName></clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; MUSIC &gt; Music</userListName>
+                    <stats>
+                        <clientImpressions>20769</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>8958545</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>ADX_BUYER</clientProduct>
+                </entries>
+                <entries>
+                    <userListId>442633753</userListId>
+                    <clientCustomerName></clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; BEHAVIOURAL &gt; SHOPPING &gt; Consumer Electronics</userListName>
+                    <stats>
+                        <clientImpressions>66449</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>28656914</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>ADX_BUYER</clientProduct>
+                </entries>
+            </rval>
+        </getResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -37,9 +37,9 @@ class SegmentRevenue extends Segment
         $segmentImpression,
         $segmentRevenue
     ) {
-        $this->clientName = $clientName;
+        $this->clientName        = $clientName;
         $this->segmentImpression = $segmentImpression;
-        $this->segmentRevenue = $segmentRevenue;
+        $this->segmentRevenue    = $segmentRevenue;
 
         parent::__construct($segmentId, $segmentName, $segmentStatus);
     }
@@ -100,8 +100,18 @@ class SegmentRevenue extends Segment
             throw new \Exception('hydration: stats->costusd->microamount');
         }
 
+        $clientName = $array['userlistid'];
+
+        if (is_array($array['userlistid'])) {
+            $clientName = implode(', ', $array['clientproduct']);
+
+            if (isEmpty($array['userlistid'])) {
+                $clientName = $array['clientproduct'];
+            }
+        }
+
         return new self(
-            $array['userlistid'],
+            $clientName,
             $array['clientcustomername'],
             $array['userlistname'],
             $array['status'],

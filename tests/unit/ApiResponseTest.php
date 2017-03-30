@@ -41,10 +41,14 @@ class ApiResponseTest extends TestCase
     {
 
         $response = $this->getRevenueReport();
-
         $apiResponse = ApiResponse::fromResponse($response);
-
         $this->assertTrue($apiResponse->isSuccessful());
+
+
+        $response = $this->getRevenueReport('v201702');
+        $apiResponse = ApiResponse::fromResponse($response);
+        $this->assertTrue($apiResponse->isSuccessful());
+
 
     }
 

@@ -23,11 +23,11 @@ class Report implements CacheableInterface
 
     use CachableTrait;
 
-    const API_VERSION                  = 'v201609';
+    const API_VERSION                  = 'v201702';
 
-    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListClientService?wsdl';
-    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201609/CustomerMatchUploaderService?wsdl';
-    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
+    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201702/UserListClientService?wsdl';
+    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201702/CustomerMatchUploaderService?wsdl';
+    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201702/UserListService?wsdl';
 
     /** @var Client|Auth */
     protected $client;
