@@ -100,19 +100,15 @@ class SegmentRevenue extends Segment
             throw new \Exception('hydration: stats->costusd->microamount');
         }
 
-        $clientName = $array['userlistid'];
+        $clientName = $array['clientcustomername'];
 
-        if (is_array($array['userlistid'])) {
-            $clientName = implode(', ', $array['clientproduct']);
-
-            if (isEmpty($array['userlistid'])) {
-                $clientName = $array['clientproduct'];
-            }
+        if (is_array($array['clientcustomername'])) {
+            $clientName = $array['clientid'];
         }
 
         return new self(
+            $array['userlistid'],
             $clientName,
-            $array['clientcustomername'],
             $array['userlistname'],
             $array['status'],
             $array['stats']['clientimpressions'],

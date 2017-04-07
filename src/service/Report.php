@@ -23,11 +23,11 @@ class Report implements CacheableInterface
 
     use CachableTrait;
 
-    const API_VERSION                  = 'v201702';
+    const API_VERSION                  = 'v201609';
 
-    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201702/UserListClientService?wsdl';
-    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201702/CustomerMatchUploaderService?wsdl';
-    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201702/UserListService?wsdl';
+    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListClientService?wsdl';
+    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201609/CustomerMatchUploaderService?wsdl';
+    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
 
     /** @var Client|Auth */
     protected $client;
@@ -49,7 +49,6 @@ class Report implements CacheableInterface
 
     const REVENUE_REPORT_TEMPLATE_NAME = 'revenue.xml.twig';
     const DMP_REPORT_TEMPLATE_NAME     = 'dmp.xml.twig';
-
 
     /**
      * Report constructor.
@@ -109,6 +108,7 @@ class Report implements CacheableInterface
         }
 
         $repositoryResponse = ApiResponse::fromResponse($response);
+
 
         if (!$repositoryResponse->isSuccessful()) {
             throw ReportException::failed($repositoryResponse);

@@ -36,6 +36,7 @@
                         </costUsd>
                     </stats>
                     <clientProduct>INVITE_ADVERTISER</clientProduct>
+                    <clientId>388</clientId>
                 </entries>
                 <entries>
                     <userListId>78610879</userListId>
@@ -60,6 +61,7 @@
                         </costUsd>
                     </stats>
                     <clientProduct>INVITE_ADVERTISER</clientProduct>
+                    <clientId>388</clientId>
                 </entries>
                 <entries>
                     <userListId>78610399</userListId>
@@ -84,6 +86,7 @@
                         </costUsd>
                     </stats>
                     <clientProduct>INVITE_ADVERTISER</clientProduct>
+                    <clientId>388</clientId>
                 </entries>
             </rval>
         </getResponse>

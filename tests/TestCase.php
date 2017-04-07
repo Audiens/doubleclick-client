@@ -107,7 +107,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
      *
      * @return ReportConfig
      */
-    protected function getRevenueReportConfig(\Datetime $from = null, \Datetime $to = null)
+    protected function getRevenueReportConfig(\DateTime $from = null, \DateTime $to = null)
     {
 
         if (!$from) {

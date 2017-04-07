@@ -55,7 +55,7 @@ class ReportTest extends TestCase
         $twigEnviroment = $this->prophesize(\Twig_Environment::class);
 
         $twigEnviroment->render(Argument::cetera())->shouldBeCalled();
-        $client->request(Argument::cetera())->willReturn($this->getRevenueReport('v201702'))->shouldBeCalled();
+        $client->request(Argument::cetera())->willReturn($this->getRevenueReport('v201609'))->shouldBeCalled();
 
         $compiler->getTwig()->willReturn($twigEnviroment->reveal());
 
@@ -96,7 +96,6 @@ class ReportTest extends TestCase
             $this->assertInstanceOf(SegmentCommunication::class, $revenue);
         }
     }
-
 
 
 }
