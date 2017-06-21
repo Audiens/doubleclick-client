@@ -25,10 +25,14 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
 
     const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
 
-    /** @var Cache */
+    /**
+ * @var Cache 
+*/
     protected $cache;
 
-    /** @var JwtFactoryInterface */
+    /**
+ * @var JwtFactoryInterface 
+*/
     protected $jwtFactory;
 
     /**

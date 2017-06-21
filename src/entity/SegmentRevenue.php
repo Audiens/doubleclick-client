@@ -10,13 +10,19 @@ class SegmentRevenue extends Segment
 
     use HydratableTrait;
 
-    /** @var string */
+    /**
+ * @var string 
+*/
     protected $clientName;
 
-    /** @var int */
+    /**
+ * @var int 
+*/
     protected $segmentImpression;
 
-    /** @var  float */
+    /**
+ * @var  float 
+*/
     protected $segmentRevenue;
 
     /**

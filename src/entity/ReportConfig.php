@@ -8,19 +8,29 @@ namespace Audiens\DoubleclickClient\entity;
 class ReportConfig
 {
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $clientCustomerId;
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $developerToken;
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $userAgent;
 
-    /** @var  \DateTime */
+    /**
+ * @var  \DateTime 
+*/
     protected $dateMin;
 
-    /** @var  \DateTime */
+    /**
+ * @var  \DateTime 
+*/
     protected $dateMax;
 
     /**

@@ -14,7 +14,9 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
 
     const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
 
-    /** @var ServiceAccount */
+    /**
+ * @var ServiceAccount 
+*/
     protected $serviceAccount;
 
     /**
@@ -28,7 +30,6 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
     }
 
     /**
-     *
      * iss      The email address of the service account.
      * scope    A space-delimited list of the permissions that the application requests.
      * aud      A descriptor of the intended target of the assertion. When making an access token request this value is

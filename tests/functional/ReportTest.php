@@ -35,7 +35,6 @@ class ReportTest extends FunctionalTestCase
      */
     public function get_dmp_report_will_return_an_array()
     {
-
         $report = $this->buildReport();
 
         $reportArrayResult = $report->getDmpReport($this->getRevenueReportConfig());

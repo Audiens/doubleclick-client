@@ -8,7 +8,9 @@ namespace Audiens\DoubleclickClient\service;
 class TwigCompiler
 {
 
-    /** @var  \Twig_Environment */
+    /**
+ * @var  \Twig_Environment 
+*/
     protected $twig;
 
 

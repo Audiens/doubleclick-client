@@ -8,13 +8,19 @@ namespace Audiens\DoubleclickClient\entity;
 class ServiceAccount
 {
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $privateKey;
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $clientEmail;
 
-    /** @var  string */
+    /**
+ * @var  string 
+*/
     protected $subject;
 
     /**

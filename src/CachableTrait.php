@@ -8,7 +8,9 @@ namespace Audiens\DoubleclickClient;
 trait CachableTrait
 {
 
-    /** @var bool */
+    /**
+ * @var bool 
+*/
     protected $cacheEnabled;
 
     /**

@@ -12,7 +12,9 @@ class SegmentCommunication extends Segment
 
     use HydratableTrait;
 
-    /** @var string */
+    /**
+     * @var string
+    */
     protected $size;
 
     /**
@@ -32,7 +34,12 @@ class SegmentCommunication extends Segment
 
         $this->size = $size;
 
-        parent::__construct($segmentId, $segmentName, $segmentStatus);
+        parent::__construct(
+            $segmentId,
+            $segmentName,
+            $segmentStatus
+        );
+
     }
 
     /**

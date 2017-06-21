@@ -8,6 +8,7 @@ use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
 use Audiens\DoubleclickClient\entity\ServiceAccount;
 use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
+use Audiens\DoubleclickClient\service\UserList;
 use Doctrine\Common\Cache\FilesystemCache;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
@@ -108,6 +109,19 @@ class FunctionalTestCase extends TestCase
         $report = new Report($this->buildAuth(), new TwigCompiler(), $cache);
 
         return $report;
+    }
+
+    /**
+     * @param bool $cacheToken
+     * @return UserList
+     */
+    protected function buildUserList($cacheToken = true)
+    {
+        $cache = $cacheToken ? new FilesystemCache('cache') : null;
+
+        $userList = new UserList($this->buildAuth(), new TwigCompiler('src/action'), $cache,getenv('CUSTOMER_ID'));
+
+        return $userList;
     }
 
 }
