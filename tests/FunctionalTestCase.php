@@ -20,7 +20,12 @@ use Prophecy\Argument;
 class FunctionalTestCase extends TestCase
 {
 
-    const REQUIRED_ENV = [];
+    const REQUIRED_ENV = [
+        'SA_PRIVATE_KEY',
+        'SA_CLIENT_EMAIL',
+        'SA_SUBJECT',
+        'CUSTOMER_ID'
+    ];
 
     protected function setUp()
     {
