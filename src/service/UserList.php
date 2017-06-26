@@ -88,7 +88,7 @@ class UserList implements CacheableInterface
                 'description' => $segment->getDescription(),
                 'integrationCode' => $segment->getIntegrationCode(),
                 'accountUserListStatus' => $segment->getAccountUserListStatus(),
-                'membershipLifeSpan' => '',
+                'membershipLifeSpan' => $segment->getMembershipLifeSpan(),
                 'accessReason' => $segment->getAccessReason(),
                 'isEligibleForSearch' => $segment->getisEligibleForSearch(),
                 'clientCustomerId' => $this->clientCustomerId
