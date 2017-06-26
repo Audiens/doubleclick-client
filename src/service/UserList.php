@@ -77,8 +77,15 @@ class UserList implements CacheableInterface
      * @return Segment
      * @throws UserListException
      */
-    public function createUserList(Segment $segment)
+    public function createUserList(Segment $segment, $updateIfExist = false)
     {
+        $operator = 'ADD';
+
+        if($updateIfExist)
+        {
+            $operator = 'SET';
+        }
+
         $requestBody = $this->twigCompiler->getTwig()->render(
             self::USER_LIST_TPL,
             [
@@ -91,7 +98,8 @@ class UserList implements CacheableInterface
                 'membershipLifeSpan' => $segment->getMembershipLifeSpan(),
                 'accessReason' => $segment->getAccessReason(),
                 'isEligibleForSearch' => $segment->getisEligibleForSearch(),
-                'clientCustomerId' => $this->clientCustomerId
+                'clientCustomerId' => $this->clientCustomerId,
+                'operator' => $operator
             ]
         );
 
