@@ -62,6 +62,41 @@ class UserListTest extends FunctionalTestCase
     /**
      * @test
      */
+    public function createUserList_will_update_an_existing_segment()
+    {
+        $userList = $this->buildUserList();
+
+        $segments = $userList->getUserList(74255119);
+
+        $this->assertInstanceOf(Segment::class, $segments);
+
+        $this->assertEquals('74255119', $segments->getSegmentId());
+
+        $randName = rand(0,1099);
+        $segment = new Segment(
+            74255119,
+            $randName,
+            'ACTIVE',
+            'test',
+            null,
+            null,
+            'OWNED',
+            false,
+            60
+        );
+
+        $segmentUpdated = $userList->createUserList($segment, true);
+
+
+        $this->assertInstanceOf(Segment::class, $segmentUpdated);
+
+        $this->assertEquals($randName, $segmentUpdated->getSegmentName());
+
+    }
+
+    /**
+     * @test
+     */
     public function getUserList_will_return_an_array_of_segments()
     {
         $userList = $this->buildUserList();
@@ -69,28 +104,14 @@ class UserListTest extends FunctionalTestCase
         $segments = $userList->getUserList();
 
         $this->assertNotNull($segments);
+
         $this->assertInternalType('array', $segments);
+
+        $this->assertGreaterThan(0,count($segments));
 
         foreach($segments as $segment)
         {
             $this->assertInstanceOf(Segment::class, $segment);
         }
-    }
-
-    /**
-     * @test
-     */
-    public function getUserList_will_return_a_segment_specified_by_id()
-    {
-        $this->markTestSkipped('Please insert a valid id');
-
-        $userList = $this->buildUserList();
-
-        $segments = $userList->getUserList(74188159);
-
-        $this->assertInstanceOf(Segment::class, $segments);
-
-        $this->assertEquals('', $segments->getSegmentId());
-
     }
 }

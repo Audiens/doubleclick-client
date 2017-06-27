@@ -1,6 +1,7 @@
 <?php
 
 namespace Audiens\DoubleclickClient\entity;
+
 use Audiens\DoubleclickClient\exceptions\UserListException;
 
 /**
@@ -10,69 +11,69 @@ class Segment
 {
 
     /**
- * @var int 
-*/
+     * @var int
+     */
     protected $segmentId;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $segmentName;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $segmentStatus;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $description;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $integrationCode;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $accountUserListStatus;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $accessReason;
 
     /**
- * @var boolean 
-*/
+     * @var boolean
+     */
     protected $isEligibleForSearch;
 
     /**
- * @var float 
-*/
+     * @var float
+     */
     protected $membershipLifeSpan;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $listType;
 
     /**
- * @var string 
-*/
+     * @var string
+     */
     protected $size;
 
     /**
      * Segment constructor.
      *
-     * @param int                 $segmentId
-     * @param string              $segmentName
-     * @param string              $segmentStatus
-     * @param string              $description
-     * @param string              $integrationCode
-     * @param string              $accountUserListStatus
+     * @param int $segmentId
+     * @param string $segmentName
+     * @param string $segmentStatus
+     * @param string $description
+     * @param string $integrationCode
+     * @param string $accountUserListStatus
      * @param $accessReason
      * @param $isEligibleForSearch
      * @param $membershipLifeSpan
@@ -244,8 +245,6 @@ class Segment
     }
 
 
-
-
     public static function fromArray(array $array)
     {
 
@@ -266,9 +265,7 @@ class Segment
             throw UserListException::validation('hydration: description');
         }
 
-        //        if (!isset($array['integrationcode'])) {
-        //            throw UserListException::validation('hydration: integrationcode');
-        //        }
+
         if (!isset($array['accountuserliststatus'])) {
             throw UserListException::validation('hydration: accountuserliststatus');
         }
@@ -284,14 +281,12 @@ class Segment
         }
 
 
-
-
         $segment = new self(
             $array['id'],
             $array['name'],
             $array['status'],
             $array['description'],
-            $array['integrationcode'],
+            null,
             $array['accountuserliststatus'],
             $array['accessreason'],
             $array['iseligibleforsearch'],
@@ -307,6 +302,9 @@ class Segment
             $segment->setSize($array['size']);
         }
 
+        if (isset($array['integrationcode'])) {
+            $segment->setIntegrationCode($array['integrationcode']);
+        }
 
         return $segment;
 

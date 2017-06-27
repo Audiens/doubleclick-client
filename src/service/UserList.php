@@ -174,7 +174,7 @@ class UserList implements CacheableInterface
         $segments = [];
 
         foreach ($entries as $entry) {
-            $segmentCommunication[] = Segment::fromArray($entry);
+            $segments[] = Segment::fromArray($entry);
         }
 
         return $segments;
