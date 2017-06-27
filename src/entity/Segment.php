@@ -109,6 +109,14 @@ class Segment
     }
 
     /**
+     * @param $name
+     */
+    public function setSegmentName($name)
+    {
+        $this->segmentName = $name;
+    }
+    
+    /**
      * @return string
      */
     public function getSegmentStatus()
