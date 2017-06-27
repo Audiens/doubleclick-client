@@ -11,17 +11,18 @@ class UserListException extends \Exception
 {
 
     /**
-     * @param ApiResponse $repositoryResponse
+     * @param ApiResponse $apiResponse
      *
      * @return self
      */
-    public static function failed(ApiResponse $repositoryResponse)
+    public static function failed(ApiResponse $apiResponse)
     {
-        return new self('Failed call: '.$repositoryResponse->getError());
+        return new self('Failed call: '.$apiResponse->getError());
     }
 
     /**
-     * @return self
+     * @param $message
+     * @return UserListException
      */
     public static function validation($message)
     {

@@ -39,7 +39,7 @@ class UserListTest extends FunctionalTestCase
 
 
         $webClient->request(Argument::cetera())->willReturn($dummyResponse->reveal());
-        $userList = new UserList($webClient->reveal(), new TwigCompiler('src/action'), null,getenv('CUSTOMER_ID'));
+        $userList = new UserList($webClient->reveal(), new TwigCompiler(), null,getenv('CUSTOMER_ID'));
 
         $segment = new Segment(
             482908340,

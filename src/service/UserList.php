@@ -24,33 +24,35 @@ class UserList implements CacheableInterface
 {
     use CachableTrait;
 
+    const API_VERSION                  = 'v201609';
+
     const BASE_URL_USER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
     const USER_LIST_TPL = 'userList.xml.twig';
     const GET_USER_LIST_TPL = 'getUserList.xml.twig';
 
     /**
- * @var Client|Auth 
-*/
+     * @var Client|Auth
+     */
     protected $client;
 
     /**
- * @var  int 
-*/
+     * @var  int
+     */
     protected $memberId;
 
     /**
- * @var  Cache 
-*/
+     * @var  Cache
+     */
     protected $cache;
 
     /**
- * @var  TwigCompiler 
-*/
+     * @var  TwigCompiler
+     */
     protected $twigCompiler;
 
     /**
- * @var  string 
-*/
+     * @var  string
+     */
     protected $clientCustomerId;
 
 
@@ -58,8 +60,8 @@ class UserList implements CacheableInterface
      * Report constructor.
      *
      * @param ClientInterface $client
-     * @param TwigCompiler    $twigCompiler
-     * @param Cache|null      $cache
+     * @param TwigCompiler $twigCompiler
+     * @param Cache|null $cache
      */
     public function __construct(ClientInterface $client, TwigCompiler $twigCompiler, Cache $cache = null, $clientCustomerId)
     {
@@ -74,6 +76,7 @@ class UserList implements CacheableInterface
 
     /**
      * @param Segment $segment
+     * @param bool $updateIfExist
      * @return Segment
      * @throws UserListException
      */
@@ -81,13 +84,12 @@ class UserList implements CacheableInterface
     {
         $operator = 'ADD';
 
-        if($updateIfExist)
-        {
+        if ($updateIfExist) {
             $operator = 'SET';
         }
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::USER_LIST_TPL,
+            self::API_VERSION . '/' . self::USER_LIST_TPL,
             [
                 'id' => $segment->getSegmentId(),
                 'name' => $segment->getSegmentName(),
@@ -111,17 +113,17 @@ class UserList implements CacheableInterface
         }
 
 
-        $repositoryResponse = ApiResponse::fromResponse($response);
+        $apiResponse = ApiResponse::fromResponse($response);
 
-        if (!$repositoryResponse->isSuccessful()) {
-            throw UserListException::failed($repositoryResponse);
+        if (!$apiResponse->isSuccessful()) {
+            throw UserListException::failed($apiResponse);
         }
 
-        if (!isset($repositoryResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value'])) {
-            throw UserListException::failed('Segment entity was not found in the response');
+        if (!isset($apiResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value'])) {
+            throw UserListException::failed($apiResponse);
         }
 
-        return Segment::fromArray($repositoryResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value']);
+        return Segment::fromArray($apiResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value']);
 
     }
 
@@ -135,7 +137,7 @@ class UserList implements CacheableInterface
         $compiledUrl = self::BASE_URL_USER;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::GET_USER_LIST_TPL,
+            self::API_VERSION . '/' . self::GET_USER_LIST_TPL,
             [
                 'clientCustomerId' => $this->clientCustomerId,
                 'id' => $id
@@ -157,7 +159,7 @@ class UserList implements CacheableInterface
 
         if (!isset($repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'])
         ) {
-            throw UserListException::failed('body->envelope->body->getresponse->rval->entries');
+            throw UserListException::failed($repositoryResponse);
         }
 
 

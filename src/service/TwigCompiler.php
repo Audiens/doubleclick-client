@@ -19,7 +19,7 @@ class TwigCompiler
      *
      * @param string $templatePath
      */
-    public function __construct($templatePath = 'src/reports')
+    public function __construct($templatePath = 'src/templates')
     {
 
         $loader = new \Twig_Loader_Filesystem($templatePath);

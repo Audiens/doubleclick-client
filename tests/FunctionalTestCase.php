@@ -124,7 +124,7 @@ class FunctionalTestCase extends TestCase
     {
         $cache = $cacheToken ? new FilesystemCache('cache') : null;
 
-        $userList = new UserList($this->buildAuth(), new TwigCompiler('src/action'), $cache,getenv('CUSTOMER_ID'));
+        $userList = new UserList($this->buildAuth(), new TwigCompiler(), $cache,getenv('CUSTOMER_ID'));
 
         return $userList;
     }
