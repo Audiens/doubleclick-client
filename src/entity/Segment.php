@@ -115,7 +115,7 @@ class Segment
     {
         $this->segmentName = $name;
     }
-    
+
     /**
      * @return string
      */
@@ -269,48 +269,41 @@ class Segment
             throw UserListException::validation('hydration: status');
         }
 
-        if (!isset($array['description'])) {
-            throw UserListException::validation('hydration: description');
-        }
-
-
-        if (!isset($array['accountuserliststatus'])) {
-            throw UserListException::validation('hydration: accountuserliststatus');
-        }
-        if (!isset($array['accessreason'])) {
-            throw UserListException::validation('hydration: accessreason');
-        }
-
-        if (!isset($array['iseligibleforsearch'])) {
-            throw UserListException::validation('hydration: iseligibleforsearch');
-        }
-        if (!isset($array['membershiplifespan'])) {
-            throw UserListException::validation('hydration: membershiplifespan');
-        }
-
-
         $segment = new self(
             $array['id'],
             $array['name'],
-            $array['status'],
-            $array['description'],
-            null,
-            $array['accountuserliststatus'],
-            $array['accessreason'],
-            $array['iseligibleforsearch'],
-            $array['membershiplifespan']
+            $array['status']
         );
 
 
-        if (isset($array['listtype'])) {
+        if (isset($array['description']) && !is_array($array['description'])) {
+            $segment->setDescription($array['description']);
+        }
+
+
+        if (isset($array['accountuserliststatus']) && !is_array($array['accountuserliststatus'])) {
+            $segment->setAccountUserListStatus($array['accountuserliststatus']);
+        }
+        if (isset($array['accessreason']) && !is_array($array['accessreason'])) {
+            $segment->setAccessReason($array['accessreason']);
+        }
+
+        if (isset($array['iseligibleforsearch']) && !is_array($array['iseligibleforsearch'])) {
+            $segment->setIsEligibleForSearch($array['iseligibleforsearch']);
+        }
+        if (isset($array['membershiplifespan']) && !is_array($array['membershiplifespan'])) {
+            $segment->setMembershipLifeSpan($array['membershiplifespan']);
+        }
+
+        if (isset($array['listtype']) && !is_array($array['listtype'])) {
             $segment->setListType($array['listtype']);
         }
 
-        if (isset($array['size'])) {
+        if (isset($array['size']) && !is_array($array['size'])) {
             $segment->setSize($array['size']);
         }
 
-        if (isset($array['integrationcode'])) {
+        if (isset($array['integrationcode']) && !is_array($array['integrationcode'])) {
             $segment->setIntegrationCode($array['integrationcode']);
         }
 

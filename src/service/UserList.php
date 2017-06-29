@@ -1,15 +1,12 @@
 <?php
 
+
 namespace Audiens\DoubleclickClient\service;
 
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
-use Audiens\DoubleclickClient\entity\ReportConfig;
 use Audiens\DoubleclickClient\entity\Segment;
-use Audiens\DoubleclickClient\entity\SegmentCommunication;
-use Audiens\DoubleclickClient\entity\SegmentRevenue;
-use Audiens\DoubleclickClient\exceptions\ReportException;
 use Audiens\DoubleclickClient\entity\ApiResponse;
 use Audiens\DoubleclickClient\exceptions\UserListException;
 use Doctrine\Common\Cache\Cache;
@@ -62,6 +59,7 @@ class UserList implements CacheableInterface
      * @param ClientInterface $client
      * @param TwigCompiler $twigCompiler
      * @param Cache|null $cache
+     * @param $clientCustomerId
      */
     public function __construct(ClientInterface $client, TwigCompiler $twigCompiler, Cache $cache = null, $clientCustomerId)
     {
