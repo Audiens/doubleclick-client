@@ -86,11 +86,9 @@ class UserListTest extends FunctionalTestCase
 
         $segmentUpdated = $userList->createUserList($segment, true);
 
-
         $this->assertInstanceOf(Segment::class, $segmentUpdated);
 
         $this->assertEquals($randName, $segmentUpdated->getSegmentName());
-
     }
 
     /**

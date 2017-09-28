@@ -11,12 +11,12 @@ class Error
     use HydratableTrait;
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $faultcode;
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $faultstring;
 

@@ -6,36 +6,31 @@ namespace Audiens\DoubleclickClient\service;
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
-use Audiens\DoubleclickClient\entity\Segment;
 use Audiens\DoubleclickClient\entity\ApiResponse;
 use Audiens\DoubleclickClient\exceptions\ClientException;
 use Doctrine\Common\Cache\Cache;
 use GuzzleHttp\Client;
-use GuzzleHttp\ClientInterface;
+
+use Audiens\DoubleclickClient\entity\UserListClient;
 use GuzzleHttp\Exception\RequestException;
 
 /**
- * Class UserList
+ * Class UserListClientService
  */
-class UserList implements CacheableInterface
+class UserListClientService implements CacheableInterface
 {
     use CachableTrait;
 
-    const API_VERSION                  = 'v201708';
+    const API_VERSION = 'v201708';
 
-    const BASE_URL_USER = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListService?wsdl';
-    const USER_LIST_TPL = 'userList.xml.twig';
-    const GET_USER_LIST_TPL = 'getUserList.xml.twig';
+    const URL_LIST_CLIENT = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListClientService?wsdl';
+    const USER_LIST_CLIENT_TPL = 'userListClient.xml.twig';
+    const GET_USER_CLIENT_LIST_TPL = 'getUserClientList.xml.twig';
 
     /**
      * @var Client|Auth
      */
     protected $client;
-
-    /**
-     * @var  int
-     */
-    protected $memberId;
 
     /**
      * @var  Cache
@@ -52,32 +47,28 @@ class UserList implements CacheableInterface
      */
     protected $clientCustomerId;
 
-
     /**
-     * Report constructor.
-     *
-     * @param ClientInterface $client
+     * UserListClient constructor.
+     * @param Auth|Client $client
+     * @param Cache $cache
      * @param TwigCompiler $twigCompiler
-     * @param Cache|null $cache
-     * @param $clientCustomerId
+     * @param string $clientCustomerId
      */
-    public function __construct(ClientInterface $client, TwigCompiler $twigCompiler, Cache $cache = null, $clientCustomerId)
+    public function __construct($client, Cache $cache = null, TwigCompiler $twigCompiler, $clientCustomerId)
     {
         $this->client = $client;
         $this->cache = $cache;
         $this->twigCompiler = $twigCompiler;
-        $this->cacheEnabled = $cache instanceof Cache;
         $this->clientCustomerId = $clientCustomerId;
     }
 
-
     /**
-     * @param Segment $segment
+     * @param UserListClient $client
      * @param bool $updateIfExist
-     * @return Segment
+     * @return UserListClient
      * @throws ClientException
      */
-    public function createUserList(Segment $segment, $updateIfExist = false)
+    public function createUserClientList(UserListClient $client, $updateIfExist = false)
     {
         $operator = 'ADD';
 
@@ -86,17 +77,13 @@ class UserList implements CacheableInterface
         }
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::USER_LIST_TPL,
+            self::API_VERSION . '/' . self::USER_LIST_CLIENT_TPL,
             [
-                'id' => $segment->getSegmentId(),
-                'name' => $segment->getSegmentName(),
-                'status' => $segment->getSegmentStatus(),
-                'description' => $segment->getDescription(),
-                'integrationCode' => $segment->getIntegrationCode(),
-                'accountUserListStatus' => $segment->getAccountUserListStatus(),
-                'membershipLifeSpan' => $segment->getMembershipLifeSpan(),
-                'accessReason' => $segment->getAccessReason(),
-                'isEligibleForSearch' => $segment->getisEligibleForSearch(),
+                'userlistid' => $client->getUserlistid(),
+                'status' => $client->getStatus(),
+                'pricingInfo' => $client->getPricingInfo(),
+                'clientproduct' => $client->getClientproduct(),
+                'clientid' => $client->getClientid(),
                 'clientCustomerId' => $this->clientCustomerId,
                 'operator' => $operator
             ]
@@ -104,11 +91,10 @@ class UserList implements CacheableInterface
 
 
         try {
-            $response = $this->client->request('POST', self::BASE_URL_USER, ['body' => $requestBody]);
+            $response = $this->client->request('POST', self::URL_LIST_CLIENT, ['body' => $requestBody]);
         } catch (RequestException $e) {
             $response = $e->getResponse();
         }
-
 
         $apiResponse = ApiResponse::fromResponse($response);
 
@@ -120,23 +106,24 @@ class UserList implements CacheableInterface
             throw ClientException::failed($apiResponse);
         }
 
-        return Segment::fromArray($apiResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value']);
+        return UserListClient::fromArray($apiResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value']);
     }
 
+
     /**
-     * @param null $id
-     * @return array|Segment
+     * @param int|null $id
+     * @return UserListClient[]|UserListClient
      * @throws ClientException
      */
-    public function getUserList($id = null)
+    public function getUserClientList($id = null)
     {
-        $compiledUrl = self::BASE_URL_USER;
+        $compiledUrl = self::URL_LIST_CLIENT;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::GET_USER_LIST_TPL,
+            self::API_VERSION . '/' . self::GET_USER_CLIENT_LIST_TPL,
             [
                 'clientCustomerId' => $this->clientCustomerId,
-                'id' => $id
+                'userlistid' => $id
             ]
         );
 
@@ -162,17 +149,15 @@ class UserList implements CacheableInterface
         $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 
         if (is_array($entries) && isset($entries['id'])) {
-            //ok, this is the case when you search a specific user list. So we don't have an array of array in response but just a single array
-
-            return Segment::fromArray($entries);
+            return UserListClient::fromArray($entries);
         }
 
-        $segments = [];
+        $licenses = [];
 
         foreach ($entries as $entry) {
-            $segments[] = Segment::fromArray($entry);
+            $licenses[] = UserListClient::fromArray($entry);
         }
 
-        return $segments;
+        return $licenses;
     }
 }

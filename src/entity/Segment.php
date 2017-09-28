@@ -2,7 +2,7 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-use Audiens\DoubleclickClient\exceptions\UserListException;
+use Audiens\DoubleclickClient\exceptions\ClientException;
 
 /**
  * Class Segment
@@ -258,15 +258,15 @@ class Segment
 
 
         if (!isset($array['id'])) {
-            throw UserListException::validation('hydration: id');
+            throw ClientException::validation('hydration: id');
         }
 
         if (!isset($array['name'])) {
-            throw UserListException::validation('hydration: name');
+            throw ClientException::validation('hydration: name');
         }
 
         if (!isset($array['status'])) {
-            throw UserListException::validation('hydration: status');
+            throw ClientException::validation('hydration: status');
         }
 
         $segment = new self(
@@ -308,9 +308,5 @@ class Segment
         }
 
         return $segment;
-
-
     }
-
-
 }

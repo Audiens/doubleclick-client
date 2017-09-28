@@ -14,10 +14,10 @@
                 <totalNumEntries>54</totalNumEntries>
                 <Page.Type>UserListClientPage</Page.Type>
                 <entries>
-                    <userListId>78610999</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610999</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <userlistname>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 18-24</userlistname>
                     <stats>
                         <startDate>
                             <year>2016</year>
@@ -35,14 +35,14 @@
                             <microAmount>30022</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_ADVERTISER</clientProduct>
-                    <clientId>388</clientId>
+                    <clientproduct>INVITE_ADVERTISER</clientproduct>
+                    <clientid>388</clientid>
                 </entries>
                 <entries>
-                    <userListId>78610879</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610879</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <userlistname>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; DEMOGRAPHIC &gt; H3G &gt; AGE &gt; 25-34</userlistname>
                     <stats>
                         <startDate>
                             <year>2016</year>
@@ -60,14 +60,14 @@
                             <microAmount>120086</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_ADVERTISER</clientProduct>
-                    <clientId>388</clientId>
+                    <clientproduct>INVITE_ADVERTISER</clientproduct>
+                    <clientid>388</clientid>
                 </entries>
                 <entries>
-                    <userListId>78610399</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610399</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; H3G &gt; CELL PHONE PLAN &gt; Data Plan</userListName>
+                    <userlistname>Audiens: ITALY &gt; MOBILE &gt; AUDIENS &gt; TELECOM &gt; H3G &gt; CELL PHONE PLAN &gt; Data Plan</userlistname>
                     <stats>
                         <startDate>
                             <year>2016</year>
@@ -85,8 +85,8 @@
                             <microAmount>103310</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_ADVERTISER</clientProduct>
-                    <clientId>388</clientId>
+                    <clientproduct>INVITE_ADVERTISER</clientproduct>
+                    <clientid>388</clientid>
                 </entries>
             </rval>
         </getResponse>

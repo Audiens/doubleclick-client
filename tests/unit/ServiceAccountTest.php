@@ -3,7 +3,6 @@
 namespace Test\unit;
 
 use Audiens\DoubleclickClient\entity\ServiceAccount;
-use Prophecy\Argument;
 use Test\TestCase;
 
 /**

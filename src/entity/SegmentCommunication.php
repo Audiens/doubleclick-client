@@ -39,7 +39,6 @@ class SegmentCommunication extends Segment
             $segmentName,
             $segmentStatus
         );
-
     }
 
     /**

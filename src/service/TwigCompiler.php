@@ -9,7 +9,7 @@ class TwigCompiler
 {
 
     /**
- * @var  \Twig_Environment 
+ * @var  \Twig_Environment
 */
     protected $twig;
 
@@ -21,7 +21,6 @@ class TwigCompiler
      */
     public function __construct($templatePath = 'src/templates')
     {
-
         $loader = new \Twig_Loader_Filesystem($templatePath);
         $this->twig = new \Twig_Environment($loader);
     }

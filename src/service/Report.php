@@ -129,7 +129,6 @@ class Report implements CacheableInterface
         $segmentsRevenue = [];
 
         foreach ($entries as $entry) {
-
             $segmentsRevenue[] = SegmentRevenue::fromArray($entry);
         }
 

@@ -17,17 +17,17 @@ class BearerToken
     const TOKEN_PREFIX = "Bearer";
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $access_token;
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $token_type;
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $expires_in;
 

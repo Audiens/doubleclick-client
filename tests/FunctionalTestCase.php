@@ -6,9 +6,11 @@ use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\authentication\JwtServiceAccountFactory;
 use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
 use Audiens\DoubleclickClient\entity\ServiceAccount;
+use Audiens\DoubleclickClient\entity\UserListClient;
 use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
 use Audiens\DoubleclickClient\service\UserList;
+use Audiens\DoubleclickClient\service\UserListClientService;
 use Doctrine\Common\Cache\FilesystemCache;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
@@ -127,6 +129,19 @@ class FunctionalTestCase extends TestCase
         $userList = new UserList($this->buildAuth(), new TwigCompiler(), $cache,getenv('CUSTOMER_ID'));
 
         return $userList;
+    }
+
+    /**
+     * @param bool $cacheToken
+     * @return $userClientList
+     */
+    protected function buildUserClientList($cacheToken = true)
+    {
+        $cache = $cacheToken ? new FilesystemCache('cache') : null;
+
+        $userClientList = new UserListClientService($this->buildAuth(), $cache, new TwigCompiler(),getenv('CUSTOMER_ID'));
+
+        return $userClientList;
     }
 
 }

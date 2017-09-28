@@ -14,22 +14,22 @@ class Auth extends Client implements ClientInterface
 {
 
     /**
- * @var  Cache 
+ * @var  Cache
 */
     protected $cache;
 
     /**
- * @var  Client 
+ * @var  Client
 */
     protected $client;
 
     /**
- * @var string 
+ * @var string
 */
     protected $token;
 
     /**
- * @var AuthStrategyInterface 
+ * @var AuthStrategyInterface
 */
     protected $authStrategy;
 

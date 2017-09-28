@@ -14,10 +14,10 @@
                 <totalNumEntries>4</totalNumEntries>
                 <Page.Type>UserListClientPage</Page.Type>
                 <entries>
-                    <userListId>78610999</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610999</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userListName>
+                    <userlistname>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 18-24</userlistname>
                     <stats>
                         <clientImpressions>87305</clientImpressions>
                         <costUsd>
@@ -25,13 +25,13 @@
                             <microAmount>77267908</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_PARTNER</clientProduct>
+                    <clientproduct>INVITE_PARTNER</clientproduct>
                 </entries>
                 <entries>
-                    <userListId>78610879</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610879</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userListName>
+                    <userlistname>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 25-34</userlistname>
                     <stats>
                         <clientImpressions>1344502</clientImpressions>
                         <costUsd>
@@ -39,13 +39,13 @@
                             <microAmount>1186236694</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_PARTNER</clientProduct>
+                    <clientproduct>INVITE_PARTNER</clientproduct>
                 </entries>
                 <entries>
-                    <userListId>78610759</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610759</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userListName>
+                    <userlistname>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 35-44</userlistname>
                     <stats>
                         <clientImpressions>2430877</clientImpressions>
                         <costUsd>
@@ -53,13 +53,13 @@
                             <microAmount>2145231000</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_PARTNER</clientProduct>
+                    <clientproduct>INVITE_PARTNER</clientproduct>
                 </entries>
                 <entries>
-                    <userListId>78610639</userListId>
-                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <userlistid>78610639</userlistid>
+                    <clientcustomername>Bid Manager Partner 388</clientcustomername>
                     <status>ACTIVE</status>
-                    <userListName>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userListName>
+                    <userlistname>Audiens: ITALY &gt; AUDIENS &gt; DEMOGRAPHIC - MOBILE &gt; H3G &gt; AGE &gt; 45-54</userlistname>
                     <stats>
                         <clientImpressions>2190166</clientImpressions>
                         <costUsd>
@@ -67,7 +67,7 @@
                             <microAmount>1928512042</microAmount>
                         </costUsd>
                     </stats>
-                    <clientProduct>INVITE_PARTNER</clientProduct>
+                    <clientproduct>INVITE_PARTNER</clientproduct>
                 </entries>
             </rval>
         </getResponse>

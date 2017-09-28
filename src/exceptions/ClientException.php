@@ -7,7 +7,7 @@ use Audiens\DoubleclickClient\entity\ApiResponse;
 /**
  * Class UserListException
  */
-class UserListException extends \Exception
+class ClientException extends \Exception
 {
 
     /**
@@ -22,7 +22,7 @@ class UserListException extends \Exception
 
     /**
      * @param $message
-     * @return UserListException
+     * @return ClientException
      */
     public static function validation($message)
     {

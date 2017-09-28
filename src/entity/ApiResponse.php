@@ -17,22 +17,22 @@ class ApiResponse
     const STATUS_SUCCESS = 'OK';
 
     /**
- * @var bool 
+ * @var bool
 */
     protected $successful = false;
 
     /**
- * @var  string 
+ * @var  string
 */
     protected $response;
 
     /**
- * @var  Error 
+ * @var  Error
 */
     protected $error;
 
     /**
- * @var  array 
+ * @var  array
 */
     protected $responseArray;
 

@@ -15,7 +15,7 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
     const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
 
     /**
- * @var ServiceAccount 
+ * @var ServiceAccount
 */
     protected $serviceAccount;
 

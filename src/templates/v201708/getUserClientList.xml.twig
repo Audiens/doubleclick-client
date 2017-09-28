@@ -1,0 +1,27 @@
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Header>
+        <RequestHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
+            <clientCustomerId>{{ clientCustomerId }}</clientCustomerId>
+        </RequestHeader>
+    </Header>
+    <Body>
+    <get xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
+        <serviceSelector>
+            <fields>UserListId</fields>
+            <fields>ClientCustomerName</fields>
+            <fields>Status</fields>
+            <fields>UserListName</fields>
+            {#<fields>PricingInfo</fields>#}
+            <fields>ClientProduct</fields>
+            <fields>ClientId</fields>
+            {%  if id is not empty %}
+            <predicates>
+                <field>UserListId</field>
+                <operator>EQUALS</operator>
+                <values>{{ userlistid }}</values>
+            </predicates>
+            {% endif %}
+        </serviceSelector>
+    </get>
+    </Body>
+</Envelope>
