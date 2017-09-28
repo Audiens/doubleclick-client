@@ -21,9 +21,9 @@ class UserList implements CacheableInterface
 {
     use CachableTrait;
 
-    const API_VERSION                  = 'v201609';
+    const API_VERSION                  = 'v201708';
 
-    const BASE_URL_USER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
+    const BASE_URL_USER = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListService?wsdl';
     const USER_LIST_TPL = 'userList.xml.twig';
     const GET_USER_LIST_TPL = 'getUserList.xml.twig';
 

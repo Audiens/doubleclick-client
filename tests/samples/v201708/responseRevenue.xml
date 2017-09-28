@@ -1,0 +1,43 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
+            <requestId>00055a2d526a17900a0deb51ea0b35c3</requestId>
+            <serviceName>UserListClientService</serviceName>
+            <methodName>get</methodName>
+            <operations>1</operations>
+            <responseTime>423</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
+            <rval>
+                <totalNumEntries>57</totalNumEntries>
+                <Page.Type>UserListClientPage</Page.Type>
+                <entries>
+                    <userListId>78593479</userListId>
+                    <clientCustomerName>Bid Manager Partner 388</clientCustomerName>
+                    <status>ACTIVE</status>
+                    <userListName>The Business</userListName>
+                    <stats>
+                        <startDate>
+                            <year>2017</year>
+                            <month>9</month>
+                            <day>27</day>
+                        </startDate>
+                        <endDate>
+                            <year>2017</year>
+                            <month>9</month>
+                            <day>27</day>
+                        </endDate>
+                        <clientImpressions>54</clientImpressions>
+                        <costUsd>
+                            <ComparableValue.Type>Money</ComparableValue.Type>
+                            <microAmount>50923</microAmount>
+                        </costUsd>
+                    </stats>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                </entries>
+            </rval>
+        </getResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -23,11 +23,11 @@ class Report implements CacheableInterface
 
     use CachableTrait;
 
-    const API_VERSION                  = 'v201609';
+    const API_VERSION                  = 'v201708';
 
-    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListClientService?wsdl';
-    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201609/CustomerMatchUploaderService?wsdl';
-    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201609/UserListService?wsdl';
+    const BASE_URL_PROVIDER = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListClientService?wsdl';
+    const BASE_URL_DDP      = 'https://ddp.googleapis.com/api/ddp/cmu/v201708/CustomerMatchUploaderService?wsdl';
+    const USER_LIST_SERVICE = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListService?wsdl';
 
     /** @var Client|Auth */
     protected $client;
@@ -121,9 +121,15 @@ class Report implements CacheableInterface
 
         $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 
+        if (is_array($entries) && isset($entries['userlistid'])) {
+            $segmentsRevenue[] = SegmentRevenue::fromArray($entries);
+            return $segmentsRevenue;
+        }
+
         $segmentsRevenue = [];
 
         foreach ($entries as $entry) {
+
             $segmentsRevenue[] = SegmentRevenue::fromArray($entry);
         }
 
@@ -167,6 +173,10 @@ class Report implements CacheableInterface
 
         $segmentCommunication = [];
 
+        if (is_array($entries) && isset($entries['id'])) {
+            $segmentCommunication[] = SegmentCommunication::fromArray($entries);
+            return $segmentCommunication;
+        }
         foreach ($entries as $entry) {
             $segmentCommunication[] = SegmentCommunication::fromArray($entry);
         }

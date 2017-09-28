@@ -1,4 +1,3 @@
-"
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Header>
         <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201702">
