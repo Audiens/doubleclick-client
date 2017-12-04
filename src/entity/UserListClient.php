@@ -113,7 +113,7 @@ class UserListClient
     }
 
     /**
-     * @return UserListPricing
+     * @return UserListPricing|null
      */
     public function getPricingInfo()
     {

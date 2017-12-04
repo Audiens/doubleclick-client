@@ -76,17 +76,27 @@ class UserListClientService implements CacheableInterface
             $operator = 'SET';
         }
 
+        $context = [
+            'status' => $client->getStatus(),
+            'userlistid' => $client->getUserlistid(),
+            'operator' => $operator,
+            'clientCustomerId' => $this->clientCustomerId,
+            'clientid' => $client->getClientid(),
+        ];
+
+
+
+        if ($client->getPricingInfo()) {
+            $context['pricingInfo'] = $client->getPricingInfo();
+        }
+
+        if ($client->getClientproduct()) {
+            $context['clientproduct'] = $client->getClientproduct();
+        }
+
         $requestBody = $this->twigCompiler->getTwig()->render(
             self::API_VERSION . '/' . self::USER_LIST_CLIENT_TPL,
-            [
-                'userlistid' => $client->getUserlistid(),
-                'status' => $client->getStatus(),
-                'pricingInfo' => $client->getPricingInfo(),
-                'clientproduct' => $client->getClientproduct(),
-                'clientid' => $client->getClientid(),
-                'clientCustomerId' => $this->clientCustomerId,
-                'operator' => $operator
-            ]
+            $context
         );
 
 

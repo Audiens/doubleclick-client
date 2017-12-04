@@ -13,6 +13,7 @@
                          xsi:type="UserListClient">
                     <userListId>{{ userlistid }}</userListId>
                     <status>{{ status }}</status>
+                    {% if pricingInfo is defined %}
                     <pricingInfo>
                         <currencyCodeString>{{ pricingInfo.currencyCodeString }}</currencyCodeString>
                         <userListCost>{{ pricingInfo.userListCost }}</userListCost>
@@ -20,7 +21,8 @@
                         <saleType>{{ pricingInfo.saleType }}</saleType>
                         <approvalState>{{ pricingInfo.approvalState }}</approvalState>
                     </pricingInfo>
-                    <clientProduct>{{ clientproduct }}</clientProduct>
+                    {% endif %}
+                    {% if clientproduct is defined %}<clientProduct>{{ clientproduct }}</clientProduct>{% endif %}
                     <clientId>{{ clientid }}</clientId>
                 </operand>
             </operations>
