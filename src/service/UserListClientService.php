@@ -85,7 +85,6 @@ class UserListClientService implements CacheableInterface
         ];
 
 
-
         if ($client->getPricingInfo()) {
             $context['pricingInfo'] = $client->getPricingInfo();
         }
@@ -121,11 +120,12 @@ class UserListClientService implements CacheableInterface
 
 
     /**
-     * @param int|null $id
+     * @param null $userListId
+     * @param null $clientId
      * @return UserListClient[]|UserListClient
      * @throws ClientException
      */
-    public function getUserClientList($id = null)
+    public function getUserClientList($userListId = null, $clientId = null)
     {
         $compiledUrl = self::URL_LIST_CLIENT;
 
@@ -133,7 +133,8 @@ class UserListClientService implements CacheableInterface
             self::API_VERSION . '/' . self::GET_USER_CLIENT_LIST_TPL,
             [
                 'clientCustomerId' => $this->clientCustomerId,
-                'userlistid' => $id
+                'userlistid' => $userListId,
+                'clientId' => $clientId
             ]
         );
 
@@ -158,7 +159,7 @@ class UserListClientService implements CacheableInterface
 
         $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 
-        if (is_array($entries) && isset($entries['id'])) {
+        if (is_array($entries) && isset($entries['userlistid'])) {
             return UserListClient::fromArray($entries);
         }
 

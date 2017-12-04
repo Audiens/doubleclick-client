@@ -14,12 +14,17 @@
             {#<fields>PricingInfo</fields>#}
             <fields>ClientProduct</fields>
             <fields>ClientId</fields>
-            {%  if id is not empty %}
-            <predicates>
-                <field>UserListId</field>
-                <operator>EQUALS</operator>
-                <values>{{ userlistid }}</values>
-            </predicates>
+            {% if userlistid is not empty %}
+                <predicates>
+                        <field>UserListId</field>
+                        <operator>EQUALS</operator>
+                        <values>{{ userlistid }}</values>
+                </predicates>
+                <predicates>
+                    <field>ClientId</field>
+                    <operator>EQUALS</operator>
+                    <values>{{ clientId }}</values>
+                </predicates>
             {% endif %}
         </serviceSelector>
     </get>

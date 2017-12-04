@@ -82,4 +82,25 @@ class UserListClientTest extends FunctionalTestCase
         $this->assertNotEmpty($userClientListNew);
         $this->assertInstanceOf(UserListClient::class, $userClientListNew);
     }
+
+
+    /**
+     * @test
+     */
+    public function it_will_fetch_by_userListId_and_clientId()
+    {
+        $this->markTestSkipped('Please provide userListId and clientId');
+
+        $userClientService = $this->buildUserClientList();
+
+        $userListId = '';
+        $clientId = '';
+
+        $license = $userClientService->getUserClientList($userListId, $clientId);
+
+        $this->assertNotEmpty($license);
+
+        $this->assertInstanceOf(UserListClient::class, $license);
+
+    }
 }
