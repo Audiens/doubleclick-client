@@ -1,8 +1,9 @@
+.idea/
+/.env
 /bin/
+/build/
+/build/
 /composer.phar
 /vendor/
-.idea/
-/build/
-/.env
-composer.lock
 cache/*
+composer.lock

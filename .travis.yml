@@ -6,11 +6,13 @@ php:
 fast_finish: true
 
 before_script:
+  - if [[ $TRAVIS_PHP_VERSION = '7.1' ]]; then PHPUNIT_FLAGS="--coverage-clover=build/logs/clover.xml"; else PHPUNIT_FLAGS=""; fi
+  - if [[ $TRAVIS_PHP_VERSION != '7.1' ]]; then phpenv config-rm xdebug.ini; fi
   - composer install --prefer-dist
 
 script:
   - bin/phpunit --testsuite=unit -v $PHPUNIT_FLAGS
 
 after_success:
-  php bin/coveralls -v
-  wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
+  - if [[ $TRAVIS_PHP_VERSION = '7.1' ]]; then php bin/coveralls -v --coverage_clover build/logs/clover.xml; fi
+  - if [[ $TRAVIS_PHP_VERSION = '7.1' ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml; fi
