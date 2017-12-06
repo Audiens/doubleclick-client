@@ -133,7 +133,7 @@ class UserListClientServiceTest extends TestCase
                 );
 
                 return new Response(200, [], $body);
-            });
+            })->shouldBeCalledTimes(1);
 
         $service = new UserListClientService($client->reveal(), null, new TwigCompiler(), $data['clientCustomerId']);
 
