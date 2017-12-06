@@ -151,13 +151,9 @@ class UserListClientService implements CacheableInterface
             throw ClientException::failed($repositoryResponse);
         }
 
-        if (!isset($repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'])
-        ) {
-            throw ClientException::failed($repositoryResponse);
-        }
-
-
-        $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
+        $entries = $repositoryResponse
+            ->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries']
+            ?? [];
 
         if (is_array($entries) && isset($entries['userlistid'])) {
             return UserListClient::fromArray($entries);
