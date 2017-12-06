@@ -18,10 +18,10 @@ trait TransmapHydratable
     private static function getTransmapper(): Transmapper
     {
         if (!static::$transmapper) {
-            static::$transmapper = new Transmapper(new AnnotationReader());
+            self::$transmapper = new Transmapper(new AnnotationReader());
         }
 
-        return static::$transmapper;
+        return self::$transmapper;
     }
 
     /**
