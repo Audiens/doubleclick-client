@@ -3,6 +3,7 @@
 namespace Test;
 
 use Audiens\DoubleclickClient\entity\ReportConfig;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
 use Prophecy\Argument;
@@ -16,6 +17,9 @@ class TestCase extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
+
+        $loader =  include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+        AnnotationRegistry::registerLoader([$loader, 'loadClass']);
     }
 
     /**

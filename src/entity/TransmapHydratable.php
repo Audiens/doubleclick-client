@@ -4,7 +4,6 @@ namespace Audiens\DoubleclickClient\entity;
 
 use Audiens\DoubleclickClient\exceptions\ClientException;
 use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use Exception;
 use GiacomoFurlan\ObjectTransmapperValidator\Transmapper;
 use RuntimeException;
@@ -19,9 +18,6 @@ trait TransmapHydratable
     private static function getTransmapper(): Transmapper
     {
         if (!static::$transmapper) {
-            $loader = include __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
-            AnnotationRegistry::registerLoader([$loader, 'loadClass']);
-
             static::$transmapper = new Transmapper(new AnnotationReader());
         }
 
@@ -45,6 +41,7 @@ trait TransmapHydratable
      */
     public static function fromArray(array $objectArray)
     {
+
         $object = (object) static::hydratePreprocess($objectArray);
         try {
             return static::getTransmapper()->map($object, static::class);

@@ -11,6 +11,7 @@ use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
 use Audiens\DoubleclickClient\service\UserList;
 use Audiens\DoubleclickClient\service\UserListClientService;
+use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Cache\FilesystemCache;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
@@ -37,6 +38,9 @@ class FunctionalTestCase extends TestCase
         }
 
         parent::setUp();
+
+        $loader =  include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+        AnnotationRegistry::registerLoader([$loader, 'loadClass']);
     }
 
     /**
