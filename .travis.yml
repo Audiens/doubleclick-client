@@ -10,3 +10,7 @@ before_script:
 
 script:
   - bin/phpunit --testsuite=unit -v $PHPUNIT_FLAGS
+
+after_success:
+  php bin/coveralls -v
+  wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
