@@ -106,6 +106,15 @@ class ApiResponse
         $responseContent = $response->getBody()->getContents();
         $response->getBody()->rewind();
 
+        // This test will prevent possible text encoding errors
+        // if PHP doesn't correctly detect Google's (UTF-8) encoding
+        $windows1252Chars = ['Ã ', 'Ã¨', 'Ã¬', 'Ã²', 'Ã¹'];
+        foreach ($windows1252Chars as $wrongChar) {
+            if (stripos($responseContent, $wrongChar) !== false) {
+                return mb_convert_encoding($responseContent, 'Windows-1252');
+            }
+        }
+
         return $responseContent;
     }
 
