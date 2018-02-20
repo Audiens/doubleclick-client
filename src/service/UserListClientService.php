@@ -144,7 +144,6 @@ class UserListClientService implements CacheableInterface
             $response = $e->getResponse();
         }
 
-
         $repositoryResponse = ApiResponse::fromResponse($response);
 
         if (!$repositoryResponse->isSuccessful()) {

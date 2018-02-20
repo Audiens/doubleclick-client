@@ -58,7 +58,7 @@ class UserListClientServiceTest extends TestCase
         $userListPricing->setCostType(UserListPricing::COST_TYPE_CPM);
         $userListPricing->setSaleType(UserListPricing::SALE_TYPE_DIRECT);
         $userListPricing->setCurrencyCodeString('EUR');
-        $userListPricing->setApprovalState(UserListPricing::APPROVAL_STATE_APPROVED);
+        $userListPricing->setApprovalstate(UserListPricing::APPROVAL_STATE_APPROVED);
 
 
         $userListClient = new UserListClient();

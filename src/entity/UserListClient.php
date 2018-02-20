@@ -38,7 +38,7 @@ class UserListClient
     protected $userlistname;
 
     /**
-     * @var  UserListPricing
+     * @var UserListPricing
      * @Validate(type="Audiens\DoubleclickClient\entity\UserListPricing", mandatory=false)
      */
     protected $pricingInfo;
@@ -162,8 +162,8 @@ class UserListClient
 
     protected static function hydratePreprocess(array $objectArray): array
     {
-        if (array_key_exists('pricingInfo', $objectArray)) {
-            $objectArray['pricingInfo'] = (object)$objectArray['pricingInfo'];
+        if (array_key_exists('pricinginfo', $objectArray)) {
+            $objectArray['pricingInfo'] = (object)$objectArray['pricinginfo'];
         }
 
         $intArray = [

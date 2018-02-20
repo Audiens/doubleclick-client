@@ -15,7 +15,7 @@ class UserListPricing
     const COST_TYPE_CPC = 'CPC';
     const COST_TYPE_CPM = 'CPM';
 
-    const SALE_TYPE_DIRECT = 'DIRECT';
+    const SALE_TYPE_DIRECT          = 'DIRECT';
     const SALE_TYPE_SALE_FOR_RESALE = 'SALE_FOR_RESALE';
 
     const APPROVAL_STATE_UNAPPROVED = 'UNAPPROVED';
@@ -23,225 +23,107 @@ class UserListPricing
     const APPROVAL_STATE_REJECTED   = 'REJECTED';
 
     /**
-     * @var  string Readonly
-     * @Validate(type="string", mandatory=true)
-     */
-    protected $startDate;
-
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
-    protected $endDate;
-
-    /**
-     * @var  string IS0-4217
+     * @var string IS0-4217
      * @Validate(type="string", regex="#^[a-zA-Z]{3}$#", mandatory=true)
      */
-    protected $currencyCodeString;
+    protected $currencycodestring;
 
     /**
-     * @var int
+     * @var string
      * @see COST_TYPE_*
-     * @Validate(type="int", mandatory=true)
-     */
-    protected $userListCost;
-
-    /**
-     * @var string Readonly
      * @Validate(type="string", mandatory=true)
      */
-    protected $creationTime;
+    protected $userlistcost;
 
     /**
      * @var string
      * @Validate(type="string", mandatory=true)
      */
-    protected $costType;
+    protected $costtype;
 
     /**
      * @var string
      * @see SALE_TYPE_*
      * @Validate(type="string", mandatory=true)
      */
-    protected $saleType;
+    protected $saletype;
 
     /**
-     * @var bool
-     * @Validate(type="bool", mandatory=true)
+     * @var string
+     * @Validate(type="string", mandatory=true)
      */
-    protected $isPricingActive;
+    protected $ispricingactive;
 
     /**
      * @var string
      * @see APPROVAL_STATE_*
      * @Validate(type="string", mandatory=true)
      */
-    protected $approvalState;
+    protected $approvalstate;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=false)
-     */
-    protected $rejectionReason;
-
-    /**
-     * @return string
-     */
-    public function getStartDate()
+    public function getIsPricingactive()
     {
-        return $this->startDate;
+        return $this->ispricingactive;
     }
 
-    /**
-     * @return string
-     */
-    public function getEndDate()
-    {
-        return $this->endDate;
-    }
-
-    /**
-     * @return string
-     */
     public function getCurrencyCodeString()
     {
-        return $this->currencyCodeString;
+        return $this->currencycodestring;
     }
 
-    /**
-     * @return int
-     */
     public function getUserListCost()
     {
-        return $this->userListCost;
+        return $this->userlistcost;
     }
 
-    /**
-     * @return string
-     */
-    public function getCreationTime()
-    {
-        return $this->creationTime;
-    }
-
-    /**
-     * @return string
-     */
     public function getCostType()
     {
-        return $this->costType;
+        return $this->costtype;
     }
 
-    /**
-     * @return string
-     */
     public function getSaleType()
     {
-        return $this->saleType;
+        return $this->saletype;
     }
 
-    /**
-     * @return bool
-     */
     public function isPricingActive()
     {
-        return $this->isPricingActive;
+        return $this->ispricingactive;
     }
 
-    /**
-     * @return string
-     */
-    public function getApprovalState()
+    public function getApprovalstate()
     {
-        return $this->approvalState;
+        return $this->approvalstate;
     }
 
-    /**
-     * @return string
-     */
-    public function getRejectionReason()
+    public function setCurrencyCodeString($currencycodestring)
     {
-        return $this->rejectionReason;
+        $this->currencycodestring = $currencycodestring;
     }
 
-    /**
-     * @param string $startDate
-     */
-    public function setStartDate(string $startDate)
+    public function setUserListCost($userlistcost)
     {
-        $this->startDate = $startDate;
+        $this->userlistcost = $userlistcost;
     }
 
-    /**
-     * @param string $endDate
-     */
-    public function setEndDate($endDate)
+    public function setCostType($costtype)
     {
-        $this->endDate = $endDate;
+        $this->costtype = $costtype;
     }
 
-    /**
-     * @param string $currencyCodeString
-     */
-    public function setCurrencyCodeString($currencyCodeString)
+    public function setSaleType($saletype)
     {
-        $this->currencyCodeString = $currencyCodeString;
+        $this->saletype = $saletype;
     }
 
-    /**
-     * @param int $userListCost
-     */
-    public function setUserListCost($userListCost)
+    public function setIsPricingActive($ispricingactive)
     {
-        $this->userListCost = $userListCost;
+        $this->ispricingactive = $ispricingactive;
     }
 
-    /**
-     * @param string $creationTime
-     */
-    public function setCreationTime($creationTime)
+    public function setApprovalstate($approvalstate)
     {
-        $this->creationTime = $creationTime;
+        $this->approvalstate = $approvalstate;
     }
 
-    /**
-     * @param string $costType
-     */
-    public function setCostType($costType)
-    {
-        $this->costType = $costType;
-    }
-
-    /**
-     * @param string $saleType
-     */
-    public function setSaleType($saleType)
-    {
-        $this->saleType = $saleType;
-    }
-
-    /**
-     * @param bool $isPricingActive
-     */
-    public function setIsPricingActive($isPricingActive)
-    {
-        $this->isPricingActive = $isPricingActive;
-    }
-
-    /**
-     * @param string $approvalState
-     */
-    public function setApprovalState($approvalState)
-    {
-        $this->approvalState = $approvalState;
-    }
-
-    /**
-     * @param string $rejectionReason
-     */
-    public function setRejectionReason($rejectionReason)
-    {
-        $this->rejectionReason = $rejectionReason;
-    }
 }

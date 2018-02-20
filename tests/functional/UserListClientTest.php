@@ -3,11 +3,9 @@
 namespace Test\functional;
 
 use Audiens\DoubleclickClient\entity\UserListClient;
+use Audiens\DoubleclickClient\entity\UserListPricing;
 use Test\FunctionalTestCase;
 
-/**
- * Class UserListClientTest
- */
 class UserListClientTest extends FunctionalTestCase
 {
     /**
@@ -23,31 +21,19 @@ class UserListClientTest extends FunctionalTestCase
 
         $this->assertInternalType('array', $licenses);
 
-        $this->assertGreaterThan(0,count($licenses));
+        $this->assertGreaterThan(0, count($licenses));
 
-        foreach($licenses as $license)
-        {
+        $atLeastOnePricing = false;
+
+        foreach ($licenses as $license) {
             $this->assertInstanceOf(UserListClient::class, $license);
+
+            if ($license->getPricingInfo() instanceof UserListPricing) {
+                $atLeastOnePricing = true;
+            }
         }
+
+        $this->assertTrue($atLeastOnePricing, 'there should be at least one UserListPricing');
     }
 
-    /**
-     * @test
-     */
-    public function it_will_fetch_by_userListId_and_clientId()
-    {
-        $this->markTestSkipped('Please provide userListId and clientId');
-
-        $userClientService = $this->buildUserClientList();
-
-        $userListId = '';
-        $clientId = '';
-
-        $license = $userClientService->getUserClientList($userListId, $clientId);
-
-        $this->assertNotEmpty($license);
-
-        $this->assertInstanceOf(UserListClient::class, $license);
-
-    }
 }

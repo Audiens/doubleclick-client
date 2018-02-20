@@ -13,6 +13,7 @@ class UserListClientTest extends TestCase
 
     /**
      * @test
+     * @throws \Audiens\DoubleclickClient\exceptions\ClientException
      */
     public function it_will_hydrate()
     {
@@ -21,17 +22,17 @@ class UserListClientTest extends TestCase
             'clientcustomername' => 'test',
             'status' => 'ACTIVE',
             'userlistname' => 'testString',
-            'pricingInfo' => [
-                'startDate' => '11/12/2011',
-                'endDate' => '09/11/2011',
-                'currencyCodeString' => 'EUR',
-                'userListCost' => 123,
-                'creationTime' => '08/11/2011',
-                'costType' => 'CPM',
-                'saleType' => 'DIRECT',
-                'isPricingActive' => true,
-                'approvalState' => 'APPROVED',
-                'rejectionReason' => 'rejected',
+            'pricinginfo' => [
+                'startdate' => '11/12/2011',
+                'enddate' => '09/11/2011',
+                'currencycodestring' => 'EUR',
+                'userlistcost' => '123',
+                'creationtime' => '08/11/2011',
+                'costtype' => 'CPM',
+                'saletype' => 'DIRECT',
+                'ispricingactive' => 'true',
+                'approvalstate' => 'APPROVED',
+                'rejectionreason' => 'rejected',
             ],
             'clientproduct' => 'GOOGLE_RESELLER',
             'clientid' => 789
