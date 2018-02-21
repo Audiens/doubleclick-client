@@ -125,5 +125,4 @@ class UserListPricing
     {
         $this->approvalstate = $approvalstate;
     }
-
 }
