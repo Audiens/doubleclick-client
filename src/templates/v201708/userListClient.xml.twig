@@ -1,5 +1,4 @@
-<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
-            xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <S:Header>
         <RequestHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
             <clientCustomerId>{{ clientCustomerId }}</clientCustomerId>
@@ -9,18 +8,17 @@
         <mutate xmlns="https://ddp.googleapis.com/api/ddp/provider/v201708">
             <operations>
                 <operator>{{ operator }}</operator>
-                <operand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                         xsi:type="UserListClient">
+                <operand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="UserListClient">
                     <userListId>{{ userlistid }}</userListId>
                     <status>{{ status }}</status>
                     {% if pricingInfo is defined %}
-                    <pricingInfo>
-                        <currencycodestring>{{ pricingInfo.currencycodestring }}</currencycodestring>
-                        <userlistcost>{{ pricingInfo.userlistcost }}</userlistcost>
-                        <costtype>{{ pricingInfo.costtype }}</costtype>
-                        <saletype>{{ pricingInfo.saletype }}</saletype>
-                        <approvalstate>{{ pricingInfo.approvalstate }}</approvalstate>
-                    </pricingInfo>
+                        <pricingInfo>
+                            <currencyCodeString>{{ pricingInfo.currencycodestring }}</currencyCodeString>
+                            <userListCost>{{ pricingInfo.userlistcost }}</userListCost>
+                            <costType>{{ pricingInfo.costtype }}</costType>
+                            <saleType>{{ pricingInfo.saletype }}</saleType>
+                            <approvalState>{{ pricingInfo.approvalstate }}</approvalState>
+                        </pricingInfo>
                     {% endif %}
                     {% if clientproduct is defined %}<clientProduct>{{ clientproduct }}</clientProduct>{% endif %}
                     <clientId>{{ clientid }}</clientId>
