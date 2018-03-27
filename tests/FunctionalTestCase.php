@@ -6,7 +6,6 @@ use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\authentication\JwtServiceAccountFactory;
 use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
 use Audiens\DoubleclickClient\entity\ServiceAccount;
-use Audiens\DoubleclickClient\entity\UserListClient;
 use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
 use Audiens\DoubleclickClient\service\UserList;
@@ -15,38 +14,31 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Cache\FilesystemCache;
 use Dotenv\Dotenv;
 use GuzzleHttp\Client;
-use Prophecy\Argument;
 
-/**
- * Class FunctionalTestCase
- */
 class FunctionalTestCase extends TestCase
 {
 
-    const REQUIRED_ENV = [
-        'SA_PRIVATE_KEY',
-        'SA_CLIENT_EMAIL',
-        'SA_SUBJECT',
-        'CUSTOMER_ID'
-    ];
+    public const REQUIRED_ENV
+        = [
+            'SA_PRIVATE_KEY',
+            'SA_CLIENT_EMAIL',
+            'SA_SUBJECT',
+            'CUSTOMER_ID',
+        ];
 
     protected function setUp()
     {
-
         if (!$this->checkEnv()) {
             $this->markTestSkipped('cannotInitialize enviroment tests will be skipped');
         }
 
         parent::setUp();
 
-        $loader =  include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+        $loader = include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
         AnnotationRegistry::registerLoader([$loader, 'loadClass']);
     }
 
-    /**
-     * @return bool
-     */
-    private function checkEnv()
+    private function checkEnv(): bool
     {
         try {
             $dotenv = new Dotenv(__DIR__.'/../');
@@ -65,13 +57,7 @@ class FunctionalTestCase extends TestCase
         return $env;
     }
 
-
-    /**
-     * @param bool|true $cacheToken
-     *
-     * @return Oauth2ServiceAccountStrategy
-     */
-    protected function buildOauth2ServiceAccountStrategy($cacheToken = true)
+    protected function buildOauth2ServiceAccountStrategy($cacheToken = true): Oauth2ServiceAccountStrategy
     {
         $cache = $cacheToken ? new FilesystemCache('cache') : null;
 
@@ -94,12 +80,7 @@ class FunctionalTestCase extends TestCase
         return $authStrategy;
     }
 
-    /**
-     * @param bool|true $cacheToken
-     *
-     * @return Auth
-     */
-    protected function buildAuth($cacheToken = true)
+    protected function buildAuth($cacheToken = true): Auth
     {
         $authStrategy = $this->buildOauth2ServiceAccountStrategy($cacheToken);
 
@@ -108,12 +89,7 @@ class FunctionalTestCase extends TestCase
         return $auth;
     }
 
-    /**
-     * @param bool|true $cacheToken
-     *
-     * @return Report
-     */
-    protected function buildReport($cacheToken = true)
+    protected function buildReport($cacheToken = true): Report
     {
         $cache = $cacheToken ? new FilesystemCache('cache') : null;
 
@@ -124,26 +100,23 @@ class FunctionalTestCase extends TestCase
 
     /**
      * @param bool $cacheToken
+     *
      * @return UserList
      */
-    protected function buildUserList($cacheToken = true)
+    protected function buildUserList($cacheToken = true): UserList
     {
         $cache = $cacheToken ? new FilesystemCache('cache') : null;
 
-        $userList = new UserList($this->buildAuth(), new TwigCompiler(), $cache,getenv('CUSTOMER_ID'));
+        $userList = new UserList($this->buildAuth(), new TwigCompiler(), $cache, getenv('CUSTOMER_ID'));
 
         return $userList;
     }
 
-    /**
-     * @param bool $cacheToken
-     * @return $userClientList
-     */
     protected function buildUserClientList($cacheToken = true)
     {
         $cache = $cacheToken ? new FilesystemCache('cache') : null;
 
-        $userClientList = new UserListClientService($this->buildAuth(), $cache, new TwigCompiler(),getenv('CUSTOMER_ID'));
+        $userClientList = new UserListClientService($this->buildAuth(), $cache, new TwigCompiler(), getenv('CUSTOMER_ID'));
 
         return $userClientList;
     }

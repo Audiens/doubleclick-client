@@ -1,16 +1,12 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\entity;
 
 use Audiens\DoubleclickClient\entity\UserListClient;
 use Test\TestCase;
 
-/**
- * Class UserListClientTest
- */
 class UserListClientTest extends TestCase
 {
-
     /**
      * @test
      * @throws \Audiens\DoubleclickClient\exceptions\ClientException
@@ -35,13 +31,12 @@ class UserListClientTest extends TestCase
                 'rejectionreason' => 'rejected',
             ],
             'clientproduct' => 'GOOGLE_RESELLER',
-            'clientid' => 789
+            'clientid' => 789,
         ];
 
         $mappedObject = UserListClient::fromArray($array);
 
         self::assertEquals($mappedObject->getUserlistid(), 123);
         self::assertEquals($mappedObject->getPricingInfo()->getCurrencyCodeString(), 'EUR');
-
     }
 }

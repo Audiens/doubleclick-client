@@ -1,184 +1,109 @@
 <?php
 
-
 namespace Audiens\DoubleclickClient\entity;
-
-use GiacomoFurlan\ObjectTransmapperValidator\Annotation\Validation\Validate;
 
 class UserListClient
 {
-    use TransmapHydratable;
+    use HydratableTrait;
 
-    const STATUS_ACTIVE = 'ACTIVE';
-    const STATUS_INACTIVE = 'INACTIVE';
-    const STATUS_UNKNOWN = 'UNKNOWN';
+    public const        STATUS_ACTIVE   = 'ACTIVE';
+    public const        STATUS_INACTIVE = 'INACTIVE';
+    public const        STATUS_UNKNOWN  = 'UNKNOWN';
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $userlistid;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=false)
-     */
+    /** @var string|null */
     protected $clientcustomername;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $status;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=false)
-     */
+    /** @var string|null */
     protected $userlistname;
 
-    /**
-     * @var UserListPricing
-     * @Validate(type="Audiens\DoubleclickClient\entity\UserListPricing", mandatory=false)
-     */
+    /** @var UserListPricing|null */
     protected $pricingInfo;
 
-    /**
-     * @var string
-     * @see Product::*
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $clientproduct;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $clientid;
 
-    /**
-     * @return string
-     */
-    public function getUserlistid()
-    {
-        return $this->userlistid;
-    }
-
-    /**
-     * @param int $userlistid
-     */
-    public function setUserlistid($userlistid)
+    public function setUserlistid(string $userlistid): void
     {
         $this->userlistid = $userlistid;
     }
 
-    /**
-     * @return string
-     */
-    public function getClientcustomername()
-    {
-        return $this->clientcustomername;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    /**
-     * @param string $status
-     */
-    public function setStatus($status)
+    public function setStatus(string $status): void
     {
         $this->status = $status;
     }
 
-    /**
-     * @return string
-     */
-    public function getUserlistname()
+    public function getStatus(): string
     {
-        return $this->userlistname;
+        return $this->status;
     }
 
-    /**
-     * @param string $userlistname
-     */
-    public function setUserlistname($userlistname)
+    public function setUserlistname(string $userlistname): void
     {
         $this->userlistname = $userlistname;
     }
 
-    /**
-     * @return UserListPricing|null
-     */
-    public function getPricingInfo()
-    {
-        return $this->pricingInfo;
-    }
-
-    /**
-     * @param UserListPricing $pricingInfo
-     */
-    public function setPricingInfo(UserListPricing $pricingInfo)
+    public function setPricingInfo(UserListPricing $pricingInfo): void
     {
         $this->pricingInfo = $pricingInfo;
     }
 
-    /**
-     * @return string
-     */
-    public function getClientproduct()
-    {
-        return $this->clientproduct;
-    }
-
-    /**
-     * @param string $clientproduct
-     */
-    public function setClientproduct($clientproduct)
+    public function setClientproduct(string $clientproduct): void
     {
         $this->clientproduct = $clientproduct;
     }
 
-    /**
-     * @return int
-     */
-    public function getClientid()
-    {
-        return $this->clientid;
-    }
-
-    /**
-     * @param string $clientid
-     */
-    public function setClientid($clientid)
+    public function setClientid(string $clientid): void
     {
         $this->clientid = $clientid;
     }
 
-    protected static function hydratePreprocess(array $objectArray): array
+    public function getUserlistid(): string
     {
+        return $this->userlistid;
+    }
+
+    public function getClientcustomername(): ?string
+    {
+        return $this->clientcustomername;
+    }
+
+    public function getUserlistname(): ?string
+    {
+        return $this->userlistname;
+    }
+
+    public function getPricingInfo(): ?UserListPricing
+    {
+        return $this->pricingInfo;
+    }
+
+    public function getClientproduct(): string
+    {
+        return $this->clientproduct;
+    }
+
+    public function getClientid(): string
+    {
+        return $this->clientid;
+    }
+
+    public static function preProcess(array $objectArray): array
+    {
+        if (isset($objectArray['clientcustomername']) && \is_array($objectArray['clientcustomername'])) {
+            $objectArray['clientcustomername'] = implode(',', $objectArray['clientcustomername']) ?? '';
+        }
+
         if (array_key_exists('pricinginfo', $objectArray)) {
-            $objectArray['pricingInfo'] = (object)$objectArray['pricinginfo'];
-        }
-
-        $intArray = [
-            'userlistid',
-            'clientid'
-        ];
-
-        foreach ($intArray as $key) {
-            if (is_int($objectArray[$key])) {
-                $objectArray[$key] = (string)$objectArray[$key];
-            }
-        }
-
-        if (isset($objectArray['clientcustomername']) && is_array($objectArray['clientcustomername'])) {
-            $objectArray['clientcustomername'] = implode(',', $objectArray['clientcustomername']);
+            $objectArray['pricingInfo'] = UserListPricing::fromArray($objectArray['pricinginfo']);
         }
 
         return $objectArray;

@@ -16,7 +16,7 @@ docker run \
 --net=host \
 -d \
 -v "$DIR"/../../:/home/audiens/projects \
---volume /home/"$USER"/.composer/:/home/audiens/.composer \
+--volume /home/"${USER}"/.composer/:/home/audiens/.composer \
 --privileged \
 --name "$CONTAINER" \
 -ti "$IMAGE" tail -f /dev/null

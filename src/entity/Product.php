@@ -2,14 +2,14 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-class Product
+interface Product
 {
-    const INVALID = 'INVALID';
-    const ADX_BUYER = 'ADX_BUYER';
-    const DFP_BY_GOOGLE = 'DFP_BY_GOOGLE';
-    const INVITE_ADVERTISER = 'INVITE_ADVERTISER';
-    const INVITE_PARTNER = 'INVITE_PARTNER';
-    const GOOGLE_RESELLER = 'GOOGLE_RESELLER';
-    const ADWORDS = 'ADWORDS';
-    const YOUTUBE_TV_PUBLISHER = 'YOUTUBE_TV_PUBLISHER';
+    public const INVALID              = 'INVALID';
+    public const ADX_BUYER            = 'ADX_BUYER';
+    public const DFP_BY_GOOGLE        = 'DFP_BY_GOOGLE';
+    public const INVITE_ADVERTISER    = 'INVITE_ADVERTISER';
+    public const INVITE_PARTNER       = 'INVITE_PARTNER';
+    public const GOOGLE_RESELLER      = 'GOOGLE_RESELLER';
+    public const ADWORDS              = 'ADWORDS';
+    public const YOUTUBE_TV_PUBLISHER = 'YOUTUBE_TV_PUBLISHER';
 }

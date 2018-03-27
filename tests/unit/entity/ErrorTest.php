@@ -1,23 +1,17 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\entity;
 
 use Audiens\DoubleclickClient\entity\Error;
-use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class ErrorTest
- */
 class ErrorTest extends TestCase
 {
-
     /**
      * @test
      */
     public function it_is_a_value_object()
     {
-
         $error = Error::fromArray(
             [
                 'faultcode' => 'a_fault_code',
@@ -30,8 +24,6 @@ class ErrorTest extends TestCase
 
         $this->assertContains('a_fault_code', $error->__toString());
         $this->assertContains('a_faultstring', $error->__toString());
-
     }
-
 
 }

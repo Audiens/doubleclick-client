@@ -4,93 +4,53 @@ namespace Audiens\DoubleclickClient\entity;
 
 use Audiens\DoubleclickClient\exceptions\ClientException;
 
-/**
- * Class Segment
- */
 class Segment
 {
-
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $segmentId;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $segmentName;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $segmentStatus;
 
-    /**
-     * @var string
-     */
+    /** @var null|string */
     protected $description;
 
-    /**
-     * @var string
-     */
+    /** @var null|string */
     protected $integrationCode;
 
-    /**
-     * @var string
-     */
+    /** @var null|string */
     protected $accountUserListStatus;
 
-    /**
-     * @var string
-     */
+    /** @var null */
     protected $accessReason;
 
-    /**
-     * @var boolean
-     */
+    /** @var null */
     protected $isEligibleForSearch;
 
-    /**
-     * @var float
-     */
+    /** @var null */
     protected $membershipLifeSpan;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $listType;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $size;
 
-    /**
-     * Segment constructor.
-     *
-     * @param int $segmentId
-     * @param string $segmentName
-     * @param string $segmentStatus
-     * @param string $description
-     * @param string $integrationCode
-     * @param string $accountUserListStatus
-     * @param $accessReason
-     * @param $isEligibleForSearch
-     * @param $membershipLifeSpan
-     */
     public function __construct($segmentId, $segmentName, $segmentStatus, $description = null, $integrationCode = null, $accountUserListStatus = null, $accessReason = null, $isEligibleForSearch = null, $membershipLifeSpan = null)
     {
-        $this->segmentId = $segmentId;
-        $this->segmentName = $segmentName;
-        $this->segmentStatus = $segmentStatus;
-        $this->description = $description;
-        $this->integrationCode = $integrationCode;
+        $this->segmentId             = $segmentId;
+        $this->segmentName           = $segmentName;
+        $this->segmentStatus         = $segmentStatus;
+        $this->description           = $description;
+        $this->integrationCode       = $integrationCode;
         $this->accountUserListStatus = $accountUserListStatus;
-        $this->accessReason = $accessReason;
-        $this->isEligibleForSearch = $isEligibleForSearch;
-        $this->membershipLifeSpan = $membershipLifeSpan;
+        $this->accessReason          = $accessReason;
+        $this->isEligibleForSearch   = $isEligibleForSearch;
+        $this->membershipLifeSpan    = $membershipLifeSpan;
     }
-
 
     /**
      * @return int
@@ -252,11 +212,8 @@ class Segment
         $this->size = $size;
     }
 
-
     public static function fromArray(array $array)
     {
-
-
         if (!isset($array['id'])) {
             throw ClientException::validation('hydration: id');
         }
@@ -275,11 +232,9 @@ class Segment
             $array['status']
         );
 
-
         if (isset($array['description']) && !is_array($array['description'])) {
             $segment->setDescription($array['description']);
         }
-
 
         if (isset($array['accountuserliststatus']) && !is_array($array['accountuserliststatus'])) {
             $segment->setAccountUserListStatus($array['accountuserliststatus']);

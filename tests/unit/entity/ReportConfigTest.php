@@ -1,17 +1,13 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\entity;
 
 use Audiens\DoubleclickClient\entity\ReportConfig;
 use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class ReportConfigTest
- */
 class ReportConfigTest extends TestCase
 {
-
     /**
      * @test
      */
@@ -44,5 +40,4 @@ class ReportConfigTest extends TestCase
 
 
     }
-
 }

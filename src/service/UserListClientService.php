@@ -1,74 +1,47 @@
 <?php
 
-
 namespace Audiens\DoubleclickClient\service;
 
+use Audiens\DoubleclickClient\ApiConfigurationInterface;
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
 use Audiens\DoubleclickClient\entity\ApiResponse;
+use Audiens\DoubleclickClient\entity\UserListClient;
 use Audiens\DoubleclickClient\exceptions\ClientException;
 use Doctrine\Common\Cache\Cache;
 use GuzzleHttp\Client;
-
-use Audiens\DoubleclickClient\entity\UserListClient;
 use GuzzleHttp\Exception\RequestException;
 
-/**
- * Class UserListClientService
- */
-class UserListClientService implements CacheableInterface
+class UserListClientService implements CacheableInterface, ApiConfigurationInterface
 {
     use CachableTrait;
 
-    const API_VERSION = 'v201708';
+    public const URL_LIST_CLIENT          = 'https://ddp.googleapis.com/api/ddp/provider/'.self::API_VERSION.'/UserListClientService?wsdl';
+    public const USER_LIST_CLIENT_TPL     = 'userListClient.xml.twig';
+    public const GET_USER_CLIENT_LIST_TPL = 'getUserClientList.xml.twig';
 
-    const URL_LIST_CLIENT = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListClientService?wsdl';
-    const USER_LIST_CLIENT_TPL = 'userListClient.xml.twig';
-    const GET_USER_CLIENT_LIST_TPL = 'getUserClientList.xml.twig';
-
-    /**
-     * @var Client|Auth
-     */
+    /** @var Client|Auth */
     protected $client;
 
-    /**
-     * @var  Cache
-     */
+    /** @var Cache */
     protected $cache;
 
-    /**
-     * @var  TwigCompiler
-     */
+    /** @var TwigCompiler */
     protected $twigCompiler;
 
-    /**
-     * @var  string
-     */
+    /** @var string */
     protected $clientCustomerId;
 
-    /**
-     * UserListClient constructor.
-     * @param Auth|Client $client
-     * @param Cache $cache
-     * @param TwigCompiler $twigCompiler
-     * @param string $clientCustomerId
-     */
     public function __construct($client, Cache $cache = null, TwigCompiler $twigCompiler, $clientCustomerId)
     {
-        $this->client = $client;
-        $this->cache = $cache;
-        $this->twigCompiler = $twigCompiler;
+        $this->client           = $client;
+        $this->cache            = $cache;
+        $this->twigCompiler     = $twigCompiler;
         $this->clientCustomerId = $clientCustomerId;
     }
 
-    /**
-     * @param UserListClient $client
-     * @param bool $updateIfExist
-     * @return UserListClient
-     * @throws ClientException
-     */
-    public function createUserClientList(UserListClient $client, $updateIfExist = false)
+    public function createUserClientList(UserListClient $client, $updateIfExist = false): UserListClient
     {
         $operator = 'ADD';
 
@@ -84,7 +57,6 @@ class UserListClientService implements CacheableInterface
             'clientid' => $client->getClientid(),
         ];
 
-
         if ($client->getPricingInfo()) {
             $context['pricingInfo'] = $client->getPricingInfo();
         }
@@ -94,10 +66,9 @@ class UserListClientService implements CacheableInterface
         }
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::USER_LIST_CLIENT_TPL,
+            self::API_VERSION.'/'.self::USER_LIST_CLIENT_TPL,
             $context
         );
-
 
         try {
             $response = $this->client->request('POST', self::URL_LIST_CLIENT, ['body' => $requestBody]);
@@ -118,10 +89,10 @@ class UserListClientService implements CacheableInterface
         return UserListClient::fromArray($apiResponse->getResponseArray()['body']['envelope']['body']['mutateresponse']['rval']['value']);
     }
 
-
     /**
-     * @param null $userListId
-     * @param null $clientId
+     * @param null|string $userListId
+     * @param null|string $clientId
+     *
      * @return UserListClient[]|UserListClient
      * @throws ClientException
      */
@@ -130,11 +101,11 @@ class UserListClientService implements CacheableInterface
         $compiledUrl = self::URL_LIST_CLIENT;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::GET_USER_CLIENT_LIST_TPL,
+            self::API_VERSION.'/'.self::GET_USER_CLIENT_LIST_TPL,
             [
                 'clientCustomerId' => $this->clientCustomerId,
                 'userlistid' => $userListId,
-                'clientId' => $clientId
+                'clientId' => $clientId,
             ]
         );
 
@@ -150,11 +121,9 @@ class UserListClientService implements CacheableInterface
             throw ClientException::failed($repositoryResponse);
         }
 
-        $entries = $repositoryResponse
-            ->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries']
-            ?? [];
+        $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'] ?? [];
 
-        if (is_array($entries) && isset($entries['userlistid'])) {
+        if (\is_array($entries) && isset($entries['userlistid'])) {
             return UserListClient::fromArray($entries);
         }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\service;
 
 use Audiens\DoubleclickClient\entity\Segment;
 use Audiens\DoubleclickClient\service\TwigCompiler;
@@ -12,23 +12,15 @@ use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
 use Test\TestCase;
 
-/**
- * Class UserListTest
- */
 class UserListTest extends TestCase
 {
+
     /**
      * @test
      */
-    public function it_will_create_a_new_userList()
+    public function createUserList_it_will_create_a_new_userList()
     {
-        $fakeResponseContent = file_get_contents(
-            __DIR__
-            .DIRECTORY_SEPARATOR.'..'
-            .DIRECTORY_SEPARATOR.'samples'
-            .DIRECTORY_SEPARATOR.'v201708'
-            .DIRECTORY_SEPARATOR.'UserList_create_success_response.xml'
-        );
+        $fakeResponseContent = file_get_contents(__DIR__.'/../../samples/'.self::VERSION.'/UserList/createUserList/ok.xml');
 
         /** @var Stream|ObjectProphecy $dummyStream */
         $dummyStream = $this->prophesize(Stream::class);
@@ -38,16 +30,14 @@ class UserListTest extends TestCase
         $dummyResponse = $this->prophesize(Response::class);
         $dummyResponse->getBody()->willReturn($dummyStream->reveal());
 
-
         $webClient = $this->prophesize(ClientInterface::class);
-
 
         $webClient->request(Argument::cetera())->willReturn($dummyResponse->reveal());
         $userList = new UserList($webClient->reveal(), new TwigCompiler(), null, '123');
 
         $segment = new Segment(
             482908340,
-            random_int(0,1099),
+            random_int(0, 1099),
             'ACTIVE',
             'test',
             null,
@@ -66,17 +56,11 @@ class UserListTest extends TestCase
     /**
      * @test
      */
-    public function it_will_create_a_new_userList_with_correct_name_encoding()
+    public function createUserList_it_will_create_a_new_userList_with_correct_name_encoding()
     {
-        $name = 'test àèìòù';
+        $name = 'xxx àèìòù';
 
-        $fakeResponseContent = file_get_contents(
-            __DIR__
-            .DIRECTORY_SEPARATOR.'..'
-            .DIRECTORY_SEPARATOR.'samples'
-            .DIRECTORY_SEPARATOR.'v201708'
-            .DIRECTORY_SEPARATOR.'responseUserList_with_latin_accents.xml'
-        );
+        $fakeResponseContent = file_get_contents(__DIR__.'/../../samples/'.self::VERSION.'/UserList/createUserList/ok_with_latins.xml');
 
         /** @var Stream|ObjectProphecy $dummyStream */
         $dummyStream = $this->prophesize(Stream::class);
@@ -86,24 +70,12 @@ class UserListTest extends TestCase
         $dummyResponse = $this->prophesize(Response::class);
         $dummyResponse->getBody()->willReturn($dummyStream->reveal());
 
-
         $webClient = $this->prophesize(ClientInterface::class);
-
 
         $webClient->request(Argument::cetera())->willReturn($dummyResponse->reveal());
         $userList = new UserList($webClient->reveal(), new TwigCompiler(), null, '123');
 
-        $segment = new Segment(
-            482908340,
-            random_int(0,1099),
-            'ACTIVE',
-            $name,
-            null,
-            null,
-            'OWNED',
-            false,
-            60
-        );
+        $segment = new Segment(482908340, random_int(0, 1099), 'ACTIVE', $name, null, null, 'OWNED', false, 60);
 
         $segment = $userList->createUserList($segment);
 
@@ -117,17 +89,16 @@ class UserListTest extends TestCase
      */
     public function getUserList_will_return_an_array_of_segments()
     {
-        $responseFake = file_get_contents(__DIR__ . '/../samples/v201708/responseUserList.xml');
+        $fakeResponse = file_get_contents(__DIR__.'/../../samples/'.self::VERSION.'/UserList/getUserList/ok.xml');
+
         $dummyStream = $this->prophesize(Stream::class);
-        $dummyStream->getContents()->willReturn($responseFake);
+        $dummyStream->getContents()->willReturn($fakeResponse);
         $dummyStream->rewind()->shouldBeCalled();
 
         $dummyResponse = $this->prophesize(Response::class);
         $dummyResponse->getBody()->willReturn($dummyStream->reveal());
 
-
         $webClient = $this->prophesize(ClientInterface::class);
-
 
         $webClient->request(Argument::cetera())->willReturn($dummyResponse->reveal());
         $userList = new UserList($webClient->reveal(), new TwigCompiler(), null, '123');
@@ -138,7 +109,7 @@ class UserListTest extends TestCase
         $this->assertEquals($segment->getSegmentName(), 'test');
         $this->assertEquals($segment->getSegmentStatus(), 'OPEN');
         $this->assertEquals($segment->getDescription(), 'test female');
-        $this->assertEquals($segment->getIntegrationCode(), 'test.gender.f');
+        $this->assertEquals($segment->getIntegrationCode(), 'xxx');
         $this->assertEquals($segment->getAccountUserListStatus(), 'ACTIVE');
         $this->assertEquals($segment->getAccessReason(), 'OWNED');
         $this->assertEquals($segment->getisEligibleForSearch(), 'true');

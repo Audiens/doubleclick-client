@@ -1,25 +1,17 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\entity;
 
-use Audiens\DoubleclickClient\entity\ReportConfig;
 use Audiens\DoubleclickClient\entity\SegmentRevenue;
-use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class SegmentRevenue
- */
 class SegmentRevenueTest extends TestCase
 {
-
-
     /**
      * @test
      */
     public function it_is_a_value_object_but_holds_a_custom_hydration_strategy()
     {
-
         $segmentRevenue = SegmentRevenue::fromArray(
             [
                 'userlistid' => 'segment_id',
@@ -43,9 +35,5 @@ class SegmentRevenueTest extends TestCase
         $this->assertEquals('segment_impressions', $segmentRevenue->getSegmentImpression());
         $this->assertEquals(1, $segmentRevenue->getSegmentRevenue());
         $this->assertEquals('segment_name', $segmentRevenue->getSegmentName());
-
-
     }
-
-
 }

@@ -2,47 +2,21 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-/**
- * Class SegmentRevenue
- */
 class SegmentRevenue extends Segment
 {
-
     use HydratableTrait;
 
-    /**
- * @var string
-*/
+    /** @var string */
     protected $clientName;
 
-    /**
- * @var int
-*/
+    /** @var int */
     protected $segmentImpression;
 
-    /**
- * @var  float
-*/
+    /** @var float */
     protected $segmentRevenue;
 
-    /**
-     * SegmentRevenue constructor.
-     *
-     * @param $segmentId
-     * @param $clientName
-     * @param $segmentName
-     * @param $segmentStatus
-     * @param $segmentImpression
-     * @param $segmentRevenue
-     */
-    public function __construct(
-        $segmentId,
-        $clientName,
-        $segmentName,
-        $segmentStatus,
-        $segmentImpression,
-        $segmentRevenue
-    ) {
+    public function __construct($segmentId, $clientName, $segmentName, $segmentStatus, $segmentImpression, $segmentRevenue)
+    {
         $this->clientName        = $clientName;
         $this->segmentImpression = $segmentImpression;
         $this->segmentRevenue    = $segmentRevenue;
@@ -74,15 +48,8 @@ class SegmentRevenue extends Segment
         return $this->segmentImpression;
     }
 
-    /**
-     * @param array $array
-     *
-     * @return SegmentRevenue
-     * @throws \Exception
-     */
-    public static function fromArray(array $array)
+    public static function fromArray(array $array): SegmentRevenue
     {
-
         if (!isset($array['userlistid'])) {
             throw new \Exception('hydration: userlistid');
         }
@@ -108,7 +75,7 @@ class SegmentRevenue extends Segment
 
         $clientName = $array['clientcustomername'];
 
-        if (is_array($array['clientcustomername'])) {
+        if (\is_array($array['clientcustomername'])) {
             $clientName = $array['clientid'];
         }
 
@@ -118,7 +85,7 @@ class SegmentRevenue extends Segment
             $array['userlistname'],
             $array['status'],
             $array['stats']['clientimpressions'],
-            (round($array['stats']['costusd']['microamount'] / 1000000, 2))
+            round($array['stats']['costusd']['microamount'] / 1000000, 2)
         );
     }
 }

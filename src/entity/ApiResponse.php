@@ -4,83 +4,50 @@ namespace Audiens\DoubleclickClient\entity;
 
 use GuzzleHttp\Psr7\Response;
 
-/**
- * Class RepositoryResponse
- */
 class ApiResponse
 {
+    public const STATUS_SUCCESS = 'OK';
 
-    private function __construct()
-    {
-    }
-
-    const STATUS_SUCCESS = 'OK';
-
-    /**
- * @var bool
-*/
+    /** @var bool */
     protected $successful = false;
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $response;
 
-    /**
- * @var  Error
-*/
+    /** @var Error */
     protected $error;
 
-    /**
- * @var  array
-*/
+    /** @var array */
     protected $responseArray;
 
-    /**
-     * @return string
-     */
-    public function getResponse()
+    public function getResponse(): string
     {
         return $this->response;
     }
 
-    /**
-     * @return boolean
-     */
-    public function isSuccessful()
+    public function isSuccessful(): bool
     {
         return $this->successful;
     }
 
-    /**
-     * @return Error
-     */
-    public function getError()
+    public function getError(): Error
     {
         return $this->error;
     }
 
-    /**
-     * @return array
-     */
-    public function getResponseArray()
+    public function getResponseArray(): array
     {
         return $this->responseArray;
     }
 
-    /**
-     * @param Response $response
-     *
-     * @return ApiResponse
-     */
-    public static function fromResponse(Response $response)
+    public static function fromResponse(Response $response): ApiResponse
     {
-        $self = new self();
-        $error = new Error();
+        $self            = new self();
+        $error           = new Error();
         $responseContent = self::getResponseContent($response);
 
-        $self->successful = false;
-        $self->response = $responseContent;
+        $self->successful    = false;
+        $self->response      = $responseContent;
         $self->responseArray = self::arrayFromXml($responseContent);
 
         if (!isset($self->responseArray['body']['envelope']['body']['fault'])) {
@@ -96,11 +63,6 @@ class ApiResponse
         return $self;
     }
 
-    /**
-     * @param Response $response
-     *
-     * @return string
-     */
     private static function getResponseContent(Response $response): string
     {
         $responseContent = $response->getBody()->getContents();
@@ -109,14 +71,8 @@ class ApiResponse
         return static::asciiToUTF8($responseContent);
     }
 
-    /**
-     * @param $xmlString
-     *
-     * @return array
-     */
-    private static function arrayFromXml($xmlString)
+    private static function arrayFromXml($xmlString): array
     {
-
         $document = new \DOMDocument(); // create dom element
 
         libxml_use_internal_errors(true); // silence errors

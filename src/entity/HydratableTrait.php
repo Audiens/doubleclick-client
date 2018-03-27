@@ -4,14 +4,16 @@ namespace Audiens\DoubleclickClient\entity;
 
 use Audiens\DoubleclickClient\exceptions\ClientException;
 use ReflectionObject;
-use Zend\Hydrator\ObjectProperty;
 use Zend\Hydrator\Reflection;
 
-/**
- * Class HydratableTrait
- */
 trait HydratableTrait
 {
+
+    public static function preProcess(array $objectArray): array
+    {
+        return $objectArray;
+    }
+
     /**
      * @param array $objectArray
      *
@@ -21,9 +23,11 @@ trait HydratableTrait
      */
     public static function fromArray(array $objectArray)
     {
-        $object = new self();
+        $objectArray = static::preProcess($objectArray);
+
+        $object           = new self();
         $reflectionObject = new ReflectionObject($object);
-        $props = $reflectionObject->getProperties();
+        $props            = $reflectionObject->getProperties();
 
         $missingFields = [];
         foreach ($props as $prop) {
@@ -32,12 +36,13 @@ trait HydratableTrait
             }
             $propName = $prop->getName();
 
+
             if (!isset($objectArray[$propName])) {
                 $missingFields[] = $propName;
             }
         }
 
-        if (count($missingFields) > 0) {
+        if (\count($missingFields) > 0) {
             throw new ClientException('hydration: missing ['.implode(', ', $missingFields).']');
         }
 
@@ -46,21 +51,13 @@ trait HydratableTrait
         return $object;
     }
 
-    /**
-     * @return array
-     */
-    public function toArray()
+    public function toArray(): array
     {
         return self::getHydrator()->extract($this);
     }
 
-    /**
-     * @return ObjectProperty
-     */
-    private static function getHydrator()
+    private static function getHydrator(): Reflection
     {
-        $hydrator = new Reflection();
-
-        return $hydrator;
+        return new Reflection();
     }
 }

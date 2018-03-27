@@ -20,8 +20,7 @@ class UserListClientTest extends FunctionalTestCase
         $this->assertNotNull($licenses);
 
         $this->assertInternalType('array', $licenses);
-
-        $this->assertGreaterThan(0, count($licenses));
+        $this->assertGreaterThan(0, \count($licenses));
 
         $atLeastOnePricing = false;
 

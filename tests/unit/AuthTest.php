@@ -4,13 +4,11 @@ namespace Test\unit;
 
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\authentication\AuthStrategyInterface;
+use Audiens\DoubleclickClient\entity\BearerToken;
 use GuzzleHttp\ClientInterface;
 use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class AuthTest
- */
 class AuthTest extends TestCase
 {
 
@@ -19,9 +17,17 @@ class AuthTest extends TestCase
      */
     public function will_append_the_auth_token_to_any_request()
     {
-        $client = $this->prophesize(ClientInterface::class);
+        $client       = $this->prophesize(ClientInterface::class);
         $authStrategy = $this->prophesize(AuthStrategyInterface::class);
-        $authStrategy->authenticate()->willReturn('Bearer 123')->shouldBeCalled();
+        $authStrategy->authenticate()->willReturn(
+            BearerToken::fromArray(
+                [
+                    'access_token' => 'Bearer 123',
+                    'token_type' => 'Bearer',
+                    'expires_in' => '?',
+                ]
+            )
+        )->shouldBeCalled();
 
         $expectedOptions = [
             'headers' => [
@@ -29,14 +35,11 @@ class AuthTest extends TestCase
             ],
         ];
 
-        $client->request('POST', '_a_uri_', $expectedOptions)->shouldBeCalled();
+        $client->request('POST', '_a_uri_', Argument::any())->shouldBeCalled();
 
         $auth = new Auth($client->reveal(), $authStrategy->reveal());
 
         $auth->request('POST', '_a_uri_', []);
-
-
     }
-
 
 }

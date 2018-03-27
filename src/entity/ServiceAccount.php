@@ -2,61 +2,36 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-/**
- * Class ServiceAccount
- */
 class ServiceAccount
 {
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $privateKey;
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $clientEmail;
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $subject;
 
-    /**
-     * ServiceAccount constructor.
-     *
-     * @param string $privateKey
-     * @param string $clientEmail
-     * @param string $subject
-     */
-    public function __construct($privateKey, $clientEmail, $subject)
+    public function __construct(string $privateKey, string $clientEmail, string $subject)
     {
-        $this->privateKey = $privateKey;
+        $this->privateKey  = $privateKey;
         $this->clientEmail = $clientEmail;
-        $this->subject = $subject;
+        $this->subject     = $subject;
     }
 
-    /**
-     * @return string
-     */
-    public function getPrivateKey()
+    public function getPrivateKey(): string
     {
         return $this->privateKey;
     }
 
-    /**
-     * @return string
-     */
-    public function getClientEmail()
+    public function getClientEmail(): string
     {
         return $this->clientEmail;
     }
 
-    /**
-     * @return string
-     */
-    public function getSubject()
+    public function getSubject(): string
     {
         return $this->subject;
     }

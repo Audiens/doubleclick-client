@@ -2,62 +2,36 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-/**
- * Class BearerToken
- */
 class BearerToken
 {
+    public const TOKEN_PREFIX = 'Bearer';
 
     use HydratableTrait;
 
-    private function __construct()
-    {
-    }
-
-    const TOKEN_PREFIX = "Bearer";
-
-    /**
- * @var  string
-*/
+    /** @var string @required */
     protected $access_token;
 
-    /**
- * @var  string
-*/
+    /** @var string @required */
     protected $token_type;
 
-    /**
- * @var  string
-*/
+    /** @var string @required */
     protected $expires_in;
 
-    /**
-     * @return string
-     */
     public function getAccessToken()
     {
         return $this->access_token;
     }
 
-    /**
-     * @return string
-     */
     public function getTokenType()
     {
         return $this->token_type;
     }
 
-    /**
-     * @return string
-     */
     public function getExpiresIn()
     {
         return $this->expires_in;
     }
 
-    /**
-     * @return string
-     */
     public function __toString()
     {
         return self::TOKEN_PREFIX.' '.$this->access_token;

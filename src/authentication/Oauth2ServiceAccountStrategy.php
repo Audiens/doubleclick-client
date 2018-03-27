@@ -8,57 +8,40 @@ use Audiens\DoubleclickClient\entity\BearerToken;
 use Doctrine\Common\Cache\Cache;
 use GuzzleHttp\ClientInterface;
 
-/**
- * Class GoogleOauth2DdpStrategy
- */
 class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableInterface
 {
 
     use CachableTrait;
 
-    const NAME = 'oauth2_service_account';
+    public const NAME = 'oauth2_service_account';
 
-    const BASE_URL = 'https://www.googleapis.com/oauth2/v4/token';
+    public const BASE_URL = 'https://www.googleapis.com/oauth2/v4/token';
 
-    const CACHE_NAMESPACE  = 'oauth2_service_account';
-    const CACHE_EXPIRATION = 1800;
+    public const CACHE_NAMESPACE  = 'oauth2_service_account';
+    public const CACHE_EXPIRATION = 1800;
 
-    const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
+    public const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
 
-    /**
- * @var Cache
-*/
+    /** @var Cache */
     protected $cache;
 
-    /**
- * @var JwtFactoryInterface
-*/
+    /** @var JwtFactoryInterface */
     protected $jwtFactory;
 
-    /**
-     * GoogleOauth2DdpStrategy constructor.
-     *
-     * @param ClientInterface     $clientInterface
-     * @param Cache               $cache
-     * @param JwtFactoryInterface $jwtFactory
-     */
+    /** @var ClientInterface */
+    protected $client;
+
     public function __construct(ClientInterface $clientInterface, Cache $cache, JwtFactoryInterface $jwtFactory)
     {
-        $this->cache = $cache;
-        $this->client = $clientInterface;
+        $this->cache      = $cache;
+        $this->client     = $clientInterface;
         $this->jwtFactory = $jwtFactory;
 
         $this->cacheEnabled = $cache instanceof Cache;
     }
 
-    /**
-     * @param bool|true $cache
-     *
-     * @return BearerToken
-     */
-    public function authenticate($cache = true)
+    public function authenticate(bool $cache = true): BearerToken
     {
-
         $cacheKey = self::CACHE_NAMESPACE.sha1($this->jwtFactory->getHash().self::BASE_URL);
 
         if ($cache) {
@@ -91,10 +74,7 @@ class Oauth2ServiceAccountStrategy implements AuthStrategyInterface, CacheableIn
         return $bearerToken;
     }
 
-    /**
-     * @return string
-     */
-    public function getSlug()
+    public function getSlug(): string
     {
         return self::NAME;
     }

@@ -5,25 +5,16 @@ namespace Audiens\DoubleclickClient\authentication;
 use Audiens\DoubleclickClient\entity\ServiceAccount;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Rsa\Sha256;
+use Lcobucci\JWT\Token;
 
-/**
- * Class JwtServiceAccountFactory
- */
 class JwtServiceAccountFactory implements JwtFactoryInterface
 {
 
-    const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
+    public const SCOPE = 'https://ddp.googleapis.com/api/ddp/';
 
-    /**
- * @var ServiceAccount
-*/
+    /** @var ServiceAccount */
     protected $serviceAccount;
 
-    /**
-     * JwtFactory constructor.
-     *
-     * @param ServiceAccount $serviceAccount
-     */
     public function __construct(ServiceAccount $serviceAccount)
     {
         $this->serviceAccount = $serviceAccount;
@@ -40,7 +31,7 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
      *
      * @return \Lcobucci\JWT\Token
      */
-    public function build()
+    public function build(): Token
     {
         return (new Builder())
             ->setIssuer($this->serviceAccount->getClientEmail())// iss claim
@@ -56,12 +47,8 @@ class JwtServiceAccountFactory implements JwtFactoryInterface
             ->getToken(); // Retrieves the generated token
     }
 
-    /**
-     * @return string
-     */
-    public function getHash()
+    public function getHash(): string
     {
-
         return sha1($this->serviceAccount->getClientEmail().$this->serviceAccount->getSubject());
     }
 }

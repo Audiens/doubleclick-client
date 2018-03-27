@@ -2,53 +2,30 @@
 
 namespace Audiens\DoubleclickClient\entity;
 
-/**
- * Class ReportConfig
- */
 class ReportConfig
 {
-
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $clientCustomerId;
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $developerToken;
 
-    /**
- * @var  string
-*/
+    /** @var string */
     protected $userAgent;
 
-    /**
- * @var  \DateTime
-*/
+    /** @var string */
     protected $dateMin;
 
-    /**
- * @var  \DateTime
-*/
+    /** @var \DateTime */
     protected $dateMax;
 
-    /**
-     * RevenueReportConfig constructor.
-     *
-     * @param string    $clientCustomerId
-     * @param string    $developerToken
-     * @param string    $userAgent
-     * @param \DateTime $dateMin
-     * @param \DateTime $dateMax
-     */
     public function __construct($clientCustomerId, $developerToken, $userAgent, \DateTime $dateMin, \DateTime $dateMax)
     {
         $this->clientCustomerId = $clientCustomerId;
-        $this->developerToken = $developerToken;
-        $this->userAgent = $userAgent;
-        $this->dateMin = $dateMin;
-        $this->dateMax = $dateMax;
+        $this->developerToken   = $developerToken;
+        $this->userAgent        = $userAgent;
+        $this->dateMin          = $dateMin;
+        $this->dateMax          = $dateMax;
     }
 
     /**
@@ -94,15 +71,15 @@ class ReportConfig
     /**
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return
             [
-                "clientCustomerId" => $this->clientCustomerId,
-                "developerToken" => $this->developerToken,
-                "userAgent" => $this->userAgent,
-                "dateMin" => $this->dateMin,
-                "dateMax" => $this->dateMax,
+                'clientCustomerId' => $this->clientCustomerId,
+                'developerToken' => $this->developerToken,
+                'userAgent' => $this->userAgent,
+                'dateMin' => $this->dateMin,
+                'dateMax' => $this->dateMax,
             ];
     }
 }

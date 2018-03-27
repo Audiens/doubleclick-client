@@ -4,27 +4,14 @@ namespace Audiens\DoubleclickClient\exceptions;
 
 use Audiens\DoubleclickClient\entity\ApiResponse;
 
-/**
- * Class UserListException
- */
 class ClientException extends \Exception
 {
-
-    /**
-     * @param ApiResponse $apiResponse
-     *
-     * @return self
-     */
-    public static function failed(ApiResponse $apiResponse)
+    public static function failed(ApiResponse $apiResponse): ClientException
     {
         return new self('Failed call: '.$apiResponse->getError());
     }
 
-    /**
-     * @param $message
-     * @return ClientException
-     */
-    public static function validation($message)
+    public static function validation($message): ClientException
     {
         return new self($message);
     }

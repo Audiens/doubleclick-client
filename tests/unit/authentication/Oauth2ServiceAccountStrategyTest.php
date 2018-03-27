@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\authentication;
 
 use Audiens\DoubleclickClient\authentication\JwtFactoryInterface;
 use Audiens\DoubleclickClient\authentication\Oauth2ServiceAccountStrategy;
@@ -11,12 +11,8 @@ use Lcobucci\JWT\Token;
 use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class Oauth2ServiceAccountStrategyTest
- */
 class Oauth2ServiceAccountStrategyTest extends TestCase
 {
-
     /**
      * @test
      */
@@ -47,7 +43,6 @@ class Oauth2ServiceAccountStrategyTest extends TestCase
         $this->assertInstanceOf(BearerToken::class, $bearerToken);
 
         $this->assertEquals(Oauth2ServiceAccountStrategy::NAME, $authStrategy->getSlug());;
-
     }
 
     /**
@@ -55,8 +50,13 @@ class Oauth2ServiceAccountStrategyTest extends TestCase
      */
     public function authenticate_will_return_a_bearer_token_with_cache()
     {
-
-        $bearerToken = BearerToken::fromArray([]);
+        $bearerToken = BearerToken::fromArray(
+            [
+                'access_token' => 'Bearer 123',
+                'token_type' => 'Bearer',
+                'expires_in' => '?',
+            ]
+        );
 
         $client = $this->prophesize(ClientInterface::class);
 
@@ -74,9 +74,5 @@ class Oauth2ServiceAccountStrategyTest extends TestCase
         $this->assertNotNull($bearerToken);
 
         $this->assertInstanceOf(BearerToken::class, $bearerToken);
-
-
     }
-
-
 }

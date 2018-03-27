@@ -1,23 +1,17 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\entity;
 
 use Audiens\DoubleclickClient\entity\BearerToken;
-use Prophecy\Argument;
 use Test\TestCase;
 
-/**
- * Class BearerTokenTest
- */
 class BearerTokenTest extends TestCase
 {
-
     /**
      * @test
      */
     public function it_is_a_value_object()
     {
-
         $bearerToken = BearerToken::fromArray(
             [
                 'access_token' => 'an_access_token',
@@ -31,8 +25,5 @@ class BearerTokenTest extends TestCase
         $this->assertEquals('an_expires_in', $bearerToken->getExpiresIn());
 
         $this->assertContains('an_access_token', $bearerToken->__toString());
-
     }
-
-
 }

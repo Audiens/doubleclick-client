@@ -5,9 +5,6 @@ namespace Test\functional;
 use Audiens\DoubleclickClient\entity\Segment;
 use Test\FunctionalTestCase;
 
-/**
- * Class UserListTest
- */
 class UserListTest extends FunctionalTestCase
 {
     /**
@@ -23,7 +20,8 @@ class UserListTest extends FunctionalTestCase
 
         $this->assertEquals('74255119', $segments->getSegmentId());
 
-        $randName = rand(0,1099);
+        $randName = 'ZZ_CLOSED_SEGMENT_FOR_TESTING_'.rand(0, 1099);
+
         $segment = new Segment(
             74255119,
             $randName,
@@ -56,10 +54,9 @@ class UserListTest extends FunctionalTestCase
 
         $this->assertInternalType('array', $segments);
 
-        $this->assertGreaterThan(0,count($segments));
+        $this->assertGreaterThan(0, count($segments));
 
-        foreach($segments as $segment)
-        {
+        foreach ($segments as $segment) {
             $this->assertInstanceOf(Segment::class, $segment);
         }
     }

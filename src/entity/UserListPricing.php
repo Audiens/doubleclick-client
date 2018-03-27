@@ -1,127 +1,100 @@
 <?php
 
-
 namespace Audiens\DoubleclickClient\entity;
 
-use GiacomoFurlan\ObjectTransmapperValidator\Annotation\Validation\Validate;
-
-/**
- * Class UserListPricing
- */
 class UserListPricing
 {
-    use TransmapHydratable;
+    use HydratableTrait;
 
-    const COST_TYPE_CPC = 'CPC';
-    const COST_TYPE_CPM = 'CPM';
+    public const COST_TYPE_CPC = 'CPC';
+    public const COST_TYPE_CPM = 'CPM';
 
-    const SALE_TYPE_DIRECT          = 'DIRECT';
-    const SALE_TYPE_SALE_FOR_RESALE = 'SALE_FOR_RESALE';
+    public const SALE_TYPE_DIRECT          = 'DIRECT';
+    public const SALE_TYPE_SALE_FOR_RESALE = 'SALE_FOR_RESALE';
 
-    const APPROVAL_STATE_UNAPPROVED = 'UNAPPROVED';
-    const APPROVAL_STATE_APPROVED   = 'APPROVED';
-    const APPROVAL_STATE_REJECTED   = 'REJECTED';
+    public const APPROVAL_STATE_UNAPPROVED = 'UNAPPROVED';
+    public const APPROVAL_STATE_APPROVED   = 'APPROVED';
+    public const APPROVAL_STATE_REJECTED   = 'REJECTED';
 
-    /**
-     * @var string IS0-4217
-     * @Validate(type="string", regex="#^[a-zA-Z]{3}$#", mandatory=true)
-     */
+    /** @var string @required */
     protected $currencycodestring;
 
-    /**
-     * @var string
-     * @see COST_TYPE_*
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $userlistcost;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $costtype;
 
-    /**
-     * @var string
-     * @see SALE_TYPE_*
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $saletype;
 
-    /**
-     * @var string
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $ispricingactive;
 
-    /**
-     * @var string
-     * @see APPROVAL_STATE_*
-     * @Validate(type="string", mandatory=true)
-     */
+    /** @var string @required */
     protected $approvalstate;
 
-    public function getIsPricingactive()
+    public function getIsPricingactive(): string
     {
         return $this->ispricingactive;
     }
 
-    public function getCurrencyCodeString()
+    public function getCurrencyCodeString(): string
     {
         return $this->currencycodestring;
     }
 
-    public function getUserListCost()
+    public function getUserListCost(): string
     {
         return $this->userlistcost;
     }
 
-    public function getCostType()
+    public function getCostType(): string
     {
         return $this->costtype;
     }
 
-    public function getSaleType()
+    public function getSaleType(): string
     {
         return $this->saletype;
     }
 
-    public function isPricingActive()
+    public function isPricingActive(): string
     {
         return $this->ispricingactive;
     }
 
-    public function getApprovalstate()
+    public function getApprovalstate(): string
     {
         return $this->approvalstate;
     }
 
-    public function setCurrencyCodeString($currencycodestring)
+    public function setCurrencyCodeString(string $currencycodestring): void
     {
         $this->currencycodestring = $currencycodestring;
     }
 
-    public function setUserListCost($userlistcost)
+    public function setUserListCost(string $userlistcost): void
     {
         $this->userlistcost = $userlistcost;
     }
 
-    public function setCostType($costtype)
+    public function setCostType(string $costtype): void
     {
         $this->costtype = $costtype;
     }
 
-    public function setSaleType($saletype)
+    public function setSaleType(string $saletype): void
     {
         $this->saletype = $saletype;
     }
 
-    public function setIsPricingActive($ispricingactive)
+    public function setIsPricingActive(string $ispricingactive): void
     {
         $this->ispricingactive = $ispricingactive;
     }
 
-    public function setApprovalstate($approvalstate)
+    public function setApprovalstate(string $approvalstate): void
     {
         $this->approvalstate = $approvalstate;
     }

@@ -7,6 +7,10 @@ RUN apt-get update && apt-get upgrade -y
 
 RUN apt-get install -y apt-utils sudo git tree zip
 
+# PHP modules from pecl
+RUN pecl install ast
+RUN docker-php-ext-enable ast
+
 COPY config/sudoers /etc/sudoers
 
 RUN useradd -ms /bin/bash audiens

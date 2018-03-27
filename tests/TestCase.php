@@ -6,29 +6,24 @@ use Audiens\DoubleclickClient\entity\ReportConfig;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
-use Prophecy\Argument;
 
-/**
- * Class SegmentRepositoryFunctionTest
- */
 class TestCase extends \PHPUnit_Framework_TestCase
 {
+
+    public const VERSION = 'v201802';
 
     protected function setUp()
     {
         parent::setUp();
 
-        $loader =  include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
+        $loader = include __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
         AnnotationRegistry::registerLoader([$loader, 'loadClass']);
     }
 
-    /**
-     * @return Response
-     */
-    public function getGenericErrorResponse()
+    public function getGenericErrorResponse(): Response
     {
         $fakeResponse = $this->prophesize(Response::class);
-        $stream = $this->prophesize(Stream::class);
+        $stream       = $this->prophesize(Stream::class);
         $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/internal_error.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
@@ -36,55 +31,38 @@ class TestCase extends \PHPUnit_Framework_TestCase
         return $fakeResponse->reveal();
     }
 
-
-    /**
-     * @param string $version
-     * @return object
-     */
-    public function getRevenueReport($version = 'v201609')
+    public function getRevenueReport($version = self::VERSION)
     {
         $fakeResponse = $this->prophesize(Response::class);
-        $stream = $this->prophesize(Stream::class);
-        $stream->getContents()->willReturn(file_get_contents(__DIR__ . '/samples/' . $version . '/revenue_report.xml'));
+        $stream       = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/'.$version.'/Report/getRevenueReport/ok.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 
         return $fakeResponse->reveal();
     }
 
-    /**
-     * @param string $version
-     * @return object
-     */
-    public function getDmpReport($version = 'v201609')
+    public function getDmpReport($version = self::VERSION)
     {
         $fakeResponse = $this->prophesize(Response::class);
-        $stream = $this->prophesize(Stream::class);
-        $stream->getContents()->willReturn(file_get_contents(__DIR__ . '/samples/' . $version . '/dmp_report.xml'));
+        $stream       = $this->prophesize(Stream::class);
+        $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/'.$version.'/Report/getDmpReport/ok.xml'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 
         return $fakeResponse->reveal();
     }
 
-
-
-    /**
-     * @return Response
-     */
-    public function getBearerTokenResponse()
+    public function getBearerTokenResponse(): Response
     {
-
-
         $fakeResponse = $this->prophesize(Response::class);
-        $stream = $this->prophesize(Stream::class);
+        $stream       = $this->prophesize(Stream::class);
         $stream->getContents()->willReturn(file_get_contents(__DIR__.'/samples/bearer_token.json'));
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 
         return $fakeResponse->reveal();
     }
-
 
     /**
      * @param $responseBody
@@ -93,17 +71,14 @@ class TestCase extends \PHPUnit_Framework_TestCase
      */
     protected function getFakeResponse($responseBody)
     {
-
         $fakeResponse = $this->prophesize(Response::class);
-        $stream = $this->prophesize(Stream::class);
+        $stream       = $this->prophesize(Stream::class);
         $stream->getContents()->willReturn($responseBody);
         $stream->rewind()->willReturn(null)->shouldBeCalled();
         $fakeResponse->getBody()->willReturn($stream->reveal());
 
         return $fakeResponse;
-
     }
-
 
     /**
      * @param null|\Datetime $from
@@ -111,11 +86,13 @@ class TestCase extends \PHPUnit_Framework_TestCase
      *
      * @return ReportConfig
      */
-    protected function getRevenueReportConfig(\DateTime $from = null, \DateTime $to = null)
+    protected function getRevenueReportConfig(\DateTime $from = null, \DateTime $to = null): ReportConfig
     {
-
         if (!$from) {
             $from = new \DateTime();
+        }
+
+        if (!$to) {
             $to = new \DateTime();
         }
 
@@ -126,8 +103,6 @@ class TestCase extends \PHPUnit_Framework_TestCase
             $from,
             $to
         );
-
-
     }
 
 }

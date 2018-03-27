@@ -1,8 +1,8 @@
 <?php
 
-
 namespace Audiens\DoubleclickClient\service;
 
+use Audiens\DoubleclickClient\ApiConfigurationInterface;
 use Audiens\DoubleclickClient\Auth;
 use Audiens\DoubleclickClient\CachableTrait;
 use Audiens\DoubleclickClient\CacheableInterface;
@@ -14,18 +14,13 @@ use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 
-/**
- * Class UserList
- */
-class UserList implements CacheableInterface
+class UserList implements CacheableInterface, ApiConfigurationInterface
 {
     use CachableTrait;
 
-    const API_VERSION                  = 'v201708';
-
-    const BASE_URL_USER = 'https://ddp.googleapis.com/api/ddp/provider/v201708/UserListService?wsdl';
-    const USER_LIST_TPL = 'userList.xml.twig';
-    const GET_USER_LIST_TPL = 'getUserList.xml.twig';
+    public const BASE_URL_USER     = 'https://ddp.googleapis.com/api/ddp/provider/'.self::API_VERSION.'/UserListService?wsdl';
+    public const USER_LIST_TPL     = 'userList.xml.twig';
+    public const GET_USER_LIST_TPL = 'getUserList.xml.twig';
 
     /**
      * @var Client|Auth
@@ -52,32 +47,24 @@ class UserList implements CacheableInterface
      */
     protected $clientCustomerId;
 
-
     /**
      * Report constructor.
      *
      * @param ClientInterface $client
-     * @param TwigCompiler $twigCompiler
-     * @param Cache|null $cache
-     * @param $clientCustomerId
+     * @param TwigCompiler    $twigCompiler
+     * @param Cache|null      $cache
+     * @param                 $clientCustomerId
      */
     public function __construct(ClientInterface $client, TwigCompiler $twigCompiler, Cache $cache = null, $clientCustomerId)
     {
-        $this->client = $client;
-        $this->cache = $cache;
-        $this->twigCompiler = $twigCompiler;
-        $this->cacheEnabled = $cache instanceof Cache;
+        $this->client           = $client;
+        $this->cache            = $cache;
+        $this->twigCompiler     = $twigCompiler;
+        $this->cacheEnabled     = $cache instanceof Cache;
         $this->clientCustomerId = $clientCustomerId;
     }
 
-
-    /**
-     * @param Segment $segment
-     * @param bool $updateIfExist
-     * @return Segment
-     * @throws ClientException
-     */
-    public function createUserList(Segment $segment, $updateIfExist = false)
+    public function createUserList(Segment $segment, $updateIfExist = false): Segment
     {
         $operator = 'ADD';
 
@@ -86,7 +73,7 @@ class UserList implements CacheableInterface
         }
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::USER_LIST_TPL,
+            self::API_VERSION.'/'.self::USER_LIST_TPL,
             [
                 'id' => $segment->getSegmentId(),
                 'name' => $segment->getSegmentName(),
@@ -98,17 +85,15 @@ class UserList implements CacheableInterface
                 'accessReason' => $segment->getAccessReason(),
                 'isEligibleForSearch' => $segment->getisEligibleForSearch(),
                 'clientCustomerId' => $this->clientCustomerId,
-                'operator' => $operator
+                'operator' => $operator,
             ]
         );
-
 
         try {
             $response = $this->client->request('POST', self::BASE_URL_USER, ['body' => $requestBody]);
         } catch (RequestException $e) {
             $response = $e->getResponse();
         }
-
 
         $apiResponse = ApiResponse::fromResponse($response);
 
@@ -124,7 +109,8 @@ class UserList implements CacheableInterface
     }
 
     /**
-     * @param null $id
+     * @param null|string $id
+     *
      * @return array|Segment
      * @throws ClientException
      */
@@ -133,10 +119,10 @@ class UserList implements CacheableInterface
         $compiledUrl = self::BASE_URL_USER;
 
         $requestBody = $this->twigCompiler->getTwig()->render(
-            self::API_VERSION . '/' . self::GET_USER_LIST_TPL,
+            self::API_VERSION.'/'.self::GET_USER_LIST_TPL,
             [
                 'clientCustomerId' => $this->clientCustomerId,
-                'id' => $id
+                'id' => $id,
             ]
         );
 
@@ -145,7 +131,6 @@ class UserList implements CacheableInterface
         } catch (RequestException $e) {
             $response = $e->getResponse();
         }
-
 
         $repositoryResponse = ApiResponse::fromResponse($response);
 
@@ -157,7 +142,6 @@ class UserList implements CacheableInterface
         ) {
             throw ClientException::failed($repositoryResponse);
         }
-
 
         $entries = $repositoryResponse->getResponseArray()['body']['envelope']['body']['getresponse']['rval']['entries'];
 

@@ -9,22 +9,11 @@ use Audiens\DoubleclickClient\service\Report;
 use Audiens\DoubleclickClient\service\TwigCompiler;
 use GuzzleHttp\Client;
 
-/**
- * Class ReportBuilder
- */
 class ReportBuilder
 {
 
-    /**
-     * @param $privateKey
-     * @param $email
-     * @param $subject
-     * @param null $cache
-     * @return Report
-     */
-    public function getReportService($privateKey, $email, $subject, $cache = null)
+    public function getReportService($privateKey, $email, $subject, $cache = null): Report
     {
-
         $serviceAccount = new ServiceAccount($privateKey, $email, $subject);
 
         $jwtFactory = new JwtServiceAccountFactory($serviceAccount);

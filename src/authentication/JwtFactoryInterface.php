@@ -2,19 +2,11 @@
 
 namespace Audiens\DoubleclickClient\authentication;
 
-/**
- * Class JwtFactoryInterface
- */
+use Lcobucci\JWT\Token;
+
 interface JwtFactoryInterface
 {
+    public function build(): Token;
 
-    /**
-     * @return \Lcobucci\JWT\Token
-     */
-    public function build();
-
-    /**
-     * @return string
-     */
-    public function getHash();
+    public function getHash(): string;
 }

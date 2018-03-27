@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\unit;
+namespace Test\unit\service;
 
 use Audiens\DoubleclickClient\entity\Product;
 use Audiens\DoubleclickClient\entity\UserListClient;
@@ -16,23 +16,14 @@ use Prophecy\Prophecy\ObjectProphecy;
 use SimpleXMLElement;
 use Test\TestCase;
 
-/**
- * Class UserListClientServiceTest
- */
-class UserListClientServiceTest extends TestCase
+class UserListClientTest extends TestCase
 {
     /**
      * @test
      */
     public function it_will_create_a_new_userClientList()
     {
-        $responseFake = file_get_contents(
-            __DIR__.DIRECTORY_SEPARATOR
-            .'..'.DIRECTORY_SEPARATOR
-            .'samples'.DIRECTORY_SEPARATOR
-            .'v201708'.DIRECTORY_SEPARATOR
-            .'responseLicense.xml'
-        );
+        $responseFake = file_get_contents(__DIR__.'/../../samples/'.self::VERSION.'/UserClientList/createUserClientList/ok.xml');
 
         $dummyStream = $this->prophesize(Stream::class);
         $dummyStream->getContents()->willReturn($responseFake);
@@ -41,9 +32,7 @@ class UserListClientServiceTest extends TestCase
         $dummyResponse = $this->prophesize(Response::class);
         $dummyResponse->getBody()->willReturn($dummyStream->reveal());
 
-
         $webClient = $this->prophesize(ClientInterface::class);
-
 
         $webClient->request(Argument::cetera())->willReturn($dummyResponse->reveal());
         $userClientListService = new UserListClientService(
@@ -59,7 +48,6 @@ class UserListClientServiceTest extends TestCase
         $userListPricing->setSaleType(UserListPricing::SALE_TYPE_DIRECT);
         $userListPricing->setCurrencyCodeString('EUR');
         $userListPricing->setApprovalstate(UserListPricing::APPROVAL_STATE_APPROVED);
-
 
         $userListClient = new UserListClient();
 
@@ -92,51 +80,51 @@ class UserListClientServiceTest extends TestCase
         $client = $this->prophesize(Client::class);
         $client
             ->request('POST', UserListClientService::URL_LIST_CLIENT, Argument::type('array'))
-            ->will(function ($arguments) use ($that, $data) {
-                $body = $arguments[2]['body'] ?? null;
-                $that->assertNotNull($body);
+            ->will(
+                function ($arguments) use ($that, $data) {
+                    $body = $arguments[2]['body'] ?? null;
+                    $that->assertNotNull($body);
 
-                $xml = new SimpleXMLElement($body);
+                    $xml = new SimpleXMLElement($body);
 
-                $clientCustomerId = $xml->Header->RequestHeader->clientCustomerId ?? null;
-                $that->assertNotNull($clientCustomerId);
-                $that->assertEquals($data['clientCustomerId'], $clientCustomerId);
+                    $clientCustomerId = $xml->Header->RequestHeader->clientCustomerId ?? null;
+                    $that->assertNotNull($clientCustomerId);
+                    $that->assertEquals($data['clientCustomerId'], $clientCustomerId);
 
-                $serviceSelector = $xml->Body->get->serviceSelector ?? null;
-                $that->assertNotNull($serviceSelector);
-                $predicates = ((array)$serviceSelector)['predicates'];
-                $that->assertNotNull($predicates);
-                $that->assertCount(2, $predicates);
+                    $serviceSelector = $xml->Body->get->serviceSelector ?? null;
+                    $that->assertNotNull($serviceSelector);
+                    $predicates = ((array)$serviceSelector)['predicates'];
+                    $that->assertNotNull($predicates);
+                    $that->assertCount(2, $predicates);
 
-                foreach ($predicates as $predicate) {
-                    switch ($predicate->field) {
-                        case 'UserListId':
-                            $that->assertEquals('EQUALS', $predicate->operator);
-                            $that->assertEquals($data['userListId'], $predicate->values);
-                            break;
-                        case 'ClientId':
-                            $that->assertEquals('EQUALS', $predicate->operator);
-                            $that->assertEquals($data['clientId'], $predicate->values);
-                            break;
-                        default:
-                            $this->assertTrue(false, 'Unknown predicate');
-                            break;
+                    foreach ($predicates as $predicate) {
+                        switch ($predicate->field) {
+                            case 'UserListId':
+                                $that->assertEquals('EQUALS', $predicate->operator);
+                                $that->assertEquals($data['userListId'], $predicate->values);
+                                break;
+                            case 'ClientId':
+                                $that->assertEquals('EQUALS', $predicate->operator);
+                                $that->assertEquals($data['clientId'], $predicate->values);
+                                break;
+                            default:
+                                $this->assertTrue(false, 'Unknown predicate');
+                                break;
+                        }
                     }
+
+                    $body = file_get_contents(__DIR__.'/../../samples/'.self::VERSION.'/UserClientList/getUserClientList/ok.xml');
+
+                    return new Response(200, [], $body);
                 }
-
-                $body = file_get_contents(
-                    __DIR__
-                    .DIRECTORY_SEPARATOR.'..'
-                    .DIRECTORY_SEPARATOR.'samples'
-                    .DIRECTORY_SEPARATOR.'v201708'
-                    .DIRECTORY_SEPARATOR.'responseUserClientList.xml'
-                );
-
-                return new Response(200, [], $body);
-            })->shouldBeCalledTimes(1);
+            )->shouldBeCalledTimes(1);
 
         $service = new UserListClientService($client->reveal(), null, new TwigCompiler(), $data['clientCustomerId']);
 
-        $service->getUserClientList($data['userListId'], $data['clientId']);
+        $userListClients = $service->getUserClientList($data['userListId'], $data['clientId']);
+
+        foreach ($userListClients as $userListClient) {
+            $this->assertInstanceOf(UserListClient::class, $userListClient);
+        }
     }
 }

@@ -8,25 +8,26 @@
          colors="true"
          verbose="true">
 
-	<testsuites>
-		<testsuite name="unit">
-			<directory suffix="Test.php">./tests/unit</directory>
-		</testsuite>
-	</testsuites>
+    <testsuites>
+        <testsuite name="unit">
+            <directory suffix="Test.php">./tests/unit</directory>
+        </testsuite>
+    </testsuites>
 
-	<testsuites>
-		<testsuite name="functional">
-			<directory suffix="Test.php">./tests/functional</directory>
-		</testsuite>
-	</testsuites>
+    <testsuites>
+        <testsuite name="functional">
+            <directory suffix="Test.php">./tests/functional</directory>
+        </testsuite>
+    </testsuites>
 
-	<filter>
-		<whitelist>
-			<directory>src</directory>
-			<exclude>
-				<directory>src/exceptions/</directory>
-			</exclude>
-		</whitelist>
-	</filter>
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+                <directory>src/exceptions/</directory>
+                <directory suffix="Interface.php">src/*</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 
 </phpunit>
