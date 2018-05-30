@@ -91,7 +91,7 @@ class UserListClient
         return $this->clientproduct;
     }
 
-    public function getClientid(): string
+    public function getClientid(): ?string
     {
         return $this->clientid;
     }
