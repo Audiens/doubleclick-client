@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\functional;
+namespace Test\functional\service;
 
 use Audiens\DoubleclickClient\entity\SegmentRevenue;
 use Test\FunctionalTestCase;

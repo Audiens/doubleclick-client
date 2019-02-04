@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\functional\authentication;
+namespace Test\functional\service;
 
 use Audiens\DoubleclickClient\entity\SegmentCommunication;
 use Test\FunctionalTestCase;

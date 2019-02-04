@@ -15,16 +15,16 @@
     "vlucas/phpdotenv": "^2.2.0",
     "lcobucci/jwt": "^3.1.1",
     "twig/twig": "~1.0",
-    "zendframework/zend-hydrator": "^2.2.1"
+    "zendframework/zend-hydrator": "^2.2.1",
+    "doctrine/annotations": "^1.6"
   },
   "require-dev": {
-    "phpunit/phpunit": "~5",
-    "satooshi/php-coveralls": "^1",
     "squizlabs/php_codesniffer": "^2",
     "phing/phing": "^2",
-    "facile-it/paraunit-testcase": "*",
-    "facile-it/paraunit": "*",
-    "symfony/var-dumper": "^3.1.6"
+    "symfony/var-dumper": "^3.1.6",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpunit": "^7.5",
+    "facile-it/paraunit": "^0.12.3"
   },
   "scripts": {
     "post-install-cmd": [

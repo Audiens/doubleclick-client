@@ -1,9 +1,10 @@
 <?php
 
-namespace Test\functional;
+namespace Test\functional\service;
 
 use Audiens\DoubleclickClient\entity\UserListClient;
 use Audiens\DoubleclickClient\entity\UserListPricing;
+use PHPUnit\Framework\TestCase;
 use Test\FunctionalTestCase;
 
 class UserListClientTest extends FunctionalTestCase
@@ -17,22 +18,22 @@ class UserListClientTest extends FunctionalTestCase
 
         $licenses = $userClientList->getUserClientList();
 
-        $this->assertNotNull($licenses);
+        TestCase::assertNotNull($licenses);
 
-        $this->assertInternalType('array', $licenses);
-        $this->assertGreaterThan(0, \count($licenses));
+        TestCase::assertIsArray($licenses);
+        TestCase::assertGreaterThan(0, \count($licenses));
 
         $atLeastOnePricing = false;
 
         foreach ($licenses as $license) {
-            $this->assertInstanceOf(UserListClient::class, $license);
+            TestCase::assertInstanceOf(UserListClient::class, $license);
 
             if ($license->getPricingInfo() instanceof UserListPricing) {
                 $atLeastOnePricing = true;
             }
         }
 
-        $this->assertTrue($atLeastOnePricing, 'there should be at least one UserListPricing');
+        TestCase::assertTrue($atLeastOnePricing, 'there should be at least one UserListPricing');
     }
 
 }

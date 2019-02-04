@@ -7,10 +7,10 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
 
-class TestCase extends \PHPUnit_Framework_TestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
 
-    public const VERSION = 'v201802';
+    public const VERSION = 'v201809';
 
     protected function setUp()
     {

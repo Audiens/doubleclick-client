@@ -1,0 +1,33 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201809">
+            <requestId>0005684dc94257a00a0dcbd3060efa93</requestId>
+            <serviceName>UserListService</serviceName>
+            <methodName>get</methodName>
+            <operations>1</operations>
+            <responseTime>494</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <getResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201809">
+            <rval>
+                <totalNumEntries>1</totalNumEntries>
+                <Page.Type>UserListPage</Page.Type>
+                <entries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="BasicUserList">
+                    <id>520500469</id>
+                    <isReadOnly>false</isReadOnly>
+                    <name>XXX</name>
+                    <status>OPEN</status>
+                    <integrationCode></integrationCode>
+                    <accountUserListStatus>ACTIVE</accountUserListStatus>
+                    <membershipLifeSpan>120</membershipLifeSpan>
+                    <size>34000000</size>
+                    <sizeForSearch>1200</sizeForSearch>
+                    <listType>REMARKETING</listType>
+                    <isEligibleForSearch>true</isEligibleForSearch>
+                    <UserList.Type>BasicUserList</UserList.Type>
+                </entries>
+            </rval>
+        </getResponse>
+    </soap:Body>
+</soap:Envelope>

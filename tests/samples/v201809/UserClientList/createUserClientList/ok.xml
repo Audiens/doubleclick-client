@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <ResponseHeader xmlns="https://ddp.googleapis.com/api/ddp/provider/v201809">
+            <requestId>00055f8022edd5d10a812b8a98094120</requestId>
+            <serviceName>UserListClientService</serviceName>
+            <methodName>mutate</methodName>
+            <operations>1</operations>
+            <responseTime>162</responseTime>
+        </ResponseHeader>
+    </soap:Header>
+    <soap:Body>
+        <mutateResponse xmlns="https://ddp.googleapis.com/api/ddp/provider/v201809">
+            <rval>
+                <ListReturnValue.Type>UserListClientReturnValue</ListReturnValue.Type>
+                <value>
+                    <userListId>519128554</userListId>
+                    <status>ACTIVE</status>
+                    <pricingInfo>
+                        <startDate>
+                            <date>
+                                <year>2017</year>
+                                <month>12</month>
+                                <day>4</day>
+                            </date>
+                            <hour>1</hour>
+                            <minute>13</minute>
+                            <second>50</second>
+                            <timeZoneID>PST8PDT</timeZoneID>
+                        </startDate>
+                        <endDate>
+                            <date>
+                                <year>2038</year>
+                                <month>1</month>
+                                <day>18</day>
+                            </date>
+                            <hour>19</hour>
+                            <minute>14</minute>
+                            <second>7</second>
+                            <timeZoneID>PST8PDT</timeZoneID>
+                        </endDate>
+                        <currencyCodeString>EUR</currencyCodeString>
+                        <userListCost>1</userListCost>
+                        <creationTime>
+                            <date>
+                                <year>2017</year>
+                                <month>12</month>
+                                <day>4</day>
+                            </date>
+                            <hour>1</hour>
+                            <minute>13</minute>
+                            <second>50</second>
+                            <timeZoneID>PST8PDT</timeZoneID>
+                        </creationTime>
+                        <costType>CPM</costType>
+                        <saleType>DIRECT</saleType>
+                        <isPricingActive>true</isPricingActive>
+                        <approvalState>APPROVED</approvalState>
+                        <rejectionReason />
+                    </pricingInfo>
+                    <clientProduct>INVITE_PARTNER</clientProduct>
+                    <clientId>1384757</clientId>
+                </value>
+            </rval>
+        </mutateResponse>
+    </soap:Body>
+</soap:Envelope>
