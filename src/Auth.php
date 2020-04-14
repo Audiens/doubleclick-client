@@ -60,7 +60,7 @@ class Auth extends Client implements ClientInterface
 
         $optionForToken = [
             'headers' => [
-                'Authorization' => $this->authStrategy->authenticate(),
+                'Authorization' => (string)$this->authStrategy->authenticate(),
             ],
         ];
 
