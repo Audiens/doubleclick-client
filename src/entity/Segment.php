@@ -6,6 +6,9 @@ use Audiens\DoubleclickClient\exceptions\ClientException;
 
 class Segment
 {
+    const STATUS_OPEN = 'OPEN';
+    const STATUS_CLOSED = 'CLOSED';
+
     /** @var int */
     protected $segmentId;
 
@@ -82,6 +85,14 @@ class Segment
     public function getSegmentStatus()
     {
         return $this->segmentStatus;
+    }
+
+    /**
+     * @return void
+     */
+    public function setSegmentStatus($status)
+    {
+        $this->segmentStatus = $status;
     }
 
     /**
